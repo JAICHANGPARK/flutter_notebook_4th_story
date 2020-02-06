@@ -2,6 +2,10 @@
 
 A new Flutter application.
 
+# Live Coding Link
+
+https://www.youtube.com/playlist?list=PLnz10ftgq9R-env5ldfnXmlqc0T2kfRDC
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
