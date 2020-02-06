@@ -18,6 +18,41 @@ class SpotFinderMainPage extends StatefulWidget {
 class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
