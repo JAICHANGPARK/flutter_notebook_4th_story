@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SpotFinderApp extends StatelessWidget {
@@ -77,27 +78,53 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     ),
                   )),
               //Image
-              SizedBox(height: deviceHeight / 2.8, child: Container(
-                margin: EdgeInsets.only(
-                  left: 24,
-                  right: 24,
-                  top: 16,
-                  bottom: 16,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  image: DecorationImage(
-                    image: NetworkImage("https://cdn.pixabay.com/photo/2015/05/15/14/55/cafe-768771__340.jpg"),
-                    fit: BoxFit.cover
-                  )
-                ),
-              )),
+              SizedBox(
+                  height: deviceHeight / 2.8,
+                  child: Container(
+                    margin: EdgeInsets.only(
+                      left: 24,
+                      right: 24,
+                      top: 16,
+                      bottom: 2,
+                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                "https://cdn.pixabay.com/photo/2015/05/15/14/55/cafe-768771__340.jpg"),
+                            fit: BoxFit.cover)),
+                  )),
               //shop information
-              SizedBox(height: deviceHeight / 6, child: Column(
-                children: <Widget>[
-                  
-                ],
-              )),
+              SizedBox(
+                  height: deviceHeight / 6,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: <Widget>[
+                            Text(
+                              "Le Paris Cafe",
+                              style: TextStyle(fontSize: 24),
+                            ),
+                            Text(
+                              "See on a map",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.teal),
+                            )
+                          ],
+                        ),
+                        SizedBox(height: 16,),
+                        Text(
+                          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                          overflow: TextOverflow.fade,
+                          style: TextStyle(fontSize: 10),
+                        )
+                      ],
+                    ),
+                  )),
 
               //contact
               SizedBox(height: deviceHeight / 10, child: Placeholder()),
