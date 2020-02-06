@@ -77,9 +77,27 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     ),
                   )),
               //Image
-              SizedBox(height: deviceHeight / 4, child: Placeholder()),
+              SizedBox(height: deviceHeight / 2.8, child: Container(
+                margin: EdgeInsets.only(
+                  left: 24,
+                  right: 24,
+                  top: 16,
+                  bottom: 16,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(24),
+                  image: DecorationImage(
+                    image: NetworkImage("https://cdn.pixabay.com/photo/2015/05/15/14/55/cafe-768771__340.jpg"),
+                    fit: BoxFit.cover
+                  )
+                ),
+              )),
               //shop information
-              SizedBox(height: deviceHeight / 6, child: Placeholder()),
+              SizedBox(height: deviceHeight / 6, child: Column(
+                children: <Widget>[
+                  
+                ],
+              )),
 
               //contact
               SizedBox(height: deviceHeight / 10, child: Placeholder()),
