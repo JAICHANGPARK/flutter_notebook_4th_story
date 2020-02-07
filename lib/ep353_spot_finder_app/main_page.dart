@@ -85,7 +85,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                       left: 24,
                       right: 24,
                       top: 16,
-                      bottom: 2,
+                      bottom: 24,
                     ),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24),
@@ -116,7 +116,9 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                             )
                           ],
                         ),
-                        SizedBox(height: 16,),
+                        SizedBox(
+                          height: 16,
+                        ),
                         Text(
                           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                           overflow: TextOverflow.fade,
@@ -126,8 +128,65 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     ),
                   )),
 
+
               //contact
-              SizedBox(height: deviceHeight / 10, child: Placeholder()),
+              SizedBox(
+                  height: deviceHeight / 10,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              "City Center, Warsaw",
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.star,
+                                  size: 14,
+                                  color: Colors.orangeAccent,
+                                ),
+                                Text(
+                                  "4.5",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "(478)",
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        Container(
+                          height: 38,
+                          width: 38,
+                          decoration: BoxDecoration(
+                              border: Border.all(), shape: BoxShape.circle),
+                          child: Center(
+                            child: Icon(
+                              Icons.call,
+                              size: 20,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
               // shop detail list
               SizedBox(height: deviceHeight / 9, child: Placeholder()),
               SizedBox(height: deviceHeight / 20, child: Placeholder()),
