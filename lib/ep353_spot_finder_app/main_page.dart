@@ -242,17 +242,25 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                           children: <Widget>[
                             Container(
                               width: 72,
+                              padding: EdgeInsets.all(2),
                               margin: EdgeInsets.only(right: 16),
                               decoration: BoxDecoration(
-                                  color: Colors.green,
+                                  color: Colors.white,
                                   border: Border.all(color: Colors.grey),
                                   borderRadius: BorderRadius.circular(24)),
-                              child: Center(
-                                child: Text(
-                                  "Cakes",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                              child: Container(
+                                
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(12)
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Cakes",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
                               ),
