@@ -230,7 +230,126 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                   ),
                 ),
               ),
-              SizedBox(height: deviceHeight / 2.5, child: Placeholder()),
+              SizedBox(
+                  height: deviceHeight / 2.5,
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 2,
+                        child: ListView(
+                          padding: EdgeInsets.only(left: 24, top: 8),
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            Container(
+                              width: 72,
+                              margin: EdgeInsets.only(right: 16),
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  border: Border.all(color: Colors.grey),
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: Center(
+                                child: Text(
+                                  "Cakes",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: 72,
+                              decoration: BoxDecoration(
+                                 ),
+                              child: Center(
+                                child: Text(
+                                  "Cookies",
+                                  style: TextStyle(
+
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: 72,
+                              decoration: BoxDecoration(
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Coffee",
+                                  style: TextStyle(
+
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: 72,
+                              decoration: BoxDecoration(
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Tea",
+                                  style: TextStyle(
+
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: 72,
+                              decoration: BoxDecoration(
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Ice Cream",
+                                  style: TextStyle(
+
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 16,),
+                      Expanded(
+                        flex: 12,
+                        child: ListView(
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                horizontal: 24,
+                                vertical: 8
+                              ),
+                              height: 64,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey,
+                                )
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                  horizontal: 24,
+                                  vertical: 8
+                              ),
+                              height: 64,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                  )
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  )),
             ],
           ),
         ),
