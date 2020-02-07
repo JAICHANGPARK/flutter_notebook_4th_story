@@ -249,11 +249,9 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                                   border: Border.all(color: Colors.grey),
                                   borderRadius: BorderRadius.circular(24)),
                               child: Container(
-                                
                                 decoration: BoxDecoration(
-                                  color: Colors.green,
-                                  borderRadius: BorderRadius.circular(12)
-                                ),
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(12)),
                                 child: Center(
                                   child: Text(
                                     "Cakes",
