@@ -16,7 +16,6 @@ class SpotFinderMainPage extends StatefulWidget {
 }
 
 class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
-
   var imgList = [
     "https://cdn.pixabay.com/photo/2016/02/19/11/40/coffee-shop-1209863__340.jpg",
     "https://cdn.pixabay.com/photo/2016/01/19/15/15/meetings-1149198__340.jpg",
@@ -27,6 +26,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
     "https://cdn.pixabay.com/photo/2015/10/12/15/14/coffee-984328__340.jpg",
     "https://cdn.pixabay.com/photo/2015/06/08/15/24/coffee-802057__340.jpg",
   ];
+
   @override
   Widget build(BuildContext context) {
     var deviceHeight = MediaQuery.of(context).size.height;
@@ -139,7 +139,6 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     ),
                   )),
 
-
               //contact
               SizedBox(
                   height: deviceHeight / 10,
@@ -199,36 +198,38 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     ),
                   )),
               // shop detail list
-              SizedBox(height: deviceHeight / 12,
+              SizedBox(
+                  height: deviceHeight / 12,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     padding: EdgeInsets.only(left: 24),
                     itemCount: imgList.length,
-                    itemBuilder: (context,index){
-
+                    itemBuilder: (context, index) {
                       return Container(
                         width: 90,
                         margin: EdgeInsets.only(right: 16),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16),
-                          image: DecorationImage(
-                            image: NetworkImage(imgList[index]),
-                            fit: BoxFit.cover
-                          )
-                        ),
+                            borderRadius: BorderRadius.circular(16),
+                            image: DecorationImage(
+                                image: NetworkImage(imgList[index]),
+                                fit: BoxFit.cover)),
                       );
                     },
-              )),
+                  )),
               SizedBox(height: deviceHeight / 20),
-              SizedBox(height: deviceHeight / 20, child: Padding(
-                padding: const EdgeInsets.only(left: 24),
-                child: Text(
-                  "Our menu",
-                  style: TextStyle(
-                    
+              SizedBox(
+                height: deviceHeight / 20,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 24),
+                  child: Text(
+                    "Our menu",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              )),
+              ),
               SizedBox(height: deviceHeight / 2.5, child: Placeholder()),
             ],
           ),
@@ -237,24 +238,3 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
