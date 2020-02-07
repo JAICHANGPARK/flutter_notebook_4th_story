@@ -369,7 +369,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                               child: Row(
                                 children: <Widget>[
                                   Text(
-                                    "Chocolate tart",
+                                    "Cheesecake",
                                     style: TextStyle(
                                       color: Colors.blueGrey,
                                       fontSize: 14,
@@ -378,7 +378,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                                   ),
                                   Spacer(),
                                   Text(
-                                    "\$6.30",
+                                    "\$5.68",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -410,7 +410,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                               child: Row(
                                 children: <Widget>[
                                   Text(
-                                    "Chocolate tart",
+                                    "Strawberry cake",
                                     style: TextStyle(
                                       color: Colors.blueGrey,
                                       fontSize: 14,
@@ -419,7 +419,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                                   ),
                                   Spacer(),
                                   Text(
-                                    "\$6.30",
+                                    "\$8.49",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
