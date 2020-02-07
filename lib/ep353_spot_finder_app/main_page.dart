@@ -259,13 +259,11 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                             ),
                             Container(
                               width: 72,
-                              decoration: BoxDecoration(
-                                 ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Text(
                                   "Cookies",
                                   style: TextStyle(
-
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -273,13 +271,11 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                             ),
                             Container(
                               width: 72,
-                              decoration: BoxDecoration(
-                              ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Text(
                                   "Coffee",
                                   style: TextStyle(
-
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -287,13 +283,11 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                             ),
                             Container(
                               width: 72,
-                              decoration: BoxDecoration(
-                              ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Text(
                                   "Tea",
                                   style: TextStyle(
-
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -301,13 +295,11 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                             ),
                             Container(
                               width: 72,
-                              decoration: BoxDecoration(
-                              ),
+                              decoration: BoxDecoration(),
                               child: Center(
                                 child: Text(
                                   "Ice Cream",
                                   style: TextStyle(
-
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -316,37 +308,63 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 16,),
+                      SizedBox(
+                        height: 16,
+                      ),
                       Expanded(
                         flex: 12,
                         child: ListView(
                           children: <Widget>[
                             Container(
                               margin: EdgeInsets.symmetric(
-                                horizontal: 24,
-                                vertical: 8
-                              ),
+                                  horizontal: 24, vertical: 8),
                               height: 54,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(36),
-                                border: Border.all(
-                                  color: Colors.grey,
-                                )
+                                  borderRadius: BorderRadius.circular(36),
+                                  border: Border.all(
+                                    color: Colors.grey,
+                                  )),
+                              padding: EdgeInsets.only(left: 24, right: 8),
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    "Chocolate tart",
+                                    style: TextStyle(
+                                      color: Colors.blueGrey,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    "\$6.30",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  CircleAvatar(
+                                    child: Icon(
+                                      Icons.arrow_forward,
+                                      color: Colors.white,
+                                    ),
+                                    backgroundColor: Colors.black,
+                                  )
+                                ],
                               ),
                             ),
                             Container(
                               margin: EdgeInsets.symmetric(
-                                  horizontal: 24,
-                                  vertical: 8
-                              ),
+                                  horizontal: 24, vertical: 8),
                               height: 54,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(36),
-
                                   border: Border.all(
                                     color: Colors.grey,
-                                  )
-                              ),
+                                  )),
                             )
                           ],
                         ),
