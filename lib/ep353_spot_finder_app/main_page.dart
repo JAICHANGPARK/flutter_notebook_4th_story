@@ -199,7 +199,7 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     ),
                   )),
               // shop detail list
-              SizedBox(height: deviceHeight / 9,
+              SizedBox(height: deviceHeight / 12,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     padding: EdgeInsets.only(left: 24),
@@ -207,9 +207,10 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                     itemBuilder: (context,index){
 
                       return Container(
-                        width: 120,
+                        width: 90,
                         margin: EdgeInsets.only(right: 16),
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
                           image: DecorationImage(
                             image: NetworkImage(imgList[index]),
                             fit: BoxFit.cover
@@ -218,7 +219,16 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                       );
                     },
               )),
-              SizedBox(height: deviceHeight / 20, child: Placeholder()),
+              SizedBox(height: deviceHeight / 20),
+              SizedBox(height: deviceHeight / 20, child: Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Text(
+                  "Our menu",
+                  style: TextStyle(
+                    
+                  ),
+                ),
+              )),
               SizedBox(height: deviceHeight / 2.5, child: Placeholder()),
             ],
           ),
