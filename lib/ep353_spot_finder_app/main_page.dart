@@ -326,8 +326,9 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                                 horizontal: 24,
                                 vertical: 8
                               ),
-                              height: 64,
+                              height: 54,
                               decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(36),
                                 border: Border.all(
                                   color: Colors.grey,
                                 )
@@ -338,8 +339,10 @@ class _SpotFinderMainPageState extends State<SpotFinderMainPage> {
                                   horizontal: 24,
                                   vertical: 8
                               ),
-                              height: 64,
+                              height: 54,
                               decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(36),
+
                                   border: Border.all(
                                     color: Colors.grey,
                                   )
