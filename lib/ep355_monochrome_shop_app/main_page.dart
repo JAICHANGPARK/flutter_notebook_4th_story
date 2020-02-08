@@ -90,7 +90,7 @@ class MonochromeShopHome extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 4,
+            right: 0,
             bottom: MediaQuery.of(context).size.height / 3.5,
             child: Container(
               width: MediaQuery.of(context).size.width / 1.6,
@@ -104,7 +104,24 @@ class MonochromeShopHome extends StatelessWidget {
                   ),
                   border: Border.all(color: Colors.white, width: 5)),
             ),
-          )
+          ),
+          Positioned(
+            left: 0,
+            top: 136,
+            child: Container(
+              width: MediaQuery.of(context).size.width / 2.1,
+              height: MediaQuery.of(context).size.height / 3.4,
+              decoration: BoxDecoration(
+                  color: Colors.black,
+                  border: Border.all(color: Colors.white, width: 5),
+                  image: DecorationImage(
+                      colorFilter:
+                          ColorFilter.mode(Colors.black, BlendMode.color),
+                      image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2016/03/09/10/22/two-women-1246024__340.jpg"),
+                      fit: BoxFit.cover)),
+            ),
+          ),
         ],
       ),
     );
