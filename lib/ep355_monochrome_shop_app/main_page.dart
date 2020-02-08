@@ -25,14 +25,11 @@ class MonochromeShopHome extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   Center(
-                    child: Text("LOSER",style: TextStyle(
-                      fontSize: 64,
-                      letterSpacing: -8
-                        ,
-                      wordSpacing: 0.1
+                    child: Text(
+                      "LOSER",
+                      style: TextStyle(
+                          fontSize: 64, letterSpacing: -8, wordSpacing: 0.1),
                     ),
-                    ),
-
                   )
                 ],
               ),
@@ -44,19 +41,23 @@ class MonochromeShopHome extends StatelessWidget {
             child: Container(
               height: 86,
               width: 86,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all()
-              ),
+              decoration:
+                  BoxDecoration(shape: BoxShape.circle, border: Border.all()),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text("explore",style: TextStyle(
-                    fontSize: 16
-                  ),),
-                  SizedBox(height: 4,),
-                  Icon(Icons.arrow_forward,size: 20, ),
+                  Text(
+                    "explore",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Icon(
+                    Icons.arrow_forward,
+                    size: 20,
+                  ),
                 ],
               ),
             ),
@@ -66,29 +67,3 @@ class MonochromeShopHome extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
