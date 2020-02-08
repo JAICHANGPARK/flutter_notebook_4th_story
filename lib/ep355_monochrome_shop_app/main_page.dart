@@ -21,15 +21,24 @@ class MonochromeShopHome extends StatelessWidget {
             right: 16,
             child: Container(
               height: 100,
-              color: Colors.red,
               child: Stack(
                 children: <Widget>[
                   Center(
                     child: Text(
                       "LOSER",
                       style: TextStyle(
-                          fontSize: 64, letterSpacing: -8, wordSpacing: 0.1),
+                          fontSize: 64, letterSpacing: -6,
+                      fontWeight: FontWeight.bold,),
                     ),
+                  ),
+                  Center(
+                    child: Text("V",
+                    style: TextStyle(
+                      fontSize: 84,
+                      letterSpacing: -8,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),),
                   )
                 ],
               ),
