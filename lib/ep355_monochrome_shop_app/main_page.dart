@@ -70,9 +70,44 @@ class MonochromeShopHome extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            left: 4,
+            bottom: 4,
+            child: Container(
+              width: MediaQuery.of(context).size.width/ 2,
+              height: MediaQuery.of(context).size.height / 3,
+              decoration: BoxDecoration(
+                color: Colors.black
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
