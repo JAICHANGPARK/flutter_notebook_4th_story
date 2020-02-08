@@ -16,6 +16,29 @@ class MonochromeShopHome extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Positioned(
+            top: 34,
+            left: 16,
+            right: 16,
+            child: Container(
+              height: 100,
+              color: Colors.red,
+              child: Stack(
+                children: <Widget>[
+                  Center(
+                    child: Text("LOSER",style: TextStyle(
+                      fontSize: 64,
+                      letterSpacing: -8
+                        ,
+                      wordSpacing: 0.1
+                    ),
+                    ),
+
+                  )
+                ],
+              ),
+            ),
+          ),
+          Positioned(
             bottom: 48,
             right: 24,
             child: Container(
