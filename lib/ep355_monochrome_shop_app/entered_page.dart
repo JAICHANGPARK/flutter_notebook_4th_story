@@ -1,5 +1,25 @@
 import 'package:flutter/material.dart';
 
+class Wear{
+  String img;
+  String price;
+  String name;
+  Wear({this.img, this.price, this.name});
+}
+
+List<Wear> items = [
+
+  Wear(img: "https://cdn.pixabay.com/photo/2017/08/06/09/51/blazer-2590798__340.jpg", price: "134", name: "Retro Blazer"),
+  Wear(img: "https://cdn.pixabay.com/photo/2017/08/10/08/00/suit-2619784__340.jpg", price: "134", name: "Retro Blazer"),
+  Wear(img: "https://cdn.pixabay.com/photo/2016/07/19/10/48/girl-1527959__340.jpg", price: "134", name: "Retro Blazer"),
+  Wear(img: "https://cdn.pixabay.com/photo/2016/03/23/08/34/beautiful-1274361__340.jpg", price: "134", name: "Retro Blazer"),
+  Wear(img: "https://cdn.pixabay.com/photo/2017/08/06/09/51/blazer-2590798__340.jpg", price: "134", name: "Retro Blazer"),
+  Wear(img: "https://cdn.pixabay.com/photo/2017/08/06/09/51/blazer-2590798__340.jpg", price: "134", name: "Retro Blazer"),
+
+];
+
+
+
 class WomensBlazersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,10 +56,21 @@ class WomensBlazersPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: GridView.builder(
-                  itemCount: 16,
+                  itemCount:items.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
-                      color: Colors.red,
+                      child: Column(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 8,
+                            child: Placeholder(),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Placeholder(),
+                          )
+                        ],
+                      ),
                     ) ;
                   },
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
