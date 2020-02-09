@@ -134,11 +134,11 @@ class MonochromeShopHome extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Men's",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 18),
                   ),
                   Text(
                     "Blazers",
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 18),
                   )
                 ],
               ),
