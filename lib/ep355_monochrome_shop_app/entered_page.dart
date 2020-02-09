@@ -63,11 +63,27 @@ class WomensBlazersPage extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                             flex: 8,
-                            child: Placeholder(),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    items[index].img
+                                  ),
+                                  fit: BoxFit.cover,
+                                  colorFilter: ColorFilter.mode(Colors.black, BlendMode.color)
+                                )
+                              ),
+                            ),
                           ),
                           Expanded(
                             flex: 2,
-                            child: Placeholder(),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text("\$ ${items[index].price}"),
+                                Text("${items[index].name}")
+                              ],
+                            ),
                           )
                         ],
                       ),
