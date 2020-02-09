@@ -49,29 +49,34 @@ class MonochromeShopHome extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 48,
+            bottom: 32,
             right: 24,
-            child: Container(
-              height: 86,
-              width: 86,
-              decoration:
-                  BoxDecoration(shape: BoxShape.circle, border: Border.all()),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    "explore",
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Icon(
-                    Icons.arrow_forward,
-                    size: 20,
-                  ),
-                ],
+            child: GestureDetector(
+              onTap: (){
+                
+              },
+              child: Container(
+                height: 86,
+                width: 86,
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, border: Border.all()),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "explore",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Icon(
+                      Icons.arrow_forward,
+                      size: 20,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -150,17 +155,40 @@ class MonochromeShopHome extends StatelessWidget {
             child: Container(
               height: 100,
               width: 100,
-
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Text("Women's",style: TextStyle(
-                    fontSize: 18
-                  ),),
-                  Text("Blazers",style: TextStyle(
-                    fontSize: 18
-                  ),),
+                  Text(
+                    "Women's",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    "Blazers",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            right: 16,
+            left: MediaQuery.of(context).size.width / 2 + 24,
+            bottom: 120,
+            child: Container(
+              height: 80,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text(
+                    "Kid's",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  Text(
+                    "Blazers",
+                    style: TextStyle(fontSize: 18),
+                  )
                 ],
               ),
             ),
@@ -170,28 +198,3 @@ class MonochromeShopHome extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
