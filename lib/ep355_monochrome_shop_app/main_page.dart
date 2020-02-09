@@ -150,16 +150,16 @@ class MonochromeShopHome extends StatelessWidget {
             child: Container(
               height: 100,
               width: 100,
-              
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text("Women's",style: TextStyle(
-                    fontSize: 20
+                    fontSize: 18
                   ),),
                   Text("Blazers",style: TextStyle(
-                    fontSize: 20
+                    fontSize: 18
                   ),),
                 ],
               ),
