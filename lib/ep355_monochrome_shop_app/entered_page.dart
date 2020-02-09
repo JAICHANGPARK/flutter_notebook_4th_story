@@ -36,27 +36,19 @@ class WomensBlazersPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: GridView.builder(
+                  itemCount: 16,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      color: Colors.red,
+                    ) ;
+                  },
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.7,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16
+                  ),
 
-                  itemBuilder: (BuildContext context, int index) {  },
-                  gridDelegate: null,
-                  children: <Widget>[
-
-                    Container(
-                      color: Colors.red,
-                    ),
-                    Container(
-                      color: Colors.red,
-                    ),
-                    Container(
-                      color: Colors.red,
-                    ),
-                    Container(
-                      color: Colors.red,
-                    ),
-                    Container(
-                      color: Colors.red,
-                    ),
-                  ],
                 ),
               ),
             )
