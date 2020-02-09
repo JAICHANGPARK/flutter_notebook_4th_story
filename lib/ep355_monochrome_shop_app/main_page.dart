@@ -122,8 +122,50 @@ class MonochromeShopHome extends StatelessWidget {
                       fit: BoxFit.cover)),
             ),
           ),
+          Positioned(
+           left: MediaQuery.of(context).size.width / 2.4 + 16,
+            top: 136,
+            right: 0,
+            child: Container(
+              height: 120,
+              color: Colors.red,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text("Men's",style: TextStyle(
+                    fontSize: 24
+                  ),),
+
+                  Text("Blazers",style: TextStyle(
+                    fontSize: 24
+                  ),)
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
