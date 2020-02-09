@@ -128,7 +128,6 @@ class MonochromeShopHome extends StatelessWidget {
             right: 0,
             child: Container(
               height: 120,
-              color: Colors.red,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -144,9 +143,55 @@ class MonochromeShopHome extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            left: 16,
+            top: MediaQuery.of(context).size.height / 2,
+            child: Container(
+              height: 100,
+              width: 100,
+              
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text("Women's",style: TextStyle(
+                    fontSize: 20
+                  ),),
+                  Text("Blazers",style: TextStyle(
+                    fontSize: 20
+                  ),),
+                ],
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
