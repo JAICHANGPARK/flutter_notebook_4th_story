@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep355_monochrome_shop_app/entered_page.dart';
 
 class MonochromeShopApp extends StatelessWidget {
   @override
@@ -52,8 +53,9 @@ class MonochromeShopHome extends StatelessWidget {
             bottom: 32,
             right: 24,
             child: GestureDetector(
-              onTap: (){
-                
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => WomensBlazersPage()));
               },
               child: Container(
                 height: 86,
