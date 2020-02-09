@@ -123,7 +123,7 @@ class MonochromeShopHome extends StatelessWidget {
             ),
           ),
           Positioned(
-           left: MediaQuery.of(context).size.width / 2.4 + 16,
+            left: MediaQuery.of(context).size.width / 2.4 + 16,
             top: 136,
             right: 0,
             child: Container(
@@ -133,13 +133,14 @@ class MonochromeShopHome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text("Men's",style: TextStyle(
-                    fontSize: 24
-                  ),),
-
-                  Text("Blazers",style: TextStyle(
-                    fontSize: 24
-                  ),)
+                  Text(
+                    "Men's",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Text(
+                    "Blazers",
+                    style: TextStyle(fontSize: 20),
+                  )
                 ],
               ),
             ),
@@ -149,23 +150,3 @@ class MonochromeShopHome extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
