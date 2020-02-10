@@ -114,26 +114,98 @@ class ItemDetailPage extends StatelessWidget {
                           ),
                           Expanded(
                             flex: 2,
-                            child: Container(
-                              
-                            ),
+                            child: Container(),
                           )
                         ],
                       ),
-
                     ),
                   ),
                   Expanded(
                     flex: 1,
-                    child: Placeholder(),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 10,
+                            child: Container(
+                              color: Colors.grey.shade400,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Container(),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(
                     flex: 1,
-                    child: Placeholder(),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 10,
+                            child: Container(
+                              color: Colors.grey.shade600,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Container(),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(
                     flex: 1,
-                    child: Placeholder(),
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 10,
+                            child: Container(
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 3,
+                                    child: Container(
+                                      color: Colors.white,
+                                      child: Center(
+                                        child: Text("\$${wear.price}", style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 8,
+                                    child: Container(
+                                      color: Colors.black,
+                                      child: Center(
+                                        child: Text(
+                                          "Add to Cart",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Container(),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Expanded(
                     flex: 1,
@@ -148,22 +220,3 @@ class ItemDetailPage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
