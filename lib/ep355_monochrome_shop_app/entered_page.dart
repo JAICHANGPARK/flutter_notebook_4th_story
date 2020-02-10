@@ -83,7 +83,9 @@ class WomensBlazersPage extends StatelessWidget {
                     return GestureDetector(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context)=>ItemDetailPage()
+                          builder: (context)=>ItemDetailPage(
+                            wear: items[index],
+                          )
                         ));
                       },
                       child: Container(
