@@ -124,7 +124,10 @@ class ItemDetailPage extends StatelessWidget {
                             flex: 2,
                             child: Container(
                               child: Center(
-                                child: Icon(Icons.card_giftcard,color: Colors.grey.shade400,),
+                                child: Icon(
+                                  Icons.card_giftcard,
+                                  color: Colors.grey.shade400,
+                                ),
                               ),
                             ),
                           )
@@ -155,7 +158,10 @@ class ItemDetailPage extends StatelessWidget {
                             flex: 2,
                             child: Container(
                               child: Center(
-                                child: Icon(Icons.favorite_border,color: Colors.grey.shade400,),
+                                child: Icon(
+                                  Icons.favorite_border,
+                                  color: Colors.grey.shade400,
+                                ),
                               ),
                             ),
                           )
@@ -186,7 +192,10 @@ class ItemDetailPage extends StatelessWidget {
                             flex: 2,
                             child: Container(
                               child: Center(
-                                child: Icon(Icons.share,color: Colors.grey.shade400,),
+                                child: Icon(
+                                  Icons.share,
+                                  color: Colors.grey.shade400,
+                                ),
                               ),
                             ),
                           )
@@ -241,7 +250,10 @@ class ItemDetailPage extends StatelessWidget {
                             flex: 2,
                             child: Container(
                               child: Center(
-                                child: Icon(Icons.more_horiz,color: Colors.grey.shade400,),
+                                child: Icon(
+                                  Icons.more_horiz,
+                                  color: Colors.grey.shade400,
+                                ),
                               ),
                             ),
                           )
