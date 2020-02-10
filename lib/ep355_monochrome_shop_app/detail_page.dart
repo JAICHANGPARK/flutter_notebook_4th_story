@@ -14,22 +14,79 @@ class ItemDetailPage extends StatelessWidget {
           children: <Widget>[
             Expanded(
               flex: 2,
-              child: Row(
-                children: <Widget>[
-                  IconButton(icon: Icon(Icons.clear),
-                  onPressed: (){
-                    Navigator.pop(context);
-                  },)
-                ],
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.clear),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    Spacer(),
+                    Text(
+                      "${wear.name}",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    Spacer(),
+                  ],
+                ),
               ),
             ),
             Expanded(
               flex: 6,
-              child: Placeholder(),
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(wear.img),
+                      fit: BoxFit.cover,
+                      colorFilter:
+                          ColorFilter.mode(Colors.black, BlendMode.color)),
+                ),
+              ),
             ),
             Expanded(
               flex: 1,
-              child: Placeholder(),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(right: 12),
+                      height: 4,
+                      width: 24,
+                      decoration: BoxDecoration(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 12),
+                      height: 4,
+                      width: 24,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 12),
+                      height: 4,
+                      width: 24,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 12),
+                      height: 4,
+                      width: 24,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
             Expanded(
               flex: 1,
@@ -45,3 +102,22 @@ class ItemDetailPage extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
