@@ -11,6 +11,7 @@ class ItemDetailPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
               flex: 2,
@@ -90,11 +91,56 @@ class ItemDetailPage extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Placeholder(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Text("No matter the occasion girl, get ready to edge\n"
+                    "out your suits collection and be best dressed"),
+              ),
             ),
             Expanded(
               flex: 7,
-              child: Placeholder(),
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 10,
+                            child: Container(
+                              color: Colors.grey.shade200,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              
+                            ),
+                          )
+                        ],
+                      ),
+
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Placeholder(),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Placeholder(),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Placeholder(),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Container(),
+                  )
+                ],
+              ),
             ),
           ],
         ),
