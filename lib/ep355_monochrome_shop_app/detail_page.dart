@@ -109,7 +109,12 @@ class ItemDetailPage extends StatelessWidget {
                           Expanded(
                             flex: 10,
                             child: Container(
+                              padding: EdgeInsets.only(left: 40),
+                              height: double.infinity,
                               color: Colors.grey.shade200,
+                              child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Detail")),
                             ),
                           ),
                           Expanded(
@@ -128,7 +133,14 @@ class ItemDetailPage extends StatelessWidget {
                           Expanded(
                             flex: 10,
                             child: Container(
+                              padding: EdgeInsets.only(left: 80),
+                              height: double.infinity,
                               color: Colors.grey.shade400,
+                              child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Delivery",style: TextStyle(
+                                    fontSize: 20
+                                  ),)),
                             ),
                           ),
                           Expanded(
@@ -147,7 +159,11 @@ class ItemDetailPage extends StatelessWidget {
                           Expanded(
                             flex: 10,
                             child: Container(
+                              padding: EdgeInsets.only(left: 120),
+                              height: double.infinity,
                               color: Colors.grey.shade600,
+                              child: Align(
+                                  alignment: Alignment.centerLeft,child: Text("Discount")),
                             ),
                           ),
                           Expanded(
@@ -173,10 +189,13 @@ class ItemDetailPage extends StatelessWidget {
                                     child: Container(
                                       color: Colors.white,
                                       child: Center(
-                                        child: Text("\$${wear.price}", style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
-                                        ),),
+                                        child: Text(
+                                          "\$${wear.price}",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -188,9 +207,8 @@ class ItemDetailPage extends StatelessWidget {
                                         child: Text(
                                           "Add to Cart",
                                           style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20
-                                          ),
+                                              color: Colors.white,
+                                              fontSize: 20),
                                         ),
                                       ),
                                     ),
