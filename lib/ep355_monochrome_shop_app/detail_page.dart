@@ -114,12 +114,19 @@ class ItemDetailPage extends StatelessWidget {
                               color: Colors.grey.shade200,
                               child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: Text("Detail")),
+                                  child: Text(
+                                    "Detail",
+                                    style: TextStyle(fontSize: 20),
+                                  )),
                             ),
                           ),
                           Expanded(
                             flex: 2,
-                            child: Container(),
+                            child: Container(
+                              child: Center(
+                                child: Icon(Icons.card_giftcard,color: Colors.grey.shade400,),
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -138,14 +145,19 @@ class ItemDetailPage extends StatelessWidget {
                               color: Colors.grey.shade400,
                               child: Align(
                                   alignment: Alignment.centerLeft,
-                                  child: Text("Delivery",style: TextStyle(
-                                    fontSize: 20
-                                  ),)),
+                                  child: Text(
+                                    "Delivery",
+                                    style: TextStyle(fontSize: 20),
+                                  )),
                             ),
                           ),
                           Expanded(
                             flex: 2,
-                            child: Container(),
+                            child: Container(
+                              child: Center(
+                                child: Icon(Icons.favorite_border,color: Colors.grey.shade400,),
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -163,12 +175,20 @@ class ItemDetailPage extends StatelessWidget {
                               height: double.infinity,
                               color: Colors.grey.shade600,
                               child: Align(
-                                  alignment: Alignment.centerLeft,child: Text("Discount")),
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Discount",
+                                    style: TextStyle(fontSize: 20),
+                                  )),
                             ),
                           ),
                           Expanded(
                             flex: 2,
-                            child: Container(),
+                            child: Container(
+                              child: Center(
+                                child: Icon(Icons.share,color: Colors.grey.shade400,),
+                              ),
+                            ),
                           )
                         ],
                       ),
@@ -219,7 +239,11 @@ class ItemDetailPage extends StatelessWidget {
                           ),
                           Expanded(
                             flex: 2,
-                            child: Container(),
+                            child: Container(
+                              child: Center(
+                                child: Icon(Icons.more_horiz,color: Colors.grey.shade400,),
+                              ),
+                            ),
                           )
                         ],
                       ),

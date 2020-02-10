@@ -19,18 +19,18 @@ List<Wear> items = [
   Wear(
       img:
           "https://cdn.pixabay.com/photo/2017/08/10/08/00/suit-2619784__340.jpg",
-      price: "134",
-      name: "Retro Blazer"),
+      price: "365",
+      name: "Fashion Blazer"),
   Wear(
       img:
           "https://cdn.pixabay.com/photo/2016/07/19/10/48/girl-1527959__340.jpg",
-      price: "134",
-      name: "Retro Blazer"),
+      price: "428",
+      name: "Classic Blazer"),
   Wear(
       img:
           "https://cdn.pixabay.com/photo/2016/03/23/08/34/beautiful-1274361__340.jpg",
-      price: "134",
-      name: "Retro Blazer"),
+      price: "122",
+      name: "Modern Blazer"),
   Wear(
       img:
           "https://cdn.pixabay.com/photo/2017/08/06/09/51/blazer-2590798__340.jpg",
@@ -41,6 +41,36 @@ List<Wear> items = [
           "https://cdn.pixabay.com/photo/2017/08/06/09/51/blazer-2590798__340.jpg",
       price: "134",
       name: "Retro Blazer"),
+  Wear(
+      img:
+      "https://cdn.pixabay.com/photo/2016/07/19/10/48/girl-1527959__340.jpg",
+      price: "428",
+      name: "Classic Blazer"),
+  Wear(
+      img:
+      "https://cdn.pixabay.com/photo/2016/03/23/08/34/beautiful-1274361__340.jpg",
+      price: "122",
+      name: "Modern Blazer"),
+  Wear(
+      img:
+      "https://cdn.pixabay.com/photo/2016/07/19/10/48/girl-1527959__340.jpg",
+      price: "428",
+      name: "Classic Blazer"),
+  Wear(
+      img:
+      "https://cdn.pixabay.com/photo/2016/03/23/08/34/beautiful-1274361__340.jpg",
+      price: "122",
+      name: "Modern Blazer"),
+  Wear(
+      img:
+      "https://cdn.pixabay.com/photo/2016/07/19/10/48/girl-1527959__340.jpg",
+      price: "428",
+      name: "Classic Blazer"),
+  Wear(
+      img:
+      "https://cdn.pixabay.com/photo/2016/03/23/08/34/beautiful-1274361__340.jpg",
+      price: "122",
+      name: "Modern Blazer"),
 ];
 
 class WomensBlazersPage extends StatelessWidget {
