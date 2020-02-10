@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep355_monochrome_shop_app/detail_page.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class Wear {
@@ -79,31 +80,38 @@ class WomensBlazersPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: StaggeredGridView.countBuilder(
                   itemBuilder: (context, index) {
-                    return Container(
-                      child: Column(
-                        children: <Widget>[
-                          Expanded(
-                            flex: 8,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: NetworkImage(items[index].img),
-                                      fit: BoxFit.cover,
-                                      colorFilter: ColorFilter.mode(
-                                          Colors.black, BlendMode.color))),
+                    return GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context)=>ItemDetailPage()
+                        ));
+                      },
+                      child: Container(
+                        child: Column(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 8,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: NetworkImage(items[index].img),
+                                        fit: BoxFit.cover,
+                                        colorFilter: ColorFilter.mode(
+                                            Colors.black, BlendMode.color))),
+                              ),
                             ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text("\$ ${items[index].price}"),
-                                Text("${items[index].name}")
-                              ],
-                            ),
-                          )
-                        ],
+                            Expanded(
+                              flex: 2,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("\$ ${items[index].price}"),
+                                  Text("${items[index].name}")
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     );
                   },
