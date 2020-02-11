@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep358_video_profile_app/main_page.dart';
 
-import 'package:flutter_notebook_4th/ep355_monochrome_shop_app/main_page.dart';
-
-void main() => runApp(MonochromeShopApp());
+void main() => runApp(VideoProfileApp());
