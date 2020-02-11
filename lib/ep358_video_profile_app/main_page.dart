@@ -50,6 +50,7 @@ class _VPMainPageState extends State<VPMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
+        maxHeight: 620,
         panel: Center(
           child: Text("This is the sliding Widget"),
         ),
@@ -76,8 +77,32 @@ class _VPMainPageState extends State<VPMainPage> {
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),),
-                  Text("Henderson"),
-                  Text("Head of Human Resources")
+                  Text("Henderson",style: TextStyle(
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+
+                  ),),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text("Head of Human Resources",style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18
+                  ),),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Icon(Icons.add_location, size: 18,
+                      color: Colors.white,),
+                      Text("PURCHASE, NY, USA", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16
+                      ),)
+                    ],
+                  )
                 ],
               ),
             ),
