@@ -30,10 +30,13 @@ class _VPMainPageState extends State<VPMainPage> {
       setState(() {
         _videoPlayerController.play();
       });
+    })..addListener(() {
+      setState(() {
 
-
+      });
     });
 
+    _videoPlayerController.setLooping(true);
   }
 
   @override
