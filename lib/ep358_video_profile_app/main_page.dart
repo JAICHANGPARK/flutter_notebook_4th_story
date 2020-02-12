@@ -51,12 +51,12 @@ class _VPMainPageState extends State<VPMainPage> {
     return Scaffold(
       body: SlidingUpPanel(
         maxHeight: 680,
-          minHeight:120,
+        minHeight: 120,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(32),
           topLeft: Radius.circular(32),
         ),
-        panel:Column(
+        panel: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
@@ -65,20 +65,80 @@ class _VPMainPageState extends State<VPMainPage> {
                 child: Container(
                   height: 4,
                   width: 58,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade200
-                  ),
+                  decoration: BoxDecoration(color: Colors.grey.shade200),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 24, right: 24,top: 16),
+              padding: const EdgeInsets.only(left: 24, right: 24, top: 16),
               child: Container(
                 height: MediaQuery.of(context).size.height / 6,
-                child: Placeholder(),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: Column(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 5,
+                              child: Container(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 2,
+                              child: Placeholder(),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 8, left: 8),
+                        child: Column(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 5,
+                              child: Container(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 2,
+                              child: Placeholder(),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 8, left: 8),
+                        child: Column(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 5,
+                              child: Container(
+                                color: Colors.blue,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 2,
+                              child: Placeholder(),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-            Divider(thickness: 2,),
+            Divider(
+              thickness: 2,
+            ),
             Container(
               height: MediaQuery.of(context).size.height / 3.5,
               child: Placeholder(),
@@ -87,7 +147,6 @@ class _VPMainPageState extends State<VPMainPage> {
               height: MediaQuery.of(context).size.height / 2.8,
               child: Placeholder(),
             ),
-
           ],
         ),
         body: Stack(
@@ -158,7 +217,7 @@ class _VPMainPageState extends State<VPMainPage> {
         padding: const EdgeInsets.only(top: 160),
         child: FloatingActionButton(
           child: Icon(Icons.stop),
-          onPressed: (){
+          onPressed: () {
             _videoPlayerController.pause();
           },
         ),
@@ -167,29 +226,3 @@ class _VPMainPageState extends State<VPMainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
