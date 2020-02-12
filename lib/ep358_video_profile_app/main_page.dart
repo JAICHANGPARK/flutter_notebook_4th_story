@@ -51,7 +51,7 @@ class _VPMainPageState extends State<VPMainPage> {
     return Scaffold(
       body: SlidingUpPanel(
         maxHeight: 680,
-        
+          minHeight:120,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(32),
           topLeft: Radius.circular(32),
