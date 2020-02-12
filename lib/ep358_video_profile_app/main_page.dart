@@ -70,25 +70,33 @@ class _VPMainPageState extends State<VPMainPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 24, right: 24, top: 16),
+              padding: const EdgeInsets.only(left: 42, right: 42, top: 16),
               child: Container(
                 height: MediaQuery.of(context).size.height / 6,
                 child: Row(
                   children: <Widget>[
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(right: 8),
+                        padding: const EdgeInsets.only(right: 16),
                         child: Column(
                           children: <Widget>[
                             Expanded(
                               flex: 5,
                               child: Container(
-                                color: Colors.blue,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue.shade200,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Center(
+                                  child: Icon(Icons.account_circle),
+                                ),
                               ),
                             ),
                             Expanded(
                               flex: 2,
-                              child: Placeholder(),
+                              child: Center(
+                                child: Text("LinkedIn"),
+                              ),
                             )
                           ],
                         ),
@@ -102,12 +110,20 @@ class _VPMainPageState extends State<VPMainPage> {
                             Expanded(
                               flex: 5,
                               child: Container(
-                                color: Colors.blue,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue.shade200,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Center(
+                                  child: Icon(Icons.email),
+                                ),
                               ),
                             ),
                             Expanded(
                               flex: 2,
-                              child: Placeholder(),
+                              child: Center(
+                                child: Text("Email"),
+                              ),
                             )
                           ],
                         ),
@@ -121,12 +137,20 @@ class _VPMainPageState extends State<VPMainPage> {
                             Expanded(
                               flex: 5,
                               child: Container(
-                                color: Colors.blue,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue.shade200,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Center(
+                                child: Icon(Icons.call),
+                              ),
                               ),
                             ),
                             Expanded(
                               flex: 2,
-                              child: Placeholder(),
+                              child: Center(
+                                child: Text("Call"),
+                              ),
                             )
                           ],
                         ),
@@ -139,9 +163,67 @@ class _VPMainPageState extends State<VPMainPage> {
             Divider(
               thickness: 2,
             ),
+            SizedBox(
+              height: 16,
+            ),
             Container(
               height: MediaQuery.of(context).size.height / 3.5,
-              child: Placeholder(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Text("About", style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),),
+                    ),
+                    Expanded(
+                      flex: 10,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(bottom: 16, right: 8),
+                            width: 160,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 4,
+                                  spreadRadius: 2,
+                                  offset: Offset(0,  4),
+                                )
+                              ]
+                            ),
+                            child: Column(),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(bottom: 16, right: 8),
+                            width: 160,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 4,
+                                    spreadRadius: 2,
+                                    offset: Offset(0,  4),
+                                  )
+                                ]
+                            ),
+                            child: Column(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 2.8,
