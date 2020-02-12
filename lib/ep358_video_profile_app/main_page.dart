@@ -88,7 +88,8 @@ class _VPMainPageState extends State<VPMainPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                  child: Icon(Icons.account_circle),
+                                  child: Icon(Icons.account_circle,
+                                  color: Colors.blue,),
                                 ),
                               ),
                             ),
@@ -115,7 +116,7 @@ class _VPMainPageState extends State<VPMainPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                  child: Icon(Icons.email),
+                                  child: Icon(Icons.email ,color: Colors.blue,),
                                 ),
                               ),
                             ),
@@ -142,7 +143,7 @@ class _VPMainPageState extends State<VPMainPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                child: Icon(Icons.call),
+                                child: Icon(Icons.call, color: Colors.blue,),
                               ),
                               ),
                             ),
@@ -295,16 +296,16 @@ class _VPMainPageState extends State<VPMainPage> {
           ],
         ),
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(top: 160),
-        child: FloatingActionButton(
-          child: Icon(Icons.stop),
-          onPressed: () {
-            _videoPlayerController.pause();
-          },
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
+//      floatingActionButton: Padding(
+//        padding: const EdgeInsets.only(top: 160),
+//        child: FloatingActionButton(
+//          child: Icon(Icons.stop),
+//          onPressed: () {
+//            _videoPlayerController.pause();
+//          },
+//        ),
+//      ),
+//      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
     );
   }
 }
