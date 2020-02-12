@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:video_player/video_player.dart';
@@ -49,42 +50,45 @@ class _VPMainPageState extends State<VPMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
-        maxHeight: 620,
-        panel:SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                height: MediaQuery.of(context).size.height / 32,
-                child: Center(
-                  child: Container(
-                    height: 4,
-                    width: 58,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200
-                    ),
+        maxHeight: 680,
+        
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(32),
+          topLeft: Radius.circular(32),
+        ),
+        panel:Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              height: MediaQuery.of(context).size.height / 32,
+              child: Center(
+                child: Container(
+                  height: 4,
+                  width: 58,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade200
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 24, right: 24,top: 16),
-                child: Container(
-                  height: MediaQuery.of(context).size.height / 6,
-                  child: Placeholder(),
-                ),
-              ),
-              Divider(thickness: 2,),
-              Container(
-                height: MediaQuery.of(context).size.height / 3.5,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 24, right: 24,top: 16),
+              child: Container(
+                height: MediaQuery.of(context).size.height / 6,
                 child: Placeholder(),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 2.8,
-                child: Placeholder(),
-              ),
+            ),
+            Divider(thickness: 2,),
+            Container(
+              height: MediaQuery.of(context).size.height / 3.5,
+              child: Placeholder(),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 2.8,
+              child: Placeholder(),
+            ),
 
-            ],
-          ),
+          ],
         ),
         body: Stack(
           children: <Widget>[
