@@ -50,8 +50,41 @@ class _VPMainPageState extends State<VPMainPage> {
     return Scaffold(
       body: SlidingUpPanel(
         maxHeight: 620,
-        panel: Center(
-          child: Text("This is the sliding Widget"),
+        panel:SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                height: MediaQuery.of(context).size.height / 32,
+                child: Center(
+                  child: Container(
+                    height: 4,
+                    width: 58,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade200
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 24, right: 24,top: 16),
+                child: Container(
+                  height: MediaQuery.of(context).size.height / 6,
+                  child: Placeholder(),
+                ),
+              ),
+              Divider(thickness: 2,),
+              Container(
+                height: MediaQuery.of(context).size.height / 3.5,
+                child: Placeholder(),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 2.8,
+                child: Placeholder(),
+              ),
+
+            ],
+          ),
         ),
         body: Stack(
           children: <Widget>[
@@ -117,13 +150,16 @@ class _VPMainPageState extends State<VPMainPage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.stop),
-        onPressed: (){
-          _videoPlayerController.pause();
-        },
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 160),
+        child: FloatingActionButton(
+          child: Icon(Icons.stop),
+          onPressed: (){
+            _videoPlayerController.pause();
+          },
+        ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
     );
   }
 }
