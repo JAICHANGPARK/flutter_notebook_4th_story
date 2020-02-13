@@ -202,7 +202,8 @@ class _VPMainPageState extends State<VPMainPage> {
                             ),
                             padding: EdgeInsets.only(
                               left: 24,
-                              top: 24
+                              top: 24,
+                              bottom: 24
                             ),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -232,7 +233,12 @@ class _VPMainPageState extends State<VPMainPage> {
                                   )
                                 ),
                                 Spacer(),
-                                Text("Assessment\nScore"),
+                                Text("Assessment\nScore",
+                                    style: TextStyle(
+                                      color: Colors.blue.shade400,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                    )),
                               ],
                             ),
                           ),
