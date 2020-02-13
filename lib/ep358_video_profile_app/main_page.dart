@@ -51,7 +51,7 @@ class _VPMainPageState extends State<VPMainPage> {
     return Scaffold(
       body: SlidingUpPanel(
         maxHeight: 680,
-        minHeight: 120,
+        minHeight: 140,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(32),
           topLeft: Radius.circular(32),
@@ -70,9 +70,9 @@ class _VPMainPageState extends State<VPMainPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 42, right: 42, top: 16),
+              padding: const EdgeInsets.only(left: 52, right: 52, top: 16),
               child: Container(
-                height: MediaQuery.of(context).size.height / 6,
+                height: MediaQuery.of(context).size.height / 7,
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -247,7 +247,7 @@ class _VPMainPageState extends State<VPMainPage> {
             ),
             Positioned(
               left: 24,
-              bottom: 140,
+              bottom: 172,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
