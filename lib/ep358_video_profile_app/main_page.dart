@@ -296,16 +296,16 @@ class _VPMainPageState extends State<VPMainPage> {
           ],
         ),
       ),
-//      floatingActionButton: Padding(
-//        padding: const EdgeInsets.only(top: 160),
-//        child: FloatingActionButton(
-//          child: Icon(Icons.stop),
-//          onPressed: () {
-//            _videoPlayerController.pause();
-//          },
-//        ),
-//      ),
-//      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(top: 160),
+        child: FloatingActionButton(
+          child: Icon(Icons.stop),
+          onPressed: () {
+            _videoPlayerController.pause();
+          },
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
     );
   }
 }
