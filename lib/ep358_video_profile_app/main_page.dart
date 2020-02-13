@@ -237,7 +237,7 @@ class _VPMainPageState extends State<VPMainPage> {
                                     style: TextStyle(
                                       color: Colors.blue.shade400,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 12,
+                                      fontSize: 13,
                                     )),
                               ],
                             ),
@@ -257,7 +257,40 @@ class _VPMainPageState extends State<VPMainPage> {
                                   )
                                 ]
                             ),
-                            child: Column(),
+                            padding: EdgeInsets.only(
+                                left: 24,
+                                top: 24,
+                                bottom: 24
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children: <Widget>[
+                                Text.rich(
+                                    TextSpan(
+                                        children: [
+                                          TextSpan(
+                                              text: "12",
+                                              style: TextStyle(
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 42,
+                                              )
+                                          ),
+
+
+                                        ]
+                                    )
+                                ),
+                                Spacer(),
+                                Text("Years\nWith Pepsico",
+                                    style: TextStyle(
+                                      color: Colors.black87,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 13,
+                                    )),
+                              ],
+                            ),
                           ),
                         ],
                       ),
