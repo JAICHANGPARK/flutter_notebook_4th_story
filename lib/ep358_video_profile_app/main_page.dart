@@ -88,8 +88,10 @@ class _VPMainPageState extends State<VPMainPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                  child: Icon(Icons.account_circle,
-                                  color: Colors.blue,),
+                                  child: Icon(
+                                    Icons.account_circle,
+                                    color: Colors.blue,
+                                  ),
                                 ),
                               ),
                             ),
@@ -116,7 +118,10 @@ class _VPMainPageState extends State<VPMainPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                  child: Icon(Icons.email ,color: Colors.blue,),
+                                  child: Icon(
+                                    Icons.email,
+                                    color: Colors.blue,
+                                  ),
                                 ),
                               ),
                             ),
@@ -143,8 +148,11 @@ class _VPMainPageState extends State<VPMainPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                child: Icon(Icons.call, color: Colors.blue,),
-                              ),
+                                  child: Icon(
+                                    Icons.call,
+                                    color: Colors.blue,
+                                  ),
+                                ),
                               ),
                             ),
                             Expanded(
@@ -176,10 +184,11 @@ class _VPMainPageState extends State<VPMainPage> {
                   children: <Widget>[
                     Expanded(
                       flex: 2,
-                      child: Text("About", style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold
-                      ),),
+                      child: Text(
+                        "About",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
                     ),
                     Expanded(
                       flex: 10,
@@ -189,49 +198,38 @@ class _VPMainPageState extends State<VPMainPage> {
                             margin: EdgeInsets.only(bottom: 16, right: 8),
                             width: 160,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 4,
-                                  spreadRadius: 2,
-                                  offset: Offset(0,  4),
-                                )
-                              ]
-                            ),
-                            padding: EdgeInsets.only(
-                              left: 24,
-                              top: 24,
-                              bottom: 24
-                            ),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 4,
+                                    spreadRadius: 2,
+                                    offset: Offset(0, 4),
+                                  )
+                                ]),
+                            padding:
+                                EdgeInsets.only(left: 24, top: 24, bottom: 24),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-
                               children: <Widget>[
-                                Text.rich(
+                                Text.rich(TextSpan(children: [
                                   TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "9.7",
-                                        style: TextStyle(
+                                      text: "9.7",
+                                      style: TextStyle(
+                                        color: Colors.blue.shade400,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 42,
+                                      )),
+                                  TextSpan(
+                                      text: "/10",
+                                      style: TextStyle(
                                           color: Colors.blue.shade400,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 42,
-                                        )
-                                      ),
-                                      TextSpan(
-                                        text: "/10",
-                                          style: TextStyle(
-                                            color: Colors.blue.shade400,
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14,
-                                            textBaseline: TextBaseline.ideographic
-                                          )
-                                      )
-                                    ]
-                                  )
-                                ),
+                                          fontSize: 14,
+                                          textBaseline:
+                                              TextBaseline.ideographic))
+                                ])),
                                 Spacer(),
                                 Text("Assessment\nScore",
                                     style: TextStyle(
@@ -253,35 +251,23 @@ class _VPMainPageState extends State<VPMainPage> {
                                     color: Colors.black.withOpacity(0.1),
                                     blurRadius: 4,
                                     spreadRadius: 2,
-                                    offset: Offset(0,  4),
+                                    offset: Offset(0, 4),
                                   )
-                                ]
-                            ),
-                            padding: EdgeInsets.only(
-                                left: 24,
-                                top: 24,
-                                bottom: 24
-                            ),
+                                ]),
+                            padding:
+                                EdgeInsets.only(left: 24, top: 24, bottom: 24),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-
                               children: <Widget>[
-                                Text.rich(
-                                    TextSpan(
-                                        children: [
-                                          TextSpan(
-                                              text: "12",
-                                              style: TextStyle(
-                                                color: Colors.black87,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 42,
-                                              )
-                                          ),
-
-
-                                        ]
-                                    )
-                                ),
+                                Text.rich(TextSpan(children: [
+                                  TextSpan(
+                                      text: "12",
+                                      style: TextStyle(
+                                        color: Colors.black87,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 42,
+                                      )),
+                                ])),
                                 Spacer(),
                                 Text("Years\nWith Pepsico",
                                     style: TextStyle(
@@ -300,8 +286,65 @@ class _VPMainPageState extends State<VPMainPage> {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height / 2.8,
-              child: Placeholder(),
+              margin: EdgeInsets.only(top: 32),
+              height: MediaQuery.of(context).size.height / 3,
+              padding: EdgeInsets.only(left: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    "Previous Companies",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    height: 224,
+
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return Card(
+                            elevation: 12,
+                            margin: EdgeInsets.only(
+                                right: 8,
+                                top: 8,
+                              bottom: 8
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Container(
+                              width: 160,
+                              decoration: BoxDecoration(
+                              ),
+                              padding: EdgeInsets.all(16),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  CircleAvatar(),
+                                  Spacer(),
+                                  Text("Vodafone",style: TextStyle(
+                                    fontWeight: FontWeight.bold
+                                  ),),
+
+                                  Text("Group HR Director",
+                                  style: TextStyle(
+                                    fontSize: 12
+                                  ),),
+                                  Text("Dec 2005 - Mar 2008",
+                                    style: TextStyle(
+                                      fontSize: 12
+                                  ),)
+                                ],
+                              ),
+                            ),
+                          );
+                        }),
+                  )
+                ],
+              ),
             ),
           ],
         ),
