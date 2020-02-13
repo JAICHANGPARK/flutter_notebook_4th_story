@@ -200,7 +200,41 @@ class _VPMainPageState extends State<VPMainPage> {
                                 )
                               ]
                             ),
-                            child: Column(),
+                            padding: EdgeInsets.only(
+                              left: 24,
+                              top: 24
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children: <Widget>[
+                                Text.rich(
+                                  TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: "9.7",
+                                        style: TextStyle(
+                                          color: Colors.blue.shade400,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 42,
+                                        )
+                                      ),
+                                      TextSpan(
+                                        text: "/10",
+                                          style: TextStyle(
+                                            color: Colors.blue.shade400,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14,
+                                            textBaseline: TextBaseline.ideographic
+                                          )
+                                      )
+                                    ]
+                                  )
+                                ),
+                                Spacer(),
+                                Text("Assessment\nScore"),
+                              ],
+                            ),
                           ),
                           Container(
                             margin: EdgeInsets.only(bottom: 16, right: 8),
