@@ -82,7 +82,7 @@ class _PlantMainPageState extends State<PlantMainPage> {
             child: Stack(
               children: <Widget>[
                 Positioned(
-                  top: 24,
+                  top: 29,
                   left: 0,
                   bottom: 0,
                   right: 0,
@@ -92,17 +92,35 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(24),
                             topRight: Radius.circular(24))),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          child: Placeholder(),
+                        ),
+                        Expanded(
+                          child: Placeholder(),
+                        ),
+                        Expanded(
+                          child: Placeholder(),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 Positioned(
-                  right: 32,
+                  right: 42,
                   top: 0,
                   child: Container(
-                    height: 48,
-                    width: 100,
+                    height: 58,
+                    width: 120,
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Row(
+                      children: <Widget>[
+
+                      ],
                     ),
                   ),
                 ),
