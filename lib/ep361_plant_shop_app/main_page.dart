@@ -8,3 +8,14 @@ class PlantShopApp extends StatelessWidget {
     );
   }
 }
+class PlantMainPage extends StatefulWidget {
+  @override
+  _PlantMainPageState createState() => _PlantMainPageState();
+}
+
+class _PlantMainPageState extends State<PlantMainPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
