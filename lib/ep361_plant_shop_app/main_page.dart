@@ -69,6 +69,25 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         )
                       ],
                     ),
+                  ),
+                  Positioned(
+                    right: 24,
+                    top: 170,
+                    child: Container(
+                      height: 62,
+                      width: 3,
+                      color: Colors.grey.shade400,
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            height: 24,
+                            color: Colors.green,
+                          )
+                        ],
+                      ),
+                    ),
+
+
                   )
                 ],
               ),
@@ -78,7 +97,7 @@ class _PlantMainPageState extends State<PlantMainPage> {
             left: 0,
             right: 0,
             bottom: 0,
-            top: MediaQuery.of(context).size.height / 2.3,
+            top: MediaQuery.of(context).size.height / 2.1,
             child: Stack(
               children: <Widget>[
                 Positioned(
