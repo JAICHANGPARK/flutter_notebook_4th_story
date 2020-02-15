@@ -1,3 +1,4 @@
+import 'package:dashed_container/dashed_container.dart';
 import 'package:flutter/material.dart';
 
 class PlantShopApp extends StatelessWidget {
@@ -166,7 +167,28 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         ),
                         Expanded(
                           flex: 2,
-                          child: Placeholder(),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 1,
+                                child: DashedContainer(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(24.0),
+                                    child: Text("Medium"),
+                                  ),
+                                  
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Placeholder(),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Placeholder(),
+                              )
+                            ],
+                          ),
                         ),
                         Expanded(
                           flex: 1,
@@ -187,7 +209,9 @@ class _PlantMainPageState extends State<PlantMainPage> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Row(
-                      children: <Widget>[],
+                      children: <Widget>[
+
+                      ],
                     ),
                   ),
                 ),
