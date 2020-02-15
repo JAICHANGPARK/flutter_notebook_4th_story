@@ -149,19 +149,22 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         ),
                         Expanded(
                           flex: 1,
-                          child: Text(""
-                              "\$12.95",style: TextStyle(
-                            fontSize: 20
-                          ),),
+                          child: Text(
+                            "\$12.95",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
                         Expanded(
                           flex: 2,
-                          child: Text(
-                            "Get your home holiday ready with this\n"
-                                "statement plant available for a limited time at\n"
-                                "a special price.",
-                            style: TextStyle(
-                              color: Colors.grey,
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Get your home holiday ready with this\n"
+                              "statement plant available for a limited time at\n"
+                              "a special price.",
+                              style: TextStyle(
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
                         ),
@@ -177,41 +180,87 @@ class _PlantMainPageState extends State<PlantMainPage> {
                                   child: DashedContainer(
                                     dashColor: Colors.green,
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
-                                        Icon(Icons.whatshot, color: Colors.green,),
-                                        SizedBox(width: 4,),
-                                        Text("Medium",style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),),
+                                        Icon(
+                                          Icons.whatshot,
+                                          color: Colors.green,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          "Medium",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                       ],
                                     ),
-                                    
                                   ),
                                 ),
                               ),
                               Expanded(
                                 flex: 1,
                                 child: Container(
+                                  height: double.infinity,
                                   margin: EdgeInsets.all(4),
                                   child: DashedContainer(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(24.0),
-                                      child: Text("12"),
+                                    dashColor: Colors.green,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.brightness_low,
+                                          color: Colors.green,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          "12 sunny",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
                                     ),
-
                                   ),
                                 ),
                               ),
                               Expanded(
                                 flex: 1,
                                 child: Container(
+                                  height: double.infinity,
                                   margin: EdgeInsets.all(4),
                                   child: DashedContainer(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(24.0),
-                                      child: Text("Indoor"),
+                                    dashColor: Colors.green,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.home,
+                                          color: Colors.green,
+                                        ),
+                                        SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          "Indoor",
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
@@ -221,7 +270,16 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         ),
                         Expanded(
                           flex: 1,
-                          child: Placeholder(),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              "+ Add to favorites",
+                              style: TextStyle(
+                                color: Colors.green,
+                                fontSize: 12
+                              ),
+                            ),
+                          ),
                         )
                       ],
                     ),
@@ -238,9 +296,7 @@ class _PlantMainPageState extends State<PlantMainPage> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Row(
-                      children: <Widget>[
-
-                      ],
+                      children: <Widget>[],
                     ),
                   ),
                 ),
