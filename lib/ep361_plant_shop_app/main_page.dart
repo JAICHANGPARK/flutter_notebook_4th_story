@@ -106,19 +106,24 @@ class _PlantMainPageState extends State<PlantMainPage> {
                   right: 0,
                   child: Container(
                     padding: EdgeInsets.only(
-                        left: 24, top: 24, bottom: 24, right: 24),
+                        left: 52, top: 32, bottom: 24, right: 24),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(24),
                             topRight: Radius.circular(24))),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Expanded(
                           flex: 1,
                           child: Row(
                             children: <Widget>[
-                              
+                              Container(
+                                height: 2,
+                                width: 28,
+                                color: Colors.black,
+                              )
                             ],
                           ),
                         ),
