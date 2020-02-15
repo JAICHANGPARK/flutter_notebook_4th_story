@@ -190,7 +190,8 @@ class _PlantMainPageState extends State<PlantMainPage> {
                                       children: <Widget>[
                                         Icon(
                                           Icons.whatshot,
-                                          color: Colors.green,
+                                          color: Colors.green,size: 18,
+
                                         ),
                                         SizedBox(
                                           width: 4,
@@ -221,7 +222,7 @@ class _PlantMainPageState extends State<PlantMainPage> {
                                       children: <Widget>[
                                         Icon(
                                           Icons.brightness_low,
-                                          color: Colors.green,
+                                          color: Colors.green,size: 18,
                                         ),
                                         SizedBox(
                                           width: 4,
@@ -253,6 +254,7 @@ class _PlantMainPageState extends State<PlantMainPage> {
                                         Icon(
                                           Icons.home,
                                           color: Colors.green,
+                                          size: 18,
                                         ),
                                         SizedBox(
                                           width: 4,
@@ -295,14 +297,24 @@ class _PlantMainPageState extends State<PlantMainPage> {
                   right: 42,
                   top: 0,
                   child: Container(
-                    height: 58,
-                    width: 120,
+                    height: 54,
+                    width: 110,
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Row(
-                      children: <Widget>[],
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text("Buy",style: TextStyle(
+                          color: Colors.white,
+                        ),),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Icon(Icons.add_shopping_cart,
+                        color: Colors.white,)
+                      ],
                     ),
                   ),
                 ),
