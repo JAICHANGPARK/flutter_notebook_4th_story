@@ -37,7 +37,8 @@ class _PlantMainPageState extends State<PlantMainPage> {
                     left: 24,
                     right: 24,
                     top: 48,
-                    child: Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Container(
                           height: 54,
@@ -86,8 +87,6 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         ],
                       ),
                     ),
-
-
                   )
                 ],
               ),
@@ -106,8 +105,8 @@ class _PlantMainPageState extends State<PlantMainPage> {
                   bottom: 0,
                   right: 0,
                   child: Container(
-                    padding: EdgeInsets.only(left: 24, top: 24, bottom: 24,
-                    right: 24),
+                    padding: EdgeInsets.only(
+                        left: 24, top: 24, bottom: 24, right: 24),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -117,7 +116,11 @@ class _PlantMainPageState extends State<PlantMainPage> {
                       children: <Widget>[
                         Expanded(
                           flex: 1,
-                          child: Placeholder(),
+                          child: Row(
+                            children: <Widget>[
+                              
+                            ],
+                          ),
                         ),
                         Expanded(
                           flex: 1,
@@ -139,7 +142,6 @@ class _PlantMainPageState extends State<PlantMainPage> {
                           flex: 1,
                           child: Placeholder(),
                         )
-
                       ],
                     ),
                   ),
@@ -155,9 +157,7 @@ class _PlantMainPageState extends State<PlantMainPage> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Row(
-                      children: <Widget>[
-
-                      ],
+                      children: <Widget>[],
                     ),
                   ),
                 ),
