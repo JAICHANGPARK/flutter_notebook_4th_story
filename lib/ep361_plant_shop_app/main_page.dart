@@ -120,24 +120,49 @@ class _PlantMainPageState extends State<PlantMainPage> {
                           child: Row(
                             children: <Widget>[
                               Container(
-                                height: 2,
+                                height: 1.5,
                                 width: 28,
                                 color: Colors.black,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 12),
+                                child: Text(
+                                  "Best Choice",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               )
                             ],
                           ),
                         ),
                         Expanded(
                           flex: 1,
-                          child: Placeholder(),
+                          child: Text(
+                            "Monstera Deliciosa",
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                         Expanded(
                           flex: 1,
-                          child: Placeholder(),
+                          child: Text(""
+                              "\$12.95",style: TextStyle(
+                            fontSize: 20
+                          ),),
                         ),
                         Expanded(
                           flex: 2,
-                          child: Placeholder(),
+                          child: Text(
+                            "Get your home holiday ready with this\n"
+                                "statement plant available for a limited time at\n"
+                                "a special price.",
+                            style: TextStyle(
+                              color: Colors.grey,
+                            ),
+                          ),
                         ),
                         Expanded(
                           flex: 2,
