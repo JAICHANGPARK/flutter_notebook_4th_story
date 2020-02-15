@@ -171,22 +171,51 @@ class _PlantMainPageState extends State<PlantMainPage> {
                             children: <Widget>[
                               Expanded(
                                 flex: 1,
-                                child: DashedContainer(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(24.0),
-                                    child: Text("Medium"),
+                                child: Container(
+                                  height: double.infinity,
+                                  margin: EdgeInsets.all(4),
+                                  child: DashedContainer(
+                                    dashColor: Colors.green,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        Icon(Icons.whatshot, color: Colors.green,),
+                                        SizedBox(width: 4,),
+                                        Text("Medium",style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                      ],
+                                    ),
+                                    
                                   ),
-                                  
                                 ),
                               ),
                               Expanded(
                                 flex: 1,
-                                child: Placeholder(),
+                                child: Container(
+                                  margin: EdgeInsets.all(4),
+                                  child: DashedContainer(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(24.0),
+                                      child: Text("12"),
+                                    ),
+
+                                  ),
+                                ),
                               ),
                               Expanded(
                                 flex: 1,
-                                child: Placeholder(),
-                              )
+                                child: Container(
+                                  margin: EdgeInsets.all(4),
+                                  child: DashedContainer(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(24.0),
+                                      child: Text("Indoor"),
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ],
                           ),
                         ),
