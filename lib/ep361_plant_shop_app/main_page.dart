@@ -149,9 +149,12 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         ),
                         Expanded(
                           flex: 1,
-                          child: Text(
-                            "\$12.95",
-                            style: TextStyle(fontSize: 20),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "\$12.95",
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         ),
                         Expanded(
@@ -272,11 +275,14 @@ class _PlantMainPageState extends State<PlantMainPage> {
                           flex: 1,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "+ Add to favorites",
-                              style: TextStyle(
-                                color: Colors.green,
-                                fontSize: 12
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "+ Add to favorites",
+                                style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 12
+                                ),
                               ),
                             ),
                           ),
