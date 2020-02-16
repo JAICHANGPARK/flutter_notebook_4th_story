@@ -19,7 +19,63 @@ class HPMainPage extends StatefulWidget {
 class _HPMainPageState extends State<HPMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 4,
+            child: Placeholder(),
+          ),
+          Expanded(
+            flex: 12,
+            child: SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: Placeholder(
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Placeholder(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
