@@ -198,17 +198,52 @@ class _HPMainPageState extends State<HPMainPage> {
                                             Expanded(
                                               flex: 9,
                                               child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: <Widget>[
-                                                  Text(hireUsers[index].name),
+                                                  Text(hireUsers[index].name,style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),),
+                                                  SizedBox(height: 5,),
+                                                  Text(hireUsers[index].subName,
+                                                  style: TextStyle(
+                                                    color: Colors.grey,
+                                                    fontSize: 13,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),)
                                                 ],
                                               ),
                                             )
                                           ],
                                         )),
-                                        Divider(),
+                                        Divider(
+                                          height: 2,
+                                        ),
                                         Expanded(
                                           flex: 2,
-                                          child: Placeholder(),
+                                          child: Column(
+                                            children: <Widget>[
+                                              Row(
+                                                children: <Widget>[
+                                                  Icon(Icons.star, color: Colors.orangeAccent,
+                                                  size: 15,)
+                                                  ,Icon(Icons.star, color: Colors.orangeAccent,
+                                                    size: 15,),
+                                                  Icon(Icons.star, color: Colors.orangeAccent,
+                                                    size: 15,),
+                                                  Icon(Icons.star, color: Colors.orangeAccent,
+                                                    size: 15,),
+                                                  Icon(Icons.star, color: Colors.orangeAccent,
+                                                    size: 15,),
+                                                  Text("(${hireUsers[index].reviews} reviewers)",
+                                                  style: TextStyle(
+                                                    fontSize: 10,
+                                                    color: Colors.grey
+                                                  ),)
+                                                ],
+                                              )
+                                            ],
+                                          ),
                                         ),
                                         Expanded(
                                           flex: 1,
