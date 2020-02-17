@@ -163,13 +163,13 @@ class _HPMainPageState extends State<HPMainPage> {
                             Expanded(
                               flex: 8,
                               child: ListView.builder(
+                                shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
                                 itemCount: hireUsers.length,
                                 itemBuilder: (BuildContext context, int index) {
                                   return Container(
                                     margin: EdgeInsets.all(16),
-                                    width:
-                                        MediaQuery.of(context).size.width / 1.6,
+                                    width: MediaQuery.of(context).size.width / 1.6,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
                                       color: Colors.white,
@@ -257,6 +257,12 @@ class _HPMainPageState extends State<HPMainPage> {
                                                 color: Colors.grey.shade200,
                                                 borderRadius:
                                                     BorderRadius.circular(12),
+                                              ),
+                                              child: Center(
+                                                child: Text("Check Availabillity",style: TextStyle(
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w500
+                                                ),),
                                               ),
                                             )),
                                       ],
