@@ -123,14 +123,53 @@ class _HPMainPageState extends State<HPMainPage> {
             child: SingleChildScrollView(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height),
+                    maxHeight: MediaQuery.of(context).size.height * 1.2),
                 child: Column(
                   children: <Widget>[
                     Expanded(
                       flex: 1,
-                      child: Placeholder(
-                        color: Colors.red,
-                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Expanded(
+                            flex : 2,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 16),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text("109 Furniture", style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20
+                                  ),),
+                                  SizedBox(height: 8,),
+                                  Text("Assemblers Near You", style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20
+                                  ),)
+                                ],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 8,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Container(
+                                  width: MediaQuery.of(context).size.width / 1.6,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                );
+                              },
+
+
+                            ),
+                          )
+                        ],
+                      )
                     ),
                     Expanded(
                       flex: 1,
