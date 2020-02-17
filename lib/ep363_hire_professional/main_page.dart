@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep363_hire_professional/user.dart';
 
 class HireProfessionalApp extends StatelessWidget {
   @override
@@ -128,51 +129,109 @@ class _HPMainPageState extends State<HPMainPage> {
                 child: Column(
                   children: <Widget>[
                     Expanded(
-                      flex: 1,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Expanded(
-                            flex : 2,
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 16),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text("109 Furniture", style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20
-                                  ),),
-                                  SizedBox(height: 8,),
-                                  Text("Assemblers Near You", style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20
-                                  ),)
-                                ],
+                        flex: 1,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Expanded(
+                              flex: 2,
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 16),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "109 Furniture",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    ),
+                                    SizedBox(
+                                      height: 8,
+                                    ),
+                                    Text(
+                                      "Assemblers Near You",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          Expanded(
-                            flex: 8,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              itemCount: 10,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Container(
-                                  margin: EdgeInsets.all(16),
-                                  width: MediaQuery.of(context).size.width / 1.6,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(16),
-                                    color: Colors.white,
-                                  ),
-                                );
-                              },
-                            ),
-                          )
-                        ],
-                      )
-                    ),
+                            Expanded(
+                              flex: 8,
+                              child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemCount: hireUsers.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return Container(
+                                    margin: EdgeInsets.all(16),
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.6,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(16),
+                                      color: Colors.white,
+                                    ),
+                                    child: Column(
+                                      children: <Widget>[
+                                        Expanded(
+                                            child: Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 3,
+                                              child: Container(
+                                                margin: EdgeInsets.all(8),
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8),
+                                                    color: Colors.red,
+                                                    image: DecorationImage(
+                                                        image: NetworkImage(
+                                                          hireUsers[index].img,
+                                                        ),
+                                                        fit: BoxFit.cover)),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              flex: 9,
+                                              child: Column(
+                                                children: <Widget>[
+                                                  Text(hireUsers[index].name),
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        )),
+                                        Divider(),
+                                        Expanded(
+                                          flex: 2,
+                                          child: Placeholder(),
+                                        ),
+                                        Expanded(
+                                          flex: 1,
+                                          child: Placeholder(),
+                                        ),
+                                        Expanded(
+                                            flex: 1,
+                                            child: Container(
+                                              margin: EdgeInsets.all(12),
+                                              decoration: BoxDecoration(
+                                                color: Colors.grey.shade200,
+                                                borderRadius:
+                                                    BorderRadius.circular(12),
+                                              ),
+                                            )),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
+                            )
+                          ],
+                        )),
                     Expanded(
                       flex: 1,
                       child: Placeholder(
