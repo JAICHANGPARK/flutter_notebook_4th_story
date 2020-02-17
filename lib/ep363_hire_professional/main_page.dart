@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HireProfessionalApp extends StatelessWidget {
@@ -156,16 +157,17 @@ class _HPMainPageState extends State<HPMainPage> {
                             flex: 8,
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
+                              itemCount: 10,
                               itemBuilder: (BuildContext context, int index) {
                                 return Container(
+                                  margin: EdgeInsets.all(16),
                                   width: MediaQuery.of(context).size.width / 1.6,
                                   decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(16),
                                     color: Colors.white,
                                   ),
                                 );
                               },
-
-
                             ),
                           )
                         ],
