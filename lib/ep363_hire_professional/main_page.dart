@@ -418,7 +418,17 @@ class _HPMainPageState extends State<HPMainPage> {
                               ),
                               Expanded(
                                 flex: 10,
-                                child: Placeholder(),
+                                child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                      height: 150,
+                                      decoration: BoxDecoration(
+                                          color: Colors.red
+                                      ),
+                                    ),
+                                  ],
+
+                                ),
                               ),
                             ],
                           ),
