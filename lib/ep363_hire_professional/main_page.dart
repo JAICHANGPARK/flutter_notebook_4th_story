@@ -275,7 +275,20 @@ class _HPMainPageState extends State<HPMainPage> {
                                         ),
                                         Expanded(
                                           flex: 1,
-                                          child: Placeholder(),
+                                          child: Column(
+                                            children: <Widget>[
+                                              Expanded(
+                                                  flex: 1,
+                                                  child: Text("BERIFIED BY")),
+                                              Expanded(
+                                                  flex: 1,
+                                                  child: ListView.builder(
+                                                    itemBuilder:
+                                                        (BuildContext context,
+                                                            int index) {},
+                                                  )),
+                                            ],
+                                          ),
                                         ),
                                         Expanded(
                                             flex: 1,
