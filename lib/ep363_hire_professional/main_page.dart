@@ -402,16 +402,20 @@ class _HPMainPageState extends State<HPMainPage> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      Text("Recommended for You",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 21
-                                      ),),
-                                      Text("See All", style: TextStyle(
-                                        color: Colors.indigoAccent,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.bold,
-                                      ),)
+                                      Text(
+                                        "Recommended for You",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 21),
+                                      ),
+                                      Text(
+                                        "See All",
+                                        style: TextStyle(
+                                          color: Colors.indigoAccent,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -420,16 +424,28 @@ class _HPMainPageState extends State<HPMainPage> {
                                 flex: 10,
                                 child: Column(
                                   children: <Widget>[
-                                    SizedBox(height: 16,),
+                                    SizedBox(
+                                      height: 16,
+                                    ),
                                     Container(
                                       margin: EdgeInsets.only(left: 16),
-                                      height: 150,
-                                      decoration: BoxDecoration(
-                                          color: Colors.red
-                                      ),
+                                      height: 120,
+                                      decoration:
+                                          BoxDecoration(color: Colors.red),
+                                      child: ListView.builder(
+                                          scrollDirection: Axis.horizontal,
+                                          itemBuilder: (context, index) {
+                                            return Container(
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width /
+                                                  1.6,
+                                              margin:
+                                                  EdgeInsets.only(right: 16),
+                                            );
+                                          }),
                                     ),
                                   ],
-
                                 ),
                               ),
                             ],
