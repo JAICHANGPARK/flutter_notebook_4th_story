@@ -276,6 +276,7 @@ class _HPMainPageState extends State<HPMainPage> {
                                         Expanded(
                                           flex: 1,
                                           child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
                                             children: <Widget>[
                                               Expanded(
                                                   flex: 1,
@@ -283,9 +284,19 @@ class _HPMainPageState extends State<HPMainPage> {
                                               Expanded(
                                                   flex: 1,
                                                   child: ListView.builder(
+                                                    scrollDirection: Axis.horizontal,
                                                     itemBuilder:
                                                         (BuildContext context,
-                                                            int index) {},
+                                                            int index) {
+                                                      return Container(
+                                                        height: 24,
+                                                        width: 24,
+                                                        decoration: BoxDecoration(
+                                                          color: Colors.red,
+
+                                                        ),
+                                                      );
+                                                    },
                                                   )),
                                             ],
                                           ),
