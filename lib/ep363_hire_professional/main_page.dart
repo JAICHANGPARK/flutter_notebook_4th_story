@@ -384,16 +384,37 @@ class _HPMainPageState extends State<HPMainPage> {
                             )
                           ],
                         )),
+                    SizedBox(
+                      height: 24,
+                    ),
                     Expanded(
-                      flex: 1,
-                      child: Container(
+                        flex: 1,
+                        child: Container(
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-
+                              Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 16\),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text("Recommended for You"),
+                                      Text("See All")
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 10,
+                                child: Placeholder(),
+                              ),
                             ],
                           ),
-                      )
-                    ),
+                        )),
                   ],
                 ),
               ),
@@ -404,17 +425,3 @@ class _HPMainPageState extends State<HPMainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
