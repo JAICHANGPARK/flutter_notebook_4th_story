@@ -433,6 +433,8 @@ class _HPMainPageState extends State<HPMainPage> {
                                       child: ListView.builder(
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (context, index) {
+                                            List<User> hu =
+                                                hireUsers.reversed.toList();
                                             return Container(
                                               width: MediaQuery.of(context)
                                                       .size
@@ -441,8 +443,92 @@ class _HPMainPageState extends State<HPMainPage> {
                                               margin:
                                                   EdgeInsets.only(right: 16),
                                               decoration: BoxDecoration(
-                                                color: Colors.white,
-                                                borderRadius: BorderRadius.circular(8)
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                      BorderRadius.circular(8)),
+                                              child: Column(
+                                                children: <Widget>[
+                                                  Expanded(
+                                                    flex: 3,
+                                                    child: Row(
+                                                      children: <Widget>[
+                                                        Expanded(
+                                                          flex: 3,
+                                                          child: Container(
+                                                            margin: EdgeInsets.all(8),
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.red,
+                                                              borderRadius: BorderRadius.circular(4),
+                                                              image: DecorationImage(
+                                                                image: NetworkImage(hu[index].img),
+                                                                fit: BoxFit.cover,
+                                                              )
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Expanded(
+                                                          flex: 8,
+                                                          child: Column(
+                                                            children: <Widget>[
+
+                                                            ],
+                                                          ),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Divider(
+                                                    height: 0,
+                                                    thickness: 1.2,
+                                                  ),
+                                                  Expanded(
+                                                    flex: 2,
+                                                    child: Padding(
+                                                      padding: const EdgeInsets.all(8.0),
+                                                      child: Row(
+                                                        children: <Widget>[
+                                                          Icon(
+                                                            Icons.star,
+                                                            color: Colors
+                                                                .orangeAccent,
+                                                            size: 18,
+                                                          ),
+                                                          Icon(
+                                                            Icons.star,
+                                                            color: Colors
+                                                                .orangeAccent,
+                                                            size: 18,
+                                                          ),
+                                                          Icon(
+                                                            Icons.star,
+                                                            color: Colors
+                                                                .orangeAccent,
+                                                            size: 18,
+                                                          ),
+                                                          Icon(
+                                                            Icons.star,
+                                                            color: Colors
+                                                                .orangeAccent,
+                                                            size: 18,
+                                                          ),
+                                                          Icon(
+                                                            Icons.star,
+                                                            color: Colors
+                                                                .orangeAccent,
+                                                            size: 18,
+                                                          ),
+                                                          Text(
+                                                            "(${hu[index].reviews} reviews)",
+                                                            style: TextStyle(
+                                                                fontSize: 12,
+                                                                color:
+                                                                    Colors.grey),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
                                               ),
                                             );
                                           }),
