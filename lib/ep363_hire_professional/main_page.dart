@@ -397,13 +397,21 @@ class _HPMainPageState extends State<HPMainPage> {
                                 flex: 1,
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      horizontal: 16\),
+                                      horizontal: 16),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      Text("Recommended for You"),
-                                      Text("See All")
+                                      Text("Recommended for You",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 21
+                                      ),),
+                                      Text("See All", style: TextStyle(
+                                        color: Colors.indigoAccent,
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold,
+                                      ),)
                                     ],
                                   ),
                                 ),
