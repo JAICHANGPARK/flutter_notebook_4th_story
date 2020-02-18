@@ -420,7 +420,9 @@ class _HPMainPageState extends State<HPMainPage> {
                                 flex: 10,
                                 child: Column(
                                   children: <Widget>[
+                                    SizedBox(height: 16,),
                                     Container(
+                                      margin: EdgeInsets.only(left: 16),
                                       height: 150,
                                       decoration: BoxDecoration(
                                           color: Colors.red
