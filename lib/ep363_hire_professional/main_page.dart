@@ -169,7 +169,8 @@ class _HPMainPageState extends State<HPMainPage> {
                                 itemBuilder: (BuildContext context, int index) {
                                   return Container(
                                     margin: EdgeInsets.all(16),
-                                    width: MediaQuery.of(context).size.width / 1.6,
+                                    width:
+                                        MediaQuery.of(context).size.width / 1.6,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(16),
                                       color: Colors.white,
@@ -198,19 +199,30 @@ class _HPMainPageState extends State<HPMainPage> {
                                             Expanded(
                                               flex: 9,
                                               child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
-                                                  Text(hireUsers[index].name,style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                  ),),
-                                                  SizedBox(height: 5,),
-                                                  Text(hireUsers[index].subName,
-                                                  style: TextStyle(
-                                                    color: Colors.grey,
-                                                    fontSize: 13,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),)
+                                                  Text(
+                                                    hireUsers[index].name,
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 5,
+                                                  ),
+                                                  Text(
+                                                    hireUsers[index].subName,
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 13,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  )
                                                 ],
                                               ),
                                             )
@@ -225,21 +237,37 @@ class _HPMainPageState extends State<HPMainPage> {
                                             children: <Widget>[
                                               Row(
                                                 children: <Widget>[
-                                                  Icon(Icons.star, color: Colors.orangeAccent,
-                                                  size: 15,)
-                                                  ,Icon(Icons.star, color: Colors.orangeAccent,
-                                                    size: 15,),
-                                                  Icon(Icons.star, color: Colors.orangeAccent,
-                                                    size: 15,),
-                                                  Icon(Icons.star, color: Colors.orangeAccent,
-                                                    size: 15,),
-                                                  Icon(Icons.star, color: Colors.orangeAccent,
-                                                    size: 15,),
-                                                  Text("(${hireUsers[index].reviews} reviewers)",
-                                                  style: TextStyle(
-                                                    fontSize: 10,
-                                                    color: Colors.grey
-                                                  ),)
+                                                  Icon(
+                                                    Icons.star,
+                                                    color: Colors.orangeAccent,
+                                                    size: 15,
+                                                  ),
+                                                  Icon(
+                                                    Icons.star,
+                                                    color: Colors.orangeAccent,
+                                                    size: 15,
+                                                  ),
+                                                  Icon(
+                                                    Icons.star,
+                                                    color: Colors.orangeAccent,
+                                                    size: 15,
+                                                  ),
+                                                  Icon(
+                                                    Icons.star,
+                                                    color: Colors.orangeAccent,
+                                                    size: 15,
+                                                  ),
+                                                  Icon(
+                                                    Icons.star,
+                                                    color: Colors.orangeAccent,
+                                                    size: 15,
+                                                  ),
+                                                  Text(
+                                                    "(${hireUsers[index].reviews} reviewers)",
+                                                    style: TextStyle(
+                                                        fontSize: 10,
+                                                        color: Colors.grey),
+                                                  )
                                                 ],
                                               )
                                             ],
@@ -259,10 +287,13 @@ class _HPMainPageState extends State<HPMainPage> {
                                                     BorderRadius.circular(12),
                                               ),
                                               child: Center(
-                                                child: Text("Check Availabillity",style: TextStyle(
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.w500
-                                                ),),
+                                                child: Text(
+                                                  "Check Availabillity",
+                                                  style: TextStyle(
+                                                      fontSize: 13,
+                                                      fontWeight:
+                                                          FontWeight.w500),
+                                                ),
                                               ),
                                             )),
                                       ],
