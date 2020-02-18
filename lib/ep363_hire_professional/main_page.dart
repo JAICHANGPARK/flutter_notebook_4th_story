@@ -430,8 +430,6 @@ class _HPMainPageState extends State<HPMainPage> {
                                     Container(
                                       margin: EdgeInsets.only(left: 16),
                                       height: 120,
-                                      decoration:
-                                          BoxDecoration(color: Colors.red),
                                       child: ListView.builder(
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (context, index) {
@@ -442,6 +440,10 @@ class _HPMainPageState extends State<HPMainPage> {
                                                   1.6,
                                               margin:
                                                   EdgeInsets.only(right: 16),
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.circular(8)
+                                              ),
                                             );
                                           }),
                                     ),
