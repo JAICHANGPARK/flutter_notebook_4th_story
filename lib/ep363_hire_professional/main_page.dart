@@ -431,6 +431,7 @@ class _HPMainPageState extends State<HPMainPage> {
                                       margin: EdgeInsets.only(left: 16),
                                       height: 120,
                                       child: ListView.builder(
+                                        itemCount: hireUsers.length,
                                           scrollDirection: Axis.horizontal,
                                           itemBuilder: (context, index) {
                                             List<User> hu =
@@ -455,22 +456,58 @@ class _HPMainPageState extends State<HPMainPage> {
                                                         Expanded(
                                                           flex: 3,
                                                           child: Container(
-                                                            margin: EdgeInsets.all(8),
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.red,
-                                                              borderRadius: BorderRadius.circular(4),
-                                                              image: DecorationImage(
-                                                                image: NetworkImage(hu[index].img),
-                                                                fit: BoxFit.cover,
-                                                              )
-                                                            ),
+                                                            margin:
+                                                                EdgeInsets.all(
+                                                                    8),
+                                                            decoration:
+                                                                BoxDecoration(
+                                                                    color: Colors
+                                                                        .red,
+                                                                    borderRadius:
+                                                                        BorderRadius
+                                                                            .circular(
+                                                                                4),
+                                                                    image:
+                                                                        DecorationImage(
+                                                                      image: NetworkImage(
+                                                                          hu[index]
+                                                                              .img),
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    )),
                                                           ),
                                                         ),
                                                         Expanded(
                                                           flex: 8,
                                                           child: Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
                                                             children: <Widget>[
-
+                                                              Text(
+                                                                hu[index].name,
+                                                                style: TextStyle(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                    fontSize:
+                                                                        16),
+                                                              ),
+                                                              SizedBox(
+                                                                height: 8,
+                                                              ),
+                                                              Text(
+                                                                hu[index]
+                                                                    .subName,
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: Colors
+                                                                      .grey,
+                                                                ),
+                                                              )
                                                             ],
                                                           ),
                                                         )
@@ -484,7 +521,9 @@ class _HPMainPageState extends State<HPMainPage> {
                                                   Expanded(
                                                     flex: 2,
                                                     child: Padding(
-                                                      padding: const EdgeInsets.all(8.0),
+                                                      padding:
+                                                          const EdgeInsets.all(
+                                                              8.0),
                                                       child: Row(
                                                         children: <Widget>[
                                                           Icon(
@@ -521,8 +560,8 @@ class _HPMainPageState extends State<HPMainPage> {
                                                             "(${hu[index].reviews} reviews)",
                                                             style: TextStyle(
                                                                 fontSize: 12,
-                                                                color:
-                                                                    Colors.grey),
+                                                                color: Colors
+                                                                    .grey),
                                                           ),
                                                         ],
                                                       ),
