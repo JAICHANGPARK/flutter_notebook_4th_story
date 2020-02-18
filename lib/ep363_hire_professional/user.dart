@@ -18,7 +18,7 @@ List<User> hireUsers = [
       reviews: 87,
       subName: "Parker Rd",
       lastestReviews:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
   User(
       img:
           "https://cdn.pixabay.com/photo/2016/11/22/21/42/adult-1850703__340.jpg",
@@ -26,7 +26,7 @@ List<User> hireUsers = [
       subName: "Salmon",
       reviews: 168,
       lastestReviews:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
   User(
       img:
           "https://cdn.pixabay.com/photo/2019/08/23/13/45/koreanfashion-4425752__340.jpg",

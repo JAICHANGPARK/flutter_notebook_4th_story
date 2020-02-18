@@ -233,72 +233,113 @@ class _HPMainPageState extends State<HPMainPage> {
                                         ),
                                         Expanded(
                                           flex: 2,
-                                          child: Column(
-                                            children: <Widget>[
-                                              Row(
-                                                children: <Widget>[
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Colors.orangeAccent,
-                                                    size: 15,
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 8,
+                                              left: 16
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: <Widget>[
+                                                Row(
+                                                  children: <Widget>[
+                                                    Icon(
+                                                      Icons.star,
+                                                      color: Colors.orangeAccent,
+                                                      size: 15,
+                                                    ),
+                                                    Icon(
+                                                      Icons.star,
+                                                      color: Colors.orangeAccent,
+                                                      size: 15,
+                                                    ),
+                                                    Icon(
+                                                      Icons.star,
+                                                      color: Colors.orangeAccent,
+                                                      size: 15,
+                                                    ),
+                                                    Icon(
+                                                      Icons.star,
+                                                      color: Colors.orangeAccent,
+                                                      size: 15,
+                                                    ),
+                                                    Icon(
+                                                      Icons.star,
+                                                      color: Colors.orangeAccent,
+                                                      size: 15,
+                                                    ),
+                                                    Text(
+                                                      "(${hireUsers[index].reviews} reviewers)",
+                                                      style: TextStyle(
+                                                          fontSize: 10,
+                                                          color: Colors.grey),
+                                                    )
+                                                  ],
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.only(top: 16),
+                                                  child: Text("LATEST REVIEW",style: TextStyle(
+                                                    color: Colors.blueGrey,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsets.
+                                                    only(
+                                                    top: 8,
+                                                    right: 8
                                                   ),
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Colors.orangeAccent,
-                                                    size: 15,
+                                                  child: Text(hireUsers[index].lastestReviews,
+                                                  style: TextStyle(
+                                                    fontSize: 10,
+
                                                   ),
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Colors.orangeAccent,
-                                                    size: 15,
-                                                  ),
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Colors.orangeAccent,
-                                                    size: 15,
-                                                  ),
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: Colors.orangeAccent,
-                                                    size: 15,
-                                                  ),
-                                                  Text(
-                                                    "(${hireUsers[index].reviews} reviewers)",
-                                                    style: TextStyle(
-                                                        fontSize: 10,
-                                                        color: Colors.grey),
-                                                  )
-                                                ],
-                                              )
-                                            ],
+                                                  overflow: TextOverflow.clip,),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         Expanded(
                                           flex: 1,
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Expanded(
-                                                  flex: 1,
-                                                  child: Text("BERIFIED BY")),
-                                              Expanded(
-                                                  flex: 1,
-                                                  child: ListView.builder(
-                                                    scrollDirection: Axis.horizontal,
-                                                    itemBuilder:
-                                                        (BuildContext context,
-                                                            int index) {
-                                                      return Container(
-                                                        height: 24,
-                                                        width: 24,
-                                                        decoration: BoxDecoration(
-                                                          color: Colors.red,
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 16,
+                                              top: 8,
+                                              bottom: 8
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: <Widget>[
+                                                Expanded(
+                                                    flex: 1,
+                                                    child: Text("BERIFIED BY",
+                                                    style: TextStyle(
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.blueGrey
+                                                    ),)),
+                                                Expanded(
+                                                    flex: 1,
+                                                    child: ListView.builder(
+                                                      itemCount: 5,
+                                                      scrollDirection: Axis.horizontal,
+                                                      itemBuilder:
+                                                          (BuildContext context,
+                                                              int index) {
+                                                        return Container(
+                                                          height: 24,
+                                                          width: 24,
+                                                          margin: EdgeInsets.only(right: 8),
+                                                          decoration: BoxDecoration(
+                                                            color: Colors.red,
+                                                            shape: BoxShape.circle
 
-                                                        ),
-                                                      );
-                                                    },
-                                                  )),
-                                            ],
+                                                          ),
+                                                        );
+                                                      },
+                                                    )),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         Expanded(
