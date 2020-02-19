@@ -30,6 +30,8 @@ dependencies:
   dashed_container: ^1.0.1
   dotted_border: ^1.0.4
 
+  google_fonts: ^0.3.9
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
