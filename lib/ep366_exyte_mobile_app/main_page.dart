@@ -34,7 +34,16 @@ class _ExyteMobileAppState extends State<SecondPage> {
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(32),
                   topLeft: Radius.circular(32)
-                )
+                ),
+
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.05),
+                    blurRadius: 5,
+                    spreadRadius: 4,
+                    offset: Offset(-4,-8)
+                  )
+                ]
               ),
             ),
           )
