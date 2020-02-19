@@ -32,8 +32,8 @@ class _ExyteMobileAppState extends State<SecondPage> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(32),
-                  topLeft: Radius.circular(32)
+                  topLeft: Radius.circular(48),
+                  topRight: Radius.circular(48),
                 ),
 
                 boxShadow: [
@@ -44,6 +44,21 @@ class _ExyteMobileAppState extends State<SecondPage> {
                     offset: Offset(-4,-8)
                   )
                 ]
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            right: 0,
+            left: 0,
+            child: Container(
+              height: MediaQuery.of(context).size.height / 3,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(48),
+                  topRight: Radius.circular(48),
+                )
               ),
             ),
           )
