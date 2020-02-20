@@ -96,16 +96,16 @@ class _ExyteMobileAppState extends State<SecondPage> {
                                   children: <Widget>[
                                     Text(
                                       "7 days",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                      style:GoogleFonts.montserrat(),
                                     ),
                                     SizedBox(
                                       height: 4,
                                     ),
                                     Text(
                                       "Design",
-                                      style: TextStyle(color: Colors.grey),
+                                      style:GoogleFonts.montserrat(
+                                        color: Colors.grey,fontSize: 12
+                                      ),
                                     )
                                   ],
                                 ),
