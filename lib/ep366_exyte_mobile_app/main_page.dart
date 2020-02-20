@@ -69,18 +69,30 @@ class _ExyteMobileAppState extends State<SecondPage> {
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height / 8,
-
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Container(
                           width: 140,
-                          margin: EdgeInsets.only(right: 16,
-                          top: 8,
-                          bottom: 8),
+                          margin: EdgeInsets.only(right: 16, top: 8, bottom: 8),
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(16)
+                              color: Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                flex:2,
+                                child: Center(
+                                  child: Icon(
+                                    Icons.apps,
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 3,
+                                child: Placeholder(),
+                              )
+                            ],
                           ),
                         );
                       },
