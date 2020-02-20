@@ -146,11 +146,10 @@ class _ExyteMobileAppState extends State<SecondPage> {
                     height: 16,
                   ),
                   Text(
-                    "On the other hand, we denouncewith nighteous indignation and dislike men who are so "
-                    "beguiled and demoralized by charms",
-                    style:  GoogleFonts.montserrat()
-                        .copyWith(color: Colors.white, fontSize: 12)
-                  ),
+                      "On the other hand, we denouncewith nighteous indignation and dislike men who are so "
+                      "beguiled and demoralized by charms",
+                      style: GoogleFonts.montserrat()
+                          .copyWith(color: Colors.white, fontSize: 12)),
                   SizedBox(
                     height: 16,
                   ),
@@ -163,9 +162,12 @@ class _ExyteMobileAppState extends State<SecondPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8),
-
                         ),
-                        child: Center(child: Text("Fintech",style: GoogleFonts.montserrat(),)),
+                        child: Center(
+                            child: Text(
+                          "Fintech",
+                          style: GoogleFonts.montserrat(),
+                        )),
                       ),
                       Container(
                         height: 24,
@@ -173,8 +175,12 @@ class _ExyteMobileAppState extends State<SecondPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8),
-                        ),child: Center(child: Text("Platform",
-                      style: GoogleFonts.montserrat(),)),
+                        ),
+                        child: Center(
+                            child: Text(
+                          "Platform",
+                          style: GoogleFonts.montserrat(),
+                        )),
                       )
                     ],
                   ),
