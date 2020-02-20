@@ -73,10 +73,10 @@ class _ExyteMobileAppState extends State<SecondPage> {
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Container(
-                          width: 140,
+                          width: 130,
                           margin: EdgeInsets.only(right: 16, top: 8, bottom: 8),
                           decoration: BoxDecoration(
-                              color: Colors.grey.shade300,
+                              color: Colors.grey.shade200,
                               borderRadius: BorderRadius.circular(16)),
                           child: Row(
                             children: <Widget>[
@@ -126,7 +126,46 @@ class _ExyteMobileAppState extends State<SecondPage> {
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(48),
                     topRight: Radius.circular(48),
-                  )),
+                  ),),
+              padding: EdgeInsets.only(left: 32,
+              top: 32, bottom: 24),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Description",
+                  style: TextStyle(
+                    color: Colors.white
+                  ),),
+                  Text("On the other hand, we denouncewith nighteous indignation and dislike men who are so "
+                      "beguiled and demoralized by charms",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        height: 24,
+                        width: 80,
+                        margin: EdgeInsets.only(right: 8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+
+                      Container(
+                        height: 24,
+                        width: 80,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
           )
         ],
@@ -134,3 +173,19 @@ class _ExyteMobileAppState extends State<SecondPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
