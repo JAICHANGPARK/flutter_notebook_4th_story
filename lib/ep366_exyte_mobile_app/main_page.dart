@@ -90,7 +90,19 @@ class _ExyteMobileAppState extends State<SecondPage> {
                               ),
                               Expanded(
                                 flex: 3,
-                                child: Placeholder(),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Text("7 days",style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),),
+                                    SizedBox(height: 4,),
+                                    Text("Design",style: TextStyle(
+                                      color: Colors.grey
+                                    ),)
+                                  ],
+                                ),
                               )
                             ],
                           ),
