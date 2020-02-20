@@ -191,7 +191,7 @@ class _ExyteMobileAppState extends State<SecondPage> {
                     height: 32,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.grey,
+
                     ),
                     child: Stack(
                       children: <Widget>[
@@ -202,6 +202,22 @@ class _ExyteMobileAppState extends State<SecondPage> {
                           left: 16,
                           child: CircleAvatar(
                             backgroundColor: Colors.red,
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          bottom: 0,
+                          left: 32,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.green,
+                          ),
+                        ),
+                        Positioned(
+                          top: 0,
+                          bottom: 0,
+                          left: 48,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.pinkAccent,
                           ),
                         )
                       ],
