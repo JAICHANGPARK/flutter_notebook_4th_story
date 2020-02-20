@@ -163,7 +163,9 @@ class _ExyteMobileAppState extends State<SecondPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8),
+
                         ),
+                        child: Center(child: Text("Fintech",style: GoogleFonts.montserrat(),)),
                       ),
                       Container(
                         height: 24,
@@ -171,7 +173,8 @@ class _ExyteMobileAppState extends State<SecondPage> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8),
-                        ),
+                        ),child: Center(child: Text("Platform",
+                      style: GoogleFonts.montserrat(),)),
                       )
                     ],
                   ),
