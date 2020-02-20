@@ -81,7 +81,7 @@ class _ExyteMobileAppState extends State<SecondPage> {
                           child: Row(
                             children: <Widget>[
                               Expanded(
-                                flex:2,
+                                flex: 2,
                                 child: Center(
                                   child: Icon(
                                     Icons.apps,
@@ -94,13 +94,19 @@ class _ExyteMobileAppState extends State<SecondPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
-                                    Text("7 days",style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),),
-                                    SizedBox(height: 4,),
-                                    Text("Design",style: TextStyle(
-                                      color: Colors.grey
-                                    ),)
+                                    Text(
+                                      "7 days",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 4,
+                                    ),
+                                    Text(
+                                      "Design",
+                                      style: TextStyle(color: Colors.grey),
+                                    )
                                   ],
                                 ),
                               )
@@ -122,26 +128,32 @@ class _ExyteMobileAppState extends State<SecondPage> {
             child: Container(
               height: MediaQuery.of(context).size.height / 3.3,
               decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(48),
-                    topRight: Radius.circular(48),
-                  ),),
-              padding: EdgeInsets.only(left: 32,
-              top: 32, bottom: 24),
+                color: Colors.black,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(48),
+                  topRight: Radius.circular(48),
+                ),
+              ),
+              padding: EdgeInsets.only(left: 32, top: 32, bottom: 8, right: 32),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text("Description",
-                  style: TextStyle(
-                    color: Colors.white
-                  ),),
-                  Text("On the other hand, we denouncewith nighteous indignation and dislike men who are so "
-                      "beguiled and demoralized by charms",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),),
+                      style: GoogleFonts.montserrat()
+                          .copyWith(color: Colors.white, fontSize: 18)),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Text(
+                    "On the other hand, we denouncewith nighteous indignation and dislike men who are so "
+                    "beguiled and demoralized by charms",
+                    style:  GoogleFonts.montserrat()
+                        .copyWith(color: Colors.white, fontSize: 12)
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
                   Row(
                     children: <Widget>[
                       Container(
@@ -153,7 +165,6 @@ class _ExyteMobileAppState extends State<SecondPage> {
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
-
                       Container(
                         height: 24,
                         width: 80,
@@ -163,6 +174,29 @@ class _ExyteMobileAppState extends State<SecondPage> {
                         ),
                       )
                     ],
+                  ),
+                  SizedBox(
+                    height: 13,
+                  ),
+                  Container(
+                    height: 32,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        CircleAvatar(),
+                        Positioned(
+                          top: 0,
+                          bottom: 0,
+                          left: 16,
+                          child: CircleAvatar(
+                            backgroundColor: Colors.red,
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -173,19 +207,3 @@ class _ExyteMobileAppState extends State<SecondPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
