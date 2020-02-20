@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,9 +69,18 @@ class _ExyteMobileAppState extends State<SecondPage> {
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height / 8,
-                    decoration: BoxDecoration(color: Colors.grey),
+                   
                     child: ListView.builder(
-                      itemBuilder: (context, index) {},
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: 120,
+                          margin: EdgeInsets.only(right: 16),
+                          decoration: BoxDecoration(
+                            color: Colors.grey
+                          ),
+                        );
+                      },
                       itemCount: 4,
                     ),
                   )
