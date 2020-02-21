@@ -19,6 +19,7 @@ class HandMadeMainPage extends StatefulWidget {
 }
 
 class _HandMadeAppState extends State<HandMadeMainPage> {
+  final _pageController = PageController(viewportFraction: 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +33,7 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage("https://cdn.pixabay.com/photo/2015/06/09/20/36/portrait-804062_960_720.jpg"),
+                  image: NetworkImage("https://cdn.pixabay.com/photo/2017/04/09/08/00/girl-2215071_960_720.jpg"),
                   fit: BoxFit.cover,
                 )
               ),
@@ -52,6 +53,28 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
               ),
             ),
           ),
+          Positioned(
+            left: 16,
+            bottom: 16,
+            right: 16,
+            top: MediaQuery.of(context).size.height / 1.8,
+            child: PageView(
+              controller: _pageController,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                  ),
+                ),
+
+              ],
+            ),
+          )
 
         ],
       ),
