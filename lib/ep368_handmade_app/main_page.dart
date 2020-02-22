@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-const Color primaryColor =  Color(0xff8c6e6b);
+const Color primaryColor = Color(0xff8c6e6b);
 const Color secondaryColor = Color(0xffC5BCBC);
 
 class HandMadeApp extends StatelessWidget {
@@ -11,16 +11,18 @@ class HandMadeApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       routes: {
-        '/': (context) =>HandMadeHomePage(),
-        '/home' : (context) => HandMadeMainPage(),
+        '/': (context) => HandMadeHomePage(),
+        '/home': (context) => HandMadeMainPage(),
       },
     );
   }
 }
+
 class HandMadeMainPage extends StatefulWidget {
   @override
   _HandMadeAppState createState() => _HandMadeAppState();
 }
+
 class _HandMadeAppState extends State<HandMadeMainPage> {
   final _pageController = PageController(viewportFraction: 1);
 
@@ -73,7 +75,9 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                 child: SmoothPageIndicator(
                   controller: _pageController,
                   count: 4,
-                  effect: WormEffect(activeDotColor:Color(0xffC5BCBC),),
+                  effect: WormEffect(
+                    activeDotColor: Color(0xffC5BCBC),
+                  ),
                 ),
               ),
             ),
@@ -98,7 +102,8 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                         "METAMORPHOSE",
                         style: GoogleFonts.openSans(
                             color: Color(0xff8c6e6b),
-                            fontSize: 16, letterSpacing: 1.2),
+                            fontSize: 16,
+                            letterSpacing: 1.2),
                       ),
                       SizedBox(
                         height: 16,
@@ -137,8 +142,7 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(16)
-                                  ),
+                                      topRight: Radius.circular(16)),
                                   color: Color(0xff8c6e6b),
                                   // 140 110 107
                                 ),
@@ -148,7 +152,7 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                                     style: GoogleFonts.merriweather(
                                         fontSize: 16,
                                         fontWeight: FontWeight.w300,
-                                    color: Colors.white),
+                                        color: Colors.white),
                                   ),
                                 ),
                               ),
@@ -183,57 +187,55 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
   }
 }
 
-
 class HandMadeHomePage extends StatefulWidget {
   @override
   _HandMadeHomePageState createState() => _HandMadeHomePageState();
 }
 
 class _HandMadeHomePageState extends State<HandMadeHomePage> {
-  final PageController _pageController = PageController(
-    viewportFraction: 0.9
-  );
-  List<Widget> _buildBackgroud(){
+  final PageController _pageController = PageController(viewportFraction: 0.9);
+
+  List<Widget> _buildBackgroud() {
     return [
       Positioned(
         left: 0,
         right: 0,
         top: 0,
         child: Container(
-          height: MediaQuery.of(context).size.height /2.5,
+          height: MediaQuery.of(context).size.height / 2.5,
           decoration: BoxDecoration(
               color: Colors.grey,
               image: DecorationImage(
-                  image: NetworkImage("https://cdn.pixabay.com/photo/2017/03/30/18/17/girl-2189247_960_720.jpg"),
+                  image: NetworkImage(
+                      "https://cdn.pixabay.com/photo/2017/03/30/18/17/girl-2189247_960_720.jpg"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
                     Colors.grey,
                     BlendMode.color,
-                  )
-              )
-          ),
+                  ))),
         ),
       ),
       Positioned(
         left: 0,
         right: 0,
-        top: MediaQuery.of(context).size.height /2.5,
+        top: MediaQuery.of(context).size.height / 2.5,
         child: Container(
-          height: MediaQuery.of(context).size.height /3.4,
+          height: MediaQuery.of(context).size.height / 3.4,
           color: Colors.white,
         ),
       ),
       Positioned(
         left: 0,
         right: 0,
-        top: MediaQuery.of(context).size.height /2.5 * 1.75,
+        top: MediaQuery.of(context).size.height / 2.5 * 1.75,
         child: Container(
-          height: MediaQuery.of(context).size.height /2.5 ,
+          height: MediaQuery.of(context).size.height / 2.5,
           color: Color(0xffC5BCBC),
         ),
       ),
     ];
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -251,31 +253,71 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(right: 16),
+                    margin: EdgeInsets.only(right: 24),
                     decoration: BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(24),
-                        bottomLeft: Radius.circular(24),
-                      )
-                    ),
+                        color: primaryColor,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        )),
                   ),
                   Container(
+                    margin: EdgeInsets.only(right: 24),
                     decoration: BoxDecoration(
-                        color: Colors.green
-                    ),
+
+                        color: secondaryColor,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        )),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 24),
+                    decoration: BoxDecoration(
+                        color: primaryColor,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        )),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(right: 24),
+                    decoration: BoxDecoration(
+
+                        color: secondaryColor,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(24),
+                          bottomLeft: Radius.circular(24),
+                        )),
                   ),
                 ],
+              ),
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: MediaQuery.of(context).size.height / 2.1,
+            child: Container(
+              height: 32,
+
+              child: Center(
+                child: SmoothPageIndicator(
+                  controller: _pageController,
+                  count: 4,
+                  effect: WormEffect(
+
+                    dotWidth: 10,
+                    dotHeight: 10,
+                    activeDotColor: primaryColor,
+                    dotColor: secondaryColor
+                  ),
+                ),
               ),
             ),
           )
         ],
       ),
-
-
-
     );
   }
 }
-
-
