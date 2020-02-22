@@ -8,17 +8,16 @@ class HandMadeApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       routes: {
-        '/': (context) => HandMadeMainPage(),
+        '/': (context) =>HandMadeHomePage(),
+        '/home' : (context) => HandMadeMainPage(),
       },
     );
   }
 }
-
 class HandMadeMainPage extends StatefulWidget {
   @override
   _HandMadeAppState createState() => _HandMadeAppState();
 }
-
 class _HandMadeAppState extends State<HandMadeMainPage> {
   final _pageController = PageController(viewportFraction: 1);
 
@@ -71,7 +70,7 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                 child: SmoothPageIndicator(
                   controller: _pageController,
                   count: 4,
-                  effect: WormEffect(activeDotColor: Colors.pinkAccent),
+                  effect: WormEffect(activeDotColor:Color(0xffC5BCBC),),
                 ),
               ),
             ),
@@ -95,6 +94,7 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                       Text(
                         "METAMORPHOSE",
                         style: GoogleFonts.openSans(
+                            color: Color(0xff8c6e6b),
                             fontSize: 16, letterSpacing: 1.2),
                       ),
                       SizedBox(
@@ -132,12 +132,20 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                             Expanded(
                               flex: 8,
                               child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(16)
+                                  ),
+                                  color: Color(0xff8c6e6b),
+                                  // 140 110 107
+                                ),
                                 child: Center(
                                   child: Text(
                                     "see details",
                                     style: GoogleFonts.merriweather(
                                         fontSize: 16,
-                                        fontWeight: FontWeight.w300),
+                                        fontWeight: FontWeight.w300,
+                                    color: Colors.white),
                                   ),
                                 ),
                               ),
@@ -171,3 +179,22 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
     );
   }
 }
+
+
+class HandMadeHomePage extends StatefulWidget {
+  @override
+  _HandMadeHomePageState createState() => _HandMadeHomePageState();
+}
+
+class _HandMadeHomePageState extends State<HandMadeHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+
+      
+    );
+  }
+}
+
+
