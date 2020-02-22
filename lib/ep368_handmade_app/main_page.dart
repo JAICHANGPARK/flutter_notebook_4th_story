@@ -253,6 +253,10 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Container(
+                    padding: EdgeInsets.only(left: 16,
+                    right: 16,
+                    top: 24,
+                    bottom: 24),
                     margin: EdgeInsets.only(right: 24),
                     decoration: BoxDecoration(
                         color: primaryColor,
@@ -260,6 +264,29 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                           topRight: Radius.circular(24),
                           bottomLeft: Radius.circular(24),
                         )),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("METAMORPHOSE",style: GoogleFonts.openSans(
+                          color: Colors.white,
+                          letterSpacing: 2
+                        ),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text("BIRD BROOCH",
+                              style: GoogleFonts.merriweather(
+                                fontSize: 20,
+                                color: Colors.white,
+                                letterSpacing: 4
+                              ),
+                            ),
+                            Icon(Icons.arrow_forward, color: Colors.white,)
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   Container(
                     margin: EdgeInsets.only(right: 24),
