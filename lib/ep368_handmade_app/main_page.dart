@@ -131,7 +131,16 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                             ),
                             Expanded(
                               flex: 8,
-                              child: Placeholder(),
+                              child: Container(
+                                child: Center(
+                                  child: Text(
+                                    "see details",
+                                    style: GoogleFonts.merriweather(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w300),
+                                  ),
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -154,7 +163,6 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
                     color: Colors.blue,
                   ),
                 ),
-
               ],
             ),
           )
