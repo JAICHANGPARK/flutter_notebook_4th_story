@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep368_handmade_app/best_sellers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -343,42 +344,45 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
           Positioned(
             left: 24,
             right: 0,
-            top: MediaQuery.of(context).size.height /1.85,
+            top: MediaQuery.of(context).size.height / 1.85,
             child: Container(
               height: MediaQuery.of(context).size.height / 2,
-
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text("Best Sellers",style:GoogleFonts.merriweather(
-                        fontSize: 22,
-                        letterSpacing: 2),),
-                    SizedBox(height: 24,),
+                    Text(
+                      "Best Sellers",
+                      style: GoogleFonts.merriweather(
+                          fontSize: 22, letterSpacing: 2),
+                    ),
+                    SizedBox(
+                      height: 24,
+                    ),
                     Container(
                       height: 180,
                       child: ListView.builder(
+                          itemCount: bestSellers.length,
                           scrollDirection: Axis.horizontal,
-                          itemBuilder:
-                      (context, index){
-                        return Container(width:
-                          130,
-                        margin: EdgeInsets.only(right: 16),
-                        color: Colors.blue,
-                        child: Column(
-                          children: <Widget>[
-                            Expanded(
-                              flex: 5,
-                              child: Placeholder(),
-                            ),
-                            Expanded(
-                              flex: 3,
-                              child: Placeholder(),
-
-                            )
-                          ],
-                        ),);
-                      }),
+                          itemBuilder: (context, index) {
+                            return Container(
+                              width: 130,
+                              margin: EdgeInsets.only(right: 16),
+                              color: Colors.blue,
+                              child: Column(
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 5,
+                                    child: Placeholder(),
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Placeholder(),
+                                  )
+                                ],
+                              ),
+                            );
+                          }),
                     )
                   ],
                 ),
@@ -390,13 +394,3 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
