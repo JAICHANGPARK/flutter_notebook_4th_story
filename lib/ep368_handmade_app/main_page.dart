@@ -369,12 +369,19 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                             return Container(
                               width: 120,
                               margin: EdgeInsets.only(right: 16),
-
                               child: Column(
                                 children: <Widget>[
                                   Expanded(
                                     flex: 6,
-                                    child: Placeholder(),
+                                    child: Container(
+                                      height: double.infinity,
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                              image: NetworkImage(
+                                                  bestSellers[index].img),
+                                              fit: BoxFit.cover)),
+                                    ),
                                   ),
                                   Expanded(
                                     flex: 3,
@@ -408,25 +415,30 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                                                     ),
                                                   )),
                                               Expanded(
-                                                  flex: 6,
-                                                  child:
-                                                  bestSellers[index].freeDelivery ?
-                                                  Container(
-                                                    margin: EdgeInsets.symmetric(vertical: 2),
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.white,
-                                                      borderRadius: BorderRadius.circular(3)
-                                                    ),
-                                                    child: Center(
-                                                      child:
-                                                      Text("Free delivery" ,style: TextStyle(
-                                                        fontSize: 12,
-                                                        color: primaryColor
-                                                      ),),
-                                                    ),
-                                                  ) : Container(),
-
-
+                                                flex: 6,
+                                                child: bestSellers[index]
+                                                        .freeDelivery
+                                                    ? Container(
+                                                        margin: EdgeInsets
+                                                            .symmetric(
+                                                                vertical: 3),
+                                                        decoration: BoxDecoration(
+                                                            color: Colors.white,
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        3)),
+                                                        child: Center(
+                                                          child: Text(
+                                                            "Free delivery",
+                                                            style: TextStyle(
+                                                                fontSize: 12,
+                                                                color:
+                                                                    primaryColor),
+                                                          ),
+                                                        ),
+                                                      )
+                                                    : Container(),
                                               ),
                                             ],
                                           ),
@@ -438,6 +450,21 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                               ),
                             );
                           }),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height / 3,
+                      color: Colors.blueGrey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            "New Arrivals",
+                            style: GoogleFonts.merriweather(
+                                fontSize: 22, letterSpacing: 2),
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
