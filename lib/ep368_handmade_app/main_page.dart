@@ -339,9 +339,64 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                 ),
               ),
             ),
+          ),
+          Positioned(
+            left: 24,
+            right: 0,
+            top: MediaQuery.of(context).size.height /1.85,
+            child: Container(
+              height: MediaQuery.of(context).size.height / 2,
+
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("Best Sellers",style:GoogleFonts.merriweather(
+                        fontSize: 24,
+                        letterSpacing: 4),),
+                    SizedBox(height: 24,),
+                    Container(
+                      height: 180,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder:
+                      (context, index){
+                        return Container(width:
+                          130,
+                        margin: EdgeInsets.only(right: 16),
+                        color: Colors.blue,
+                        child: Column(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 4,
+                              child: Placeholder(),
+                            ),
+                            Expanded(
+                              flex: 3,
+                              child: Placeholder(),
+
+                            )
+                          ],
+                        ),);
+                      }),
+                    )
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
