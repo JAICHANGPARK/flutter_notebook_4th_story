@@ -26,7 +26,13 @@ class HandMadeMainPage extends StatefulWidget {
 }
 
 class _HandMadeAppState extends State<HandMadeMainPage> {
-  final _pageController = PageController(viewportFraction: 1);
+  PageController _pageController;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController(viewportFraction: 1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +79,7 @@ class _HandMadeAppState extends State<HandMadeMainPage> {
             right: 16,
             top: MediaQuery.of(context).size.height / 1.9,
             child: Container(
-              height: 24,
+              height: 38,
               child: Center(
                 child: SmoothPageIndicator(
                   controller: _pageController,
@@ -285,7 +291,7 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                                   letterSpacing: 4),
                             ),
                             GestureDetector(
-                              onTap: (){
+                              onTap: () {
                                 Navigator.of(context).pushNamed("/home");
                               },
                               child: Icon(
@@ -457,7 +463,9 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                             );
                           }),
                     ),
-                    SizedBox(height: 24,),
+                    SizedBox(
+                      height: 24,
+                    ),
                     Container(
                       width: double.infinity,
                       height: MediaQuery.of(context).size.height / 3,
@@ -469,15 +477,16 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                             style: GoogleFonts.merriweather(
                                 fontSize: 22, letterSpacing: 2),
                           ),
-                          SizedBox(height: 16,),
+                          SizedBox(
+                            height: 16,
+                          ),
                           Container(
                             height: 150,
                             decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage("https://cdn.pixabay.com/photo/2017/11/29/09/15/paint-2985569__340.jpg"),
-                                fit: BoxFit.cover
-                              )
-                            ),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://cdn.pixabay.com/photo/2017/11/29/09/15/paint-2985569__340.jpg"),
+                                    fit: BoxFit.cover)),
                           )
                         ],
                       ),
