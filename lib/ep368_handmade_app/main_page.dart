@@ -352,8 +352,8 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text("Best Sellers",style:GoogleFonts.merriweather(
-                        fontSize: 24,
-                        letterSpacing: 4),),
+                        fontSize: 22,
+                        letterSpacing: 2),),
                     SizedBox(height: 24,),
                     Container(
                       height: 180,
@@ -368,7 +368,7 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                         child: Column(
                           children: <Widget>[
                             Expanded(
-                              flex: 4,
+                              flex: 5,
                               child: Placeholder(),
                             ),
                             Expanded(
