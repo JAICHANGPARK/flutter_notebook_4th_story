@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notebook_4th/ep368_handmade_app/best_sellers.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -366,18 +367,72 @@ class _HandMadeHomePageState extends State<HandMadeHomePage> {
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
                             return Container(
-                              width: 130,
+                              width: 120,
                               margin: EdgeInsets.only(right: 16),
-                              color: Colors.blue,
+
                               child: Column(
                                 children: <Widget>[
                                   Expanded(
-                                    flex: 5,
+                                    flex: 6,
                                     child: Placeholder(),
                                   ),
                                   Expanded(
                                     flex: 3,
-                                    child: Placeholder(),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        Expanded(
+                                          flex: 1,
+                                          child: Align(
+                                            alignment: Alignment.centerLeft,
+                                            child: Text(
+                                              bestSellers[index].title,
+                                              style: TextStyle(
+                                                fontSize: 13,
+                                                color: primaryColor,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          flex: 1,
+                                          child: Row(
+                                            children: <Widget>[
+                                              Expanded(
+                                                  flex: 3,
+                                                  child: Text(
+                                                    "\$${bestSellers[index].price}",
+                                                    style: TextStyle(
+                                                      fontSize: 16,
+                                                    ),
+                                                  )),
+                                              Expanded(
+                                                  flex: 6,
+                                                  child:
+                                                  bestSellers[index].freeDelivery ?
+                                                  Container(
+                                                    margin: EdgeInsets.symmetric(vertical: 2),
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.white,
+                                                      borderRadius: BorderRadius.circular(3)
+                                                    ),
+                                                    child: Center(
+                                                      child:
+                                                      Text("Free delivery" ,style: TextStyle(
+                                                        fontSize: 12,
+                                                        color: primaryColor
+                                                      ),),
+                                                    ),
+                                                  ) : Container(),
+
+
+                                              ),
+                                            ],
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   )
                                 ],
                               ),
