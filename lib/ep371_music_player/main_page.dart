@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Color backgroundColor = Color(0xff7800ee);
 
@@ -70,6 +71,30 @@ class _MainPageState extends State<MainPage> {
                   color: Color(0xff6e00db),
                   borderRadius:
                       BorderRadius.only(topLeft: Radius.circular(42))),
+            ),
+          ),
+          Positioned(
+            left: 42,
+            top: MediaQuery.of(context).size.height /1.95,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text("Head Shaker", style: GoogleFonts.montserrat(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold
+                ),),
+                Row(
+                  children: <Widget>[
+                    Icon(Icons.cloud_queue, color: Colors.orange,),
+                    SizedBox(width: 8,),
+                    Text("247k Followers",style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: Colors.white,
+                    ),)
+                  ],
+                )
+              ],
             ),
           )
         ],
