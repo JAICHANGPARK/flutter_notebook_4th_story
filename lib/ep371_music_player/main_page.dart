@@ -75,23 +75,33 @@ class _MainPageState extends State<MainPage> {
           ),
           Positioned(
             left: 42,
-            top: MediaQuery.of(context).size.height /1.95,
+            top: MediaQuery.of(context).size.height / 1.95,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("Head Shaker", style: GoogleFonts.montserrat(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold
-                ),),
+                Text(
+                  "Head Shaker",
+                  style: GoogleFonts.montserrat(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
+                ),
                 Row(
                   children: <Widget>[
-                    Icon(Icons.cloud_queue, color: Colors.orange,),
-                    SizedBox(width: 8,),
-                    Text("247k Followers",style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      color: Colors.white,
-                    ),)
+                    Icon(
+                      Icons.cloud_queue,
+                      color: Colors.orange,
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "247k Followers",
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        color: Colors.white,
+                      ),
+                    )
                   ],
                 )
               ],
@@ -102,15 +112,3 @@ class _MainPageState extends State<MainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
