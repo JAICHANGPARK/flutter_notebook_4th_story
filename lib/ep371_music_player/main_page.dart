@@ -88,7 +88,7 @@ class _MainPageState extends State<MainPage> {
                         Container(
                           margin: EdgeInsets.only(top: 16, left: 0),
                           width: MediaQuery.of(context).size.width / 1.8,
-                          decoration: BoxDecoration(color: Colors.yellow),
+//                          decoration: BoxDecoration(color: Colors.yellow),
                           child: ListView.builder(
                             padding: EdgeInsets.zero,
                             itemBuilder: (BuildContext context, int index) {
@@ -96,7 +96,7 @@ class _MainPageState extends State<MainPage> {
                                 height: 84,
                                 margin: EdgeInsets.only(bottom: 16),
                                 decoration: BoxDecoration(
-                                  color: Colors.purple,
+//                                  color: Colors.purple,
                                 ),
                                 child: Row(
                                   children: <Widget>[
