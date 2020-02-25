@@ -67,41 +67,74 @@ class _MainPageState extends State<MainPage> {
             left: 48,
             child: Container(
               height: MediaQuery.of(context).size.height / 2.7,
+              padding: EdgeInsets.only(left: 24, top: 24),
               decoration: BoxDecoration(
                   color: Color(0xff6e00db),
                   borderRadius:
                       BorderRadius.only(topLeft: Radius.circular(42))),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Recent Songs",style: TextStyle(
-                    color: Colors.white,
-                  ),),
+                  Text("Recent Songs",
+                      style: GoogleFonts.montserrat(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600)),
                   Container(
-                    height: 257,
+                    height: 224,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(
-                            top: 24,
-                            left: 24
-                          ),
-                          width: MediaQuery.of(context).size.width / 1.5,
-                          decoration: BoxDecoration(
-                            color: Colors.yellow
+                          margin: EdgeInsets.only(top: 16, left: 0),
+                          width: MediaQuery.of(context).size.width / 1.8,
+                          decoration: BoxDecoration(color: Colors.yellow),
+                          child: ListView.builder(
+                            padding: EdgeInsets.zero,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                height: 84,
+                                margin: EdgeInsets.only(bottom: 16),
+                                decoration: BoxDecoration(
+                                  color: Colors.purple,
+                                ),
+                                child: Row(
+                                  children: <Widget>[
+                                    CircleAvatar(
+                                      radius: 32,
+                                    ),
+                                    SizedBox(width: 12,),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Secrets",
+                                          style: GoogleFonts.montserrat(
+                                              color: Colors.white,
+                                          fontSize: 18),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "Not a Hobby 2020",
+                                          style: GoogleFonts.montserrat(
+                                              color: Colors.grey.shade200),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(
-                              top: 24,
-                              left: 24
-                          ),
-                          width: MediaQuery.of(context).size.width / 1.5,
-                          decoration: BoxDecoration(
-                              color: Colors.yellow
-                          ),
+                          margin: EdgeInsets.only(top: 16, left: 24),
+                          width: MediaQuery.of(context).size.width / 1.8,
+                          decoration: BoxDecoration(color: Colors.yellow),
                         )
-
                       ],
                     ),
                   ),
