@@ -71,17 +71,40 @@ class _MainPageState extends State<MainPage> {
                   color: Color(0xff6e00db),
                   borderRadius:
                       BorderRadius.only(topLeft: Radius.circular(42))),
-              child: ListView(
-                scrollDirection: Axis.horizontal,
+              child: Column(
                 children: <Widget>[
+                  Text("Recent Songs",style: TextStyle(
+                    color: Colors.white,
+                  ),),
                   Container(
-                    margin: EdgeInsets.all(16),
-                    width: MediaQuery.of(context).size.width / 1.5,
-                    decoration: BoxDecoration(
-                      color: Colors.yellow
-                    ),
-                  )
+                    height: 257,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(
+                            top: 24,
+                            left: 24
+                          ),
+                          width: MediaQuery.of(context).size.width / 1.5,
+                          decoration: BoxDecoration(
+                            color: Colors.yellow
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(
+                              top: 24,
+                              left: 24
+                          ),
+                          width: MediaQuery.of(context).size.width / 1.5,
+                          decoration: BoxDecoration(
+                              color: Colors.yellow
+                          ),
+                        )
 
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
