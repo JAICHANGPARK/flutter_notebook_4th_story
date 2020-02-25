@@ -71,6 +71,19 @@ class _MainPageState extends State<MainPage> {
                   color: Color(0xff6e00db),
                   borderRadius:
                       BorderRadius.only(topLeft: Radius.circular(42))),
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.all(16),
+                    width: MediaQuery.of(context).size.width / 1.5,
+                    decoration: BoxDecoration(
+                      color: Colors.yellow
+                    ),
+                  )
+
+                ],
+              ),
             ),
           ),
           Positioned(
