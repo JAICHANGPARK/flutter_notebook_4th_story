@@ -102,6 +102,7 @@ class _MainPageState extends State<MainPage> {
                                   children: <Widget>[
                                     CircleAvatar(
                                       radius: 32,
+                                      backgroundColor: Colors.yellow,
                                     ),
                                     SizedBox(width: 12,),
                                     Column(
@@ -131,10 +132,50 @@ class _MainPageState extends State<MainPage> {
                           ),
                         ),
                         Container(
-                          margin: EdgeInsets.only(top: 16, left: 24),
+                          margin: EdgeInsets.only(top: 16, left: 0),
                           width: MediaQuery.of(context).size.width / 1.8,
-                          decoration: BoxDecoration(color: Colors.yellow),
-                        )
+//                          decoration: BoxDecoration(color: Colors.yellow),
+                          child: ListView.builder(
+                            padding: EdgeInsets.zero,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                height: 84,
+                                margin: EdgeInsets.only(bottom: 16),
+                                decoration: BoxDecoration(
+//                                  color: Colors.purple,
+                                ),
+                                child: Row(
+                                  children: <Widget>[
+                                    CircleAvatar(
+                                      radius: 32,
+                                    ),
+                                    SizedBox(width: 12,),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Secrets",
+                                          style: GoogleFonts.montserrat(
+                                              color: Colors.white,
+                                              fontSize: 18),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          "Not a Hobby 2020",
+                                          style: GoogleFonts.montserrat(
+                                              color: Colors.grey.shade200),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
                       ],
                     ),
                   ),
