@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_notebook_4th/ep371_music_player/main_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PlayPage extends StatefulWidget {
@@ -34,7 +35,7 @@ class _PlayPageState extends State<PlayPage> {
           Positioned(
             left: 64,
             right: 64,
-            top: 120,
+            top: 100,
             child: Container(
               height: 260,
               width: MediaQuery.of(context).size.width - 100,
@@ -56,14 +57,15 @@ class _PlayPageState extends State<PlayPage> {
           Positioned(
             left: 16,
             right: 16,
-            top: 440,
+            top: 410,
             child: Container(
               height: 180,
-              color: Colors.blue,
               child: Column(
                 children: <Widget>[
                   Icon(Icons.music_note),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   Text(
                     "Sam Fischer",
                     style: GoogleFonts.montserrat(
@@ -75,7 +77,9 @@ class _PlayPageState extends State<PlayPage> {
                     "This City",
                     style: GoogleFonts.montserrat(),
                   ),
-                  SizedBox(height: 24,),
+                  SizedBox(
+                    height: 24,
+                  ),
                   Container(
                     height: 52,
                     color: Colors.red,
@@ -83,16 +87,48 @@ class _PlayPageState extends State<PlayPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text("1:35", style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.bold
-                      ),),
-                      Text("3:42", style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.bold
-                      ),)
+                      Text(
+                        "1:35",
+                        style:
+                            GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "3:42",
+                        style:
+                            GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+                      )
                     ],
                   )
                 ],
               ),
+            ),
+          ),
+          Positioned(
+            left: 24,
+            right: 24,
+            bottom: 16,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Icon(Icons.refresh),
+                Icon(Icons.skip_previous),
+                Card(
+                  color:backgroundColor,
+                  elevation: 12,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16)
+                  ),
+                  child:Container(
+                    height: 84,
+                    width: 48,
+                    child: Center(
+                      child: Icon(Icons.play_arrow, color: Colors.white,),
+                    ),
+                  )
+                ),
+                Icon(Icons.skip_next),
+                Icon(Icons.shuffle),
+              ],
             ),
           )
         ],
