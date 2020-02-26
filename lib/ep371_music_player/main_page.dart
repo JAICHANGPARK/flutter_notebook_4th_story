@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep371_music_player/play_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Color backgroundColor = Color(0xff7800ee);
@@ -45,18 +46,25 @@ class _MainPageState extends State<MainPage> {
           Positioned(
             right: 48,
             top: MediaQuery.of(context).size.height / 2.4,
-            child: Container(
-              height: 84,
-              width: 84,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-              ),
-              child: Center(
-                child: Icon(
-                  Icons.play_arrow,
-                  color: backgroundColor,
-                  size: 48,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) =>PlayPage()
+                ));
+              },
+              child: Container(
+                height: 84,
+                width: 84,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Icon(
+                    Icons.play_arrow,
+                    color: backgroundColor,
+                    size: 48,
+                  ),
                 ),
               ),
             ),
