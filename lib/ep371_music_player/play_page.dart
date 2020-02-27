@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class _PlayPageState extends State<PlayPage> {
   double barWidth = 5.0;
   double soundPosition = 0.0;
   double nextSoundPosition = 140.0;
-  Random r = Random();
+  Random r = math.Random();
   @override
   void initState() {
     // TODO: implement initState
@@ -201,12 +202,24 @@ class ArcPainter extends CustomPainter{
   @override
   void paint(Canvas canvas, Size size) {
     // TODO: implement paint
+    final rect = Rect.fromLTRB(50, 100, 150, 200);
+    final startAngle = -math.pi;
+    final sweepAngle = -math.pi;
+    final useCenter = false;
+    final paint = Paint()..
+    color = Colors.black..
+    style = PaintingStyle.stroke
+    ..strokeWidth = 2;
+
+    canvas.drawArc(rect, startAngle, sweepAngle, useCenter, paint);
+
+
   }
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     // TODO: implement shouldRepaint
-    throw UnimplementedError();
+    return false;
   }
 }
 
