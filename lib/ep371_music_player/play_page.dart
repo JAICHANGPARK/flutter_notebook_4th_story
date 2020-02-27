@@ -73,6 +73,22 @@ class _PlayPageState extends State<PlayPage> {
             ),
           ),
           Positioned(
+            left: 24,
+            right: 24,
+            top: 100,
+            child: Container(
+              height: 300,
+              color: Colors.grey.shade50.withOpacity(0.2),
+              child: CustomPaint(
+                size: Size(300, 300),
+                painter: ArcPainter(),
+
+              ),
+            ),
+            
+          ),
+          
+          Positioned(
             left: 16,
             right: 16,
             top: 410,
@@ -151,7 +167,6 @@ class _PlayPageState extends State<PlayPage> {
                         soundBars.add(r.nextInt((52)));
                       }
                       setState(() {
-
                       });
                   },
                 ),
@@ -181,3 +196,42 @@ class _PlayPageState extends State<PlayPage> {
     );
   }
 }
+
+class ArcPainter extends CustomPainter{
+  @override
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    // TODO: implement shouldRepaint
+    throw UnimplementedError();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
