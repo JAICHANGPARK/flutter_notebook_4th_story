@@ -26,11 +26,58 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
             flex: 2,
             child: Container(
               color: Colors.yellow,
+              child: SafeArea(
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 8),
+                        child: Row(
+                          children: <Widget>[
+                            Icon(Icons.keyboard_arrow_left),
+                            Icon(Icons.menu),
+                            Spacer(
+                              flex: 3,
+                            ),
+                            Text("SHOPPING CART",style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),),
+                            Spacer(
+                              flex: 4,
+                            ),
+                            Icon(Icons.add_shopping_cart),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8
+                        ),
+                        child: Row(
+                          children: <Widget>[
+                            Icon(Icons.markunread_mailbox),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Send as a gift",style: TextStyle(
+                                fontWeight: FontWeight.bold
+                              ),),
+                            ),
+                            Spacer(),
+                            Icon(Icons.arrow_forward),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
 
             ),
           ),
           Expanded(
-            flex: 6,
+            flex: 7,
             child: Container(
               decoration: BoxDecoration(color: Colors.grey),
             ),
