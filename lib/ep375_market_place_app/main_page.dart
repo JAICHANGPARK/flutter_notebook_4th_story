@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MarketPlaceApp extends StatelessWidget {
@@ -5,6 +6,7 @@ class MarketPlaceApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MarketPlaceHome(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -22,7 +24,10 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
         children: <Widget>[
           Expanded(
             flex: 2,
-            child: Placeholder(),
+            child: Container(
+              color: Colors.yellow,
+
+            ),
           ),
           Expanded(
             flex: 6,
@@ -35,20 +40,29 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
             child: Column(
               children: <Widget>[
                 Expanded(
+                  flex: 3,
                   child: Container(
                     child: Center(
                       child: Text(
+
                         "Discounts, free, tax, and tip will be\ncalculated on checkout",
-                        style: TextStyle(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Expanded(
+                  flex: 4,
                   child: Container(
                     decoration: BoxDecoration(color: Colors.yellow),
                     child: Center(
-                      child: Text("CHECK OUT NOW WITH ELIGIBLE SHOPS"),
+                      child: Text("CHECK OUT NOW WITH ELIGIBLE SHOPS",style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),),
                     ),
                   ),
                 ),
@@ -60,3 +74,25 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
