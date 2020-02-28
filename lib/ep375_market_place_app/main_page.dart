@@ -19,7 +19,21 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+        leading: Row(
+          children: <Widget>[
+            IconButton(
+              icon: Icon(Icons.keyboard_arrow_left),
+              onPressed: (){},
+            ),
+            IconButton(
+              icon: Icon(Icons.menu),
+              onPressed: (){},
+            ),
+          ],
+        ),
+        title: Text("SHOPPING CART", style: TextStyle(
+          color: Colors.black
+        ),),
         backgroundColor: Colors.yellow,
         bottom: PreferredSize(
           preferredSize: Size(MediaQuery.of(context).size.width, 50),
