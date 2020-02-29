@@ -9,9 +9,36 @@ class ItemWithBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height / 3,
+      height: MediaQuery.of(context).size.height / 2.3,
       decoration: BoxDecoration(
-        color: Colors.red
+        color: Colors.red,
+      ),
+      child: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 3,
+            child: Container(
+              color: Colors.black,
+              child: Row(
+                children: <Widget>[
+
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.pinkAccent,
+            ),
+          ),
+          Expanded(
+            flex: 10,
+            child: Container(
+              color: Colors.white
+            ),
+          ),
+        ],
       ),
     );
   }

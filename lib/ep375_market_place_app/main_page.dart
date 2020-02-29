@@ -85,6 +85,7 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
             child: Container(
               decoration: BoxDecoration(color: Colors.grey),
               child: ListView.builder(
+                padding: EdgeInsets.zero,
                   itemCount: marketItems.length,
                   itemBuilder: (context,index){
                 return marketItems[index].isBanner ? ItemWithBanner() : MarketItemView();
