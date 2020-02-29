@@ -39,9 +39,12 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                             Spacer(
                               flex: 3,
                             ),
-                            Text("SHOPPING CART",style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),),
+                            Text(
+                              "SHOPPING CART",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             Spacer(
                               flex: 4,
                             ),
@@ -52,17 +55,16 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 8
-                        ),
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
                         child: Row(
                           children: <Widget>[
                             Icon(Icons.markunread_mailbox),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text("Send as a gift",style: TextStyle(
-                                fontWeight: FontWeight.bold
-                              ),),
+                              child: Text(
+                                "Send as a gift",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
                             ),
                             Spacer(),
                             Icon(Icons.arrow_forward),
@@ -73,7 +75,6 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                   ],
                 ),
               ),
-
             ),
           ),
           Expanded(
@@ -91,13 +92,10 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                   child: Container(
                     child: Center(
                       child: Text(
-
                         "Discounts, free, tax, and tip will be\ncalculated on checkout",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.bold
-                        ),
+                            fontSize: 11, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -107,9 +105,12 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                   child: Container(
                     decoration: BoxDecoration(color: Colors.yellow),
                     child: Center(
-                      child: Text("CHECK OUT NOW WITH ELIGIBLE SHOPS",style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),),
+                      child: Text(
+                        "CHECK OUT NOW WITH ELIGIBLE SHOPS",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -121,25 +122,3 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
