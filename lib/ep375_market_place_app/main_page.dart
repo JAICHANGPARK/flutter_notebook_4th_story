@@ -61,7 +61,7 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                         padding: const EdgeInsets.symmetric(horizontal: 8),
                         child: Row(
                           children: <Widget>[
-                            Icon(Icons.markunread_mailbox),
+                            Icon(Icons.card_giftcard),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
@@ -85,11 +85,15 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
             child: Container(
               decoration: BoxDecoration(color: Colors.grey),
               child: ListView.builder(
-                padding: EdgeInsets.zero,
+                  padding: EdgeInsets.zero,
                   itemCount: marketItems.length,
-                  itemBuilder: (context,index){
-                return marketItems[index].isBanner ? ItemWithBanner() : MarketItemView();
-              }),
+                  itemBuilder: (context, index) {
+                    return marketItems[index].isBanner
+                        ? ItemWithBanner(
+                            item: marketItems[index],
+                          )
+                        : MarketItemView();
+                  }),
             ),
           ),
           Expanded(
