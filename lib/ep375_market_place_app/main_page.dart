@@ -92,7 +92,7 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                         ? ItemWithBanner(
                             item: marketItems[index],
                           )
-                        : MarketItemView();
+                        : MarketItemView( item: marketItems[index],);
                   }),
             ),
           ),
