@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep375_market_place_app/banner_item.dart';
+import 'package:flutter_notebook_4th/ep375_market_place_app/item_view.dart';
+import 'package:flutter_notebook_4th/ep375_market_place_app/market_model.dart';
 
 class MarketPlaceApp extends StatelessWidget {
   @override
@@ -81,6 +84,11 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
             flex: 7,
             child: Container(
               decoration: BoxDecoration(color: Colors.grey),
+              child: ListView.builder(
+                  itemCount: marketItems.length,
+                  itemBuilder: (context,index){
+                return marketItems[index].isBanner ? ItemWithBanner() : MarketItemView();
+              }),
             ),
           ),
           Expanded(
