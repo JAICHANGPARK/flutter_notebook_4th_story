@@ -112,11 +112,17 @@ class ItemWithBanner extends StatelessWidget {
                       children: <Widget>[
                         Expanded(
                           flex: 1,
-                          child: Placeholder(),
+                          child: Container(),
                         ),
                         Expanded(
-                          flex: 2,
-                          child: Placeholder(),
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage("https://www.pngkit.com/png/full/242-2420325_corona-google-search-corona-extra.png"),
+                              )
+                            ),
+                          ),
                         ),
                         Expanded(
                           flex: 2,
@@ -127,17 +133,20 @@ class ItemWithBanner extends StatelessWidget {
                               Text(
                                 "Corona",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 4,),
+                              SizedBox(height: 2,),
                               Text(
                                 "Light",
-                                style: TextStyle(fontSize: 16),
+                                style: TextStyle(fontSize: 18),
                               ),
-                              SizedBox(height: 8,),
-                              Text("\$${item.price}"),
+                              SizedBox(height: 18,),
+                              Text("\$${item.price}", style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12
+                              ),),
                               SizedBox(height: 4,),
                               Text("6-pack")
                             ],
@@ -145,7 +154,7 @@ class ItemWithBanner extends StatelessWidget {
                         ),
                         Expanded(
                           flex: 3,
-                          child: Placeholder(),
+                          child: Container(),
                         ),
                         Expanded(
                           flex: 1,
