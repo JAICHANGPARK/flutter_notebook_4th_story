@@ -9,12 +9,12 @@ class MarketItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height / 2.5,
+      height: MediaQuery.of(context).size.height / 2.7,
 
       child: Column(
         children: <Widget>[
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 8),
               color: Colors.black,
