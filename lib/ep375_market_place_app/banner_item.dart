@@ -121,6 +121,7 @@ class ItemWithBanner extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
@@ -130,11 +131,14 @@ class ItemWithBanner extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
+                              SizedBox(height: 4,),
                               Text(
                                 "Light",
                                 style: TextStyle(fontSize: 16),
                               ),
+                              SizedBox(height: 8,),
                               Text("\$${item.price}"),
+                              SizedBox(height: 4,),
                               Text("6-pack")
                             ],
                           ),
