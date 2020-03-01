@@ -4,9 +4,8 @@ import 'package:flutter_notebook_4th/ep375_market_place_app/market_model.dart';
 
 class ItemWithBanner extends StatelessWidget {
   final MarketItem item;
-  final int itemCount;
 
-  ItemWithBanner({this.item,this.itemCount});
+  ItemWithBanner({this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -67,10 +66,9 @@ class ItemWithBanner extends StatelessWidget {
                   Text(
                     "Add \$10.01 to meet the minimum",
                     style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 11
-                    ),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 11),
                   ),
                   Spacer(),
                   Icon(
@@ -97,11 +95,12 @@ class ItemWithBanner extends StatelessWidget {
                       height: 38,
                       width: 38,
                       decoration: BoxDecoration(
-                        color: Colors.pink[100],
-                        shape: BoxShape.circle
+                          color: Colors.pink[100], shape: BoxShape.circle),
+                      child: Icon(
+                        Icons.clear,
+                        size: 18,
+                        color: Colors.grey,
                       ),
-                      child: Icon(Icons.clear,size: 18,
-                      color: Colors.grey,),
                     ),
                   ),
                   Positioned(
@@ -121,7 +120,24 @@ class ItemWithBanner extends StatelessWidget {
                         ),
                         Expanded(
                           flex: 2,
-                          child: Placeholder(),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Corona",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Light",
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              Text("\$${item.price}"),
+                              Text("6-pack")
+                            ],
+                          ),
                         ),
                         Expanded(
                           flex: 3,
@@ -133,29 +149,32 @@ class ItemWithBanner extends StatelessWidget {
                             children: <Widget>[
                               IconButton(
                                 icon: Icon(Icons.keyboard_arrow_up),
-                                onPressed: (){},
+                                onPressed: () {},
                               ),
                               Container(
                                 height: 38,
                                 width: 38,
                                 decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  border: Border.all(color: Colors.pink[100])
-                                ),
+                                    color: Colors.white,
+                                    border:
+                                        Border.all(color: Colors.pink[100])),
                                 child: Center(
-                                  child: Text("${itemCount.toString()}"),
+                                  child: Text(
+                                    "1",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                               ),
                               IconButton(
                                 icon: Icon(Icons.keyboard_arrow_down),
-                                onPressed: (){},
+                                onPressed: () {},
                               ),
                             ],
                           ),
                         ),
                       ],
-
-
                     ),
                   )
                 ],
@@ -167,31 +186,3 @@ class ItemWithBanner extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

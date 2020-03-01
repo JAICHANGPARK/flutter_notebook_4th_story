@@ -20,7 +20,8 @@ class MarketPlaceHome extends StatefulWidget {
 }
 
 class _MarketPlaceHomeState extends State<MarketPlaceHome> {
- 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,8 +92,7 @@ class _MarketPlaceHomeState extends State<MarketPlaceHome> {
                   itemBuilder: (context, index) {
                     return marketItems[index].isBanner
                         ? ItemWithBanner(
-                            item: marketItems[index],
-                            itemCount: ,
+                            item: marketItems[index]
                           )
                         : MarketItemView( item: marketItems[index],);
                   }),
