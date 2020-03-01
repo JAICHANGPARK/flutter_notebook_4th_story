@@ -28,7 +28,7 @@ List<MarketItem> marketItems = [
       isBanner: true),
   MarketItem(
       market: "STILL WATER LIQUORS",
-      place: "15 Bond Street, lBrooklyn, NY",
+      place: "15 Bond Street, Brooklyn, NY",
       img: "",
       itemTitle: "Corona",
       itemSubtitle: "Light",
