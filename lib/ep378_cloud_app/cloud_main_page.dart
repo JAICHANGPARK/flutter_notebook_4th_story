@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +27,8 @@ class _CloudMainPageState extends State<CloudMainPage> {
     // TODO: implement initState
     super.initState();
     for(int i=0; i < 9; i++){
-      r.add(Random().nextInt(64));
+      int k = 32 + Random().nextInt(32);
+      r.add(k);
     }
     r.forEach(
         (r){
@@ -77,11 +79,19 @@ class _CloudMainPageState extends State<CloudMainPage> {
               Positioned(
                 left: 0,
                 right: 0,
-                top: 280,
-                child: Row(
-                  children: <Widget>[
-
-                  ],
+                top: 210,
+                child: Transform.rotate(
+                  angle: -0.2,
+                  child: Row(
+                    children: r.map((e) => Container(
+                      height: e.toDouble(),
+                      width: e.toDouble(),
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle
+                      ),
+                    )).toList()
+                  ),
                 ),
               )
               
