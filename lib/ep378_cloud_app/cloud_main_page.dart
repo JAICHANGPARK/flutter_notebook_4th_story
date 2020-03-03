@@ -260,10 +260,37 @@ class _CloudMainPageState extends State<CloudMainPage> {
                                     top: 90,
                                     child: Container(
                                       height: 135,
+                                      padding: EdgeInsets.only(left: 24,bottom: 16,top: 16),
                                       decoration: BoxDecoration(
                                           color: Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(24)),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Spacer(),
+                                          Text('Google',style: GoogleFonts.montserrat(
+                                            color: Colors.black,
+                                            fontSize: 18,
+                                          ),),
+                                          Text("Drive",style: GoogleFonts.montserrat(
+                                            color: Colors.black,
+                                            fontSize: 18,
+                                          ),),
+                                          Spacer(),
+                                          Text.rich(TextSpan(children: [
+                                            TextSpan(text: "245",style: GoogleFonts.montserrat(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16,
+                                            ),),
+                                            TextSpan(text: "/500 GB",style: GoogleFonts.montserrat(
+                                              color: Colors.grey.withOpacity(0.8),
+                                              fontSize: 15,
+                                            ),),
+                                          ]))
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Positioned(
