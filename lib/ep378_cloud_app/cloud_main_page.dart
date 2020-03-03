@@ -24,6 +24,7 @@ class _CloudMainPageState extends State<CloudMainPage> {
   List<int> r = [];
   static const double leftPadding = 24.0;
   static const double rightPadding = 24.0;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -79,21 +80,13 @@ class _CloudMainPageState extends State<CloudMainPage> {
               ),
             ),
             Positioned(
-              left: 0,
               right: 0,
               top: 210,
-              child: Transform.rotate(
-                angle: -0.1,
-                child: Row(
-                    children: r
-                        .map((e) => Container(
-                              height: e.toDouble(),
-                              width: e.toDouble(),
-                              decoration: BoxDecoration(
-                                  color: Colors.grey[200],
-                                  shape: BoxShape.circle),
-                            ))
-                        .toList()),
+              child: Container(
+                height: 64,
+                width: 64,
+                decoration: BoxDecoration(
+                    color: Colors.grey[300], shape: BoxShape.circle),
               ),
             ),
             Positioned(
@@ -102,7 +95,6 @@ class _CloudMainPageState extends State<CloudMainPage> {
               top: 170,
               child: Container(
                 height: 380,
-                color: Colors.blue,
                 child: Column(
                   children: <Widget>[
                     Expanded(
@@ -127,9 +119,7 @@ class _CloudMainPageState extends State<CloudMainPage> {
               bottom: 0,
               child: Container(
                 height: 120,
-                decoration: BoxDecoration(
-                  color: Colors.red
-                ),
+                decoration: BoxDecoration(color: Colors.red),
               ),
             ),
             Positioned(
