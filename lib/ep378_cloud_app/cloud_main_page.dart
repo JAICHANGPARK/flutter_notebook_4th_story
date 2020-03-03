@@ -211,8 +211,14 @@ class _CloudMainPageState extends State<CloudMainPage> {
                                           ),),
                                           Spacer(),
                                           Text.rich(TextSpan(children: [
-                                            TextSpan(text: "11"),
-                                            TextSpan(text: "/20"),
+                                            TextSpan(text: "11",style: GoogleFonts.montserrat(
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                            ),),
+                                            TextSpan(text: "/20 GB",style: GoogleFonts.montserrat(
+                                              color: Colors.white.withOpacity(0.8),
+                                              fontSize: 18,
+                                            ),),
                                           ]))
                                         ],
                                       ),
