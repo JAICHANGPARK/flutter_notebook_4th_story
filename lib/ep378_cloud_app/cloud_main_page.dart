@@ -119,11 +119,60 @@ class _CloudMainPageState extends State<CloudMainPage> {
                     color: Colors.grey[300], shape: BoxShape.circle),
               ),
             ),
-
+            Positioned(
+              left: 32,
+              top: 180,
+              child: Container(
+                height: 8,
+                width: 9,
+                decoration:
+                    BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              left: 48,
+              top: 130,
+              child: Container(
+                height: 14,
+                width: 14,
+                decoration:
+                    BoxDecoration(color: Colors.blue, shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              left: 100,
+              top: 120,
+              child: Container(
+                height: 8,
+                width: 8,
+                decoration:
+                    BoxDecoration(color: Colors.green, shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              left: 130,
+              top: 140,
+              child: Container(
+                height: 8,
+                width: 8,
+                decoration: BoxDecoration(
+                    color: Colors.indigoAccent, shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              left: 160,
+              top: 150,
+              child: Container(
+                height: 13,
+                width: 13,
+                decoration:
+                    BoxDecoration(color: Colors.orange, shape: BoxShape.circle),
+              ),
+            ),
             Positioned(
               left: 8,
               right: rightPadding,
-              top: 170,
+              top: 160,
               child: Container(
                 height: 400,
                 child: Column(
@@ -135,19 +184,37 @@ class _CloudMainPageState extends State<CloudMainPage> {
                           Expanded(
                             flex: 4,
                             child: Container(
-
                               child: Stack(
                                 children: <Widget>[
-
                                   Positioned(
                                     top: 50,
                                     left: 16,
                                     right: 16,
                                     child: Container(
                                       height: 180,
+                                      padding: EdgeInsets.only(left: 24,bottom: 24,top: 32),
                                       decoration: BoxDecoration(
-                                        color: Colors.indigoAccent,
-                                          borderRadius: BorderRadius.circular(24)
+                                          color: Colors.indigoAccent,
+                                          borderRadius:
+                                              BorderRadius.circular(24)),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Spacer(),
+                                          Text('Dropbox',style: GoogleFonts.montserrat(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          ),),
+                                          Text("Plus",style: GoogleFonts.montserrat(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          ),),
+                                          Spacer(),
+                                          Text.rich(TextSpan(children: [
+                                            TextSpan(text: "11"),
+                                            TextSpan(text: "/20"),
+                                          ]))
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -161,14 +228,14 @@ class _CloudMainPageState extends State<CloudMainPage> {
                                         color: Colors.indigoAccent,
                                         shape: BoxShape.circle,
                                         border: Border.all(
-                                            color: Colors.white,
-                                            width: 10
-                                        ),
+                                            color: Colors.white, width: 10),
                                       ),
                                       child: Center(
-                                        child: Icon(Icons.move_to_inbox,
+                                        child: Icon(
+                                          Icons.move_to_inbox,
                                           color: Colors.white,
-                                          size: 48,),
+                                          size: 48,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -179,7 +246,42 @@ class _CloudMainPageState extends State<CloudMainPage> {
                           Expanded(
                             flex: 3,
                             child: Container(
-                              color: Colors.indigo,
+                              child: Stack(
+                                children: <Widget>[
+                                  Positioned(
+                                    left: 8,
+                                    right: 0,
+                                    top: 90,
+                                    child: Container(
+                                      height: 135,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(24)),
+                                    ),
+                                  ),
+                                  Positioned(
+                                    left: 40,
+                                    top: 44,
+                                    child: Container(
+                                      height: 80,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                        border: Border.all(
+                                            color: Colors.grey[200], width: 10),
+                                      ),
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.cloud_circle,
+                                          size: 42,
+                                        ),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           )
                         ],
