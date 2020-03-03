@@ -80,11 +80,31 @@ class _CloudMainPageState extends State<CloudMainPage> {
               ),
             ),
             Positioned(
-              right: 0,
-              top: 210,
+              right: -64,
+              top: 180,
               child: Container(
-                height: 64,
-                width: 64,
+                height: 180,
+                width: 180,
+                decoration: BoxDecoration(
+                    color: Colors.grey[300], shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              right: 24,
+              top: 190,
+              child: Container(
+                height: 140,
+                width: 140,
+                decoration: BoxDecoration(
+                    color: Colors.grey[300], shape: BoxShape.circle),
+              ),
+            ),
+            Positioned(
+              right: 120,
+              top: 184,
+              child: Container(
+                height: 100,
+                width: 100,
                 decoration: BoxDecoration(
                     color: Colors.grey[300], shape: BoxShape.circle),
               ),
