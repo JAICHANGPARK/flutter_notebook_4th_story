@@ -434,8 +434,25 @@ class _CloudMainPageState extends State<CloudMainPage> {
               right: rightPadding,
               bottom: 0,
               child: Container(
-                height: 120,
+                height: 140,
                 decoration: BoxDecoration(color: Colors.red),
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: Row(
+                        children: <Widget>[
+                          Text("Actions",style: GoogleFonts.montserrat(fontSize: 18),),
+                          Text("Actions",style: GoogleFonts.montserrat(fontSize: 14),),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 8,
+                      child: Placeholder(),
+                    ),
+                  ],
+                ),
               ),
             ),
             Positioned(
@@ -448,7 +465,7 @@ class _CloudMainPageState extends State<CloudMainPage> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16)),
                 child: Row(
-                  
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     IconButton(
                       icon: Icon(Icons.search),
