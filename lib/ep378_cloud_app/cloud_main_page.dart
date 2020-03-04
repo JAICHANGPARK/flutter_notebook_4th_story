@@ -442,8 +442,15 @@ class _CloudMainPageState extends State<CloudMainPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text("Actions",style: GoogleFonts.montserrat(fontSize: 18),),
-                          Text("Recent",style: GoogleFonts.montserrat(fontSize: 12,color: Colors.grey),),
+                          Text(
+                            "Actions",
+                            style: GoogleFonts.montserrat(fontSize: 18),
+                          ),
+                          Text(
+                            "Recent",
+                            style: GoogleFonts.montserrat(
+                                fontSize: 12, color: Colors.grey),
+                          ),
                         ],
                       ),
                     ),
@@ -451,7 +458,27 @@ class _CloudMainPageState extends State<CloudMainPage> {
                       flex: 8,
                       child: Row(
                         children: <Widget>[
-                          
+                          Expanded(
+                            flex: 1,
+                            child: Column(
+                              children: <Widget>[
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            flex: 9,
+                            child: ListView.builder(itemBuilder: (context,index){
+                              return Container(
+                                height: 100,
+
+                                margin: EdgeInsets.only(left: 12, bottom: 12,top: 8),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(24)
+                                ),
+                              );
+                            }),
+                          ),
                         ],
                       ),
                     ),
@@ -463,49 +490,55 @@ class _CloudMainPageState extends State<CloudMainPage> {
               bottom: 16,
               left: leftPadding,
               right: rightPadding,
-              child: Container(
-                height: 80,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.search),
-                      onPressed: () {},
-                      color: Colors.grey,
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.cloud_queue),
-                      onPressed: () {},
-                      color: Colors.green,
-                    ),
-                    Container(
-                      height: 58,
-                      width: 58,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Center(
-                          child: IconButton(
-                        icon: Icon(Icons.add),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                ),
+                elevation: 4,
+                child: Container(
+                  height: 80,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(Icons.search),
                         onPressed: () {},
-                        color: Colors.white,
-                      )),
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.settings_backup_restore),
-                      onPressed: () {},
-                      color: Colors.grey,
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.settings),
-                      onPressed: () {},
-                      color: Colors.grey,
-                    ),
-                  ],
+                        color: Colors.grey,
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.cloud_queue),
+                        onPressed: () {},
+                        color: Colors.green,
+                      ),
+                      Container(
+                        height: 58,
+                        width: 58,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Center(
+                            child: IconButton(
+                          icon: Icon(Icons.add),
+                          onPressed: () {},
+                          color: Colors.white,
+                        )),
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.settings_backup_restore),
+                        onPressed: () {},
+                        color: Colors.grey,
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.settings),
+                        onPressed: () {},
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             )
