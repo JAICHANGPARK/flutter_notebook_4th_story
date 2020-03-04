@@ -387,17 +387,27 @@ class _CloudMainPageState extends State<CloudMainPage> {
                     ),
                     Expanded(
                       flex: 6,
-                      child: ListView.builder(itemBuilder: (context, index){
+                      child: ListView.builder(
+                         scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index){
                         return Card(
+                          shadowColor: Colors.indigo[00],
                           color: Colors.white,
                           elevation: 8,
+                          margin: EdgeInsets.only(right: 16,top: 8, bottom: 8),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           ),
-                          child: Column(
-                            children: <Widget>[
-                              
-                            ],
+                          child: Container(
+                            width: 94,
+                            decoration: BoxDecoration(
+                              color: Colors.white
+                            ),
+                            child: Column(
+                              children: <Widget>[
+
+                              ],
+                            ),
                           ),
                         );
                       }),
