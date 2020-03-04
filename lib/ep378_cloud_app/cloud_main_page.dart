@@ -388,9 +388,17 @@ class _CloudMainPageState extends State<CloudMainPage> {
                     Expanded(
                       flex: 6,
                       child: ListView.builder(itemBuilder: (context, index){
-                        return Container(
-                          width: 80,
-                          decoration: BoxDecoration(),
+                        return Card(
+                          color: Colors.white,
+                          elevation: 8,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Column(
+                            children: <Widget>[
+                              
+                            ],
+                          ),
                         );
                       }),
                     ),
