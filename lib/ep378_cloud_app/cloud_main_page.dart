@@ -364,7 +364,9 @@ class _CloudMainPageState extends State<CloudMainPage> {
                               borderRadius: BorderRadius.circular(8),
                             ),
                           ),
-                          SizedBox(width: 8,),
+                          SizedBox(
+                            width: 8,
+                          ),
                           Container(
                             height: 6,
                             width: 6,
@@ -373,7 +375,9 @@ class _CloudMainPageState extends State<CloudMainPage> {
                               color: Colors.grey,
                             ),
                           ),
-                          SizedBox(width: 8,),
+                          SizedBox(
+                            width: 8,
+                          ),
                           Container(
                             height: 6,
                             width: 6,
@@ -388,29 +392,26 @@ class _CloudMainPageState extends State<CloudMainPage> {
                     Expanded(
                       flex: 6,
                       child: ListView.builder(
-                         scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index){
-                        return Card(
-                          shadowColor: Colors.indigo[00],
-                          color: Colors.white,
-                          elevation: 8,
-                          margin: EdgeInsets.only(right: 16,top: 8, bottom: 8),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          child: Container(
-                            width: 94,
-                            decoration: BoxDecoration(
-                              color: Colors.white
-                            ),
-                            child: Column(
-                              children: <Widget>[
-
-                              ],
-                            ),
-                          ),
-                        );
-                      }),
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return Card(
+                              shadowColor: Colors.indigo[00],
+                              color: Colors.white,
+                              elevation: 8,
+                              margin: EdgeInsets.only(
+                                  right: 2, top: 8, bottom: 8, left: 16),
+                              child: Container(
+                                width: 94,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Column(
+                                  children: <Widget>[],
+                                ),
+                              ),
+                            );
+                          }),
                     ),
                   ],
                 ),
