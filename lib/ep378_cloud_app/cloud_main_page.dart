@@ -435,21 +435,25 @@ class _CloudMainPageState extends State<CloudMainPage> {
               bottom: 0,
               child: Container(
                 height: 140,
-                decoration: BoxDecoration(color: Colors.red),
                 child: Column(
                   children: <Widget>[
                     Expanded(
                       flex: 2,
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text("Actions",style: GoogleFonts.montserrat(fontSize: 18),),
-                          Text("Actions",style: GoogleFonts.montserrat(fontSize: 14),),
+                          Text("Recent",style: GoogleFonts.montserrat(fontSize: 12,color: Colors.grey),),
                         ],
                       ),
                     ),
                     Expanded(
                       flex: 8,
-                      child: Placeholder(),
+                      child: Row(
+                        children: <Widget>[
+                          
+                        ],
+                      ),
                     ),
                   ],
                 ),
