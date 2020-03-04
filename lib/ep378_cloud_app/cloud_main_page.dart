@@ -352,11 +352,47 @@ class _CloudMainPageState extends State<CloudMainPage> {
                     ),
                     Expanded(
                       flex: 1,
-                      child: Placeholder(),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            height: 5,
+                            width: 16,
+                            decoration: BoxDecoration(
+                              color: Colors.orange,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                          SizedBox(width: 8,),
+                          Container(
+                            height: 6,
+                            width: 6,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          SizedBox(width: 8,),
+                          Container(
+                            height: 6,
+                            width: 6,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.grey,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Expanded(
                       flex: 6,
-                      child: Placeholder(),
+                      child: ListView.builder(itemBuilder: (context, index){
+                        return Container(
+                          width: 80,
+                          decoration: BoxDecoration(),
+                        );
+                      }),
                     ),
                   ],
                 ),
