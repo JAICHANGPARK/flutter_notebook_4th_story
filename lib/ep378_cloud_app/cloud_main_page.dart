@@ -407,7 +407,19 @@ class _CloudMainPageState extends State<CloudMainPage> {
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                                 child: Column(
-                                  children: <Widget>[],
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 54,
+                                      width: 64,
+                                      color: Colors.red,
+                                    ),
+                                    Text(
+                                      "Flutter",
+                                      style: GoogleFonts.montserrat(),
+                                    ),
+                                  ],
                                 ),
                               ),
                             );
@@ -435,6 +447,45 @@ class _CloudMainPageState extends State<CloudMainPage> {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16)),
+                child: Row(
+                  
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {},
+                      color: Colors.grey,
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.cloud_queue),
+                      onPressed: () {},
+                      color: Colors.green,
+                    ),
+                    Container(
+                      height: 58,
+                      width: 58,
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Center(
+                          child: IconButton(
+                        icon: Icon(Icons.add),
+                        onPressed: () {},
+                        color: Colors.white,
+                      )),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.settings_backup_restore),
+                      onPressed: () {},
+                      color: Colors.grey,
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.settings),
+                      onPressed: () {},
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
               ),
             )
           ],
