@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -19,26 +20,42 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin{
   AnimationController controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: <Widget>[
+
             Expanded(
               flex: 2,
               child: Row(
                 children: <Widget>[
-                  AnimatedIcon(progress: null, icon: null,
-
-                  ),
-
                   Container(
-                    width: 48,
-                    decoration: BoxDecoration(
-                      color: Colors.red
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    width: 64,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Container(
+                          width: 24,
+                          height: 2,
+                          color: Color(0xff643635),
+                        ),
+                        Container(
+                          width: 24,
+                          height: 2,
+                          color: Color(0xff643635),
+                        ),
+                      ],
                     ),
                   )
                 ],
