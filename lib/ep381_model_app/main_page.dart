@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_circular_text/circular_text.dart';
 
 class ModelApp extends StatelessWidget {
   @override
@@ -106,6 +107,19 @@ class _MainPageState extends State<MainPage>
                           width: MediaQuery.of(context).size.width / 2 + 32,
                           decoration: BoxDecoration(
                             color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 16,
+                        top: 24,
+                        child: Container(
+                          height: 100,
+                          width: 100,
+                          child: CircularText(children: <TextItem>[
+                            TextItem(text: Text("TOP MODEL")),
+                            TextItem(text: Text("TOP MODEL")),
+                          ],
                           ),
                         ),
                       ),
