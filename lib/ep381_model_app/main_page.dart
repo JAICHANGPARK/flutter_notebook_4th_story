@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class ModelApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,24 +19,26 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin{
+class _MainPageState extends State<MainPage>
+    with SingleTickerProviderStateMixin {
   AnimationController controller;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: <Widget>[
-
             Expanded(
               flex: 2,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 16),
@@ -57,13 +58,78 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
                         ),
                       ],
                     ),
+                  ),
+                  Text(
+                    "MODELS",
+                    style: TextStyle(color: Color(0xff643635), fontSize: 20),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.search),
+                    onPressed: () {},
+                    color: Color(0xff643635),
                   )
                 ],
               ),
             ),
             Expanded(
               flex: 20,
-              child: Placeholder(),
+              child: PageView(
+                children: <Widget>[
+                  Stack(
+                    children: <Widget>[
+                      Positioned(
+                        right: 0,
+                        top: 100,
+                        bottom: 100,
+                        child: Container(
+                          width: 130,
+                          decoration: BoxDecoration(
+                              color: Colors.orange,
+                              border: Border(
+                                top: BorderSide(color: Colors.white, width: 24),
+                                left:
+                                    BorderSide(color: Colors.white, width: 24),
+                                bottom:
+                                    BorderSide(color: Colors.white, width: 24),
+                              )),
+                        ),
+                      )
+                    ],
+                  ),
+                  Stack(
+                    children: <Widget>[
+                      Positioned(
+                        right: 0,
+                        top: 40,
+                        bottom: 200,
+                        child: Container(
+                          width: MediaQuery.of(context).size.width / 2 + 32,
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 100,
+                        bottom: 100,
+                        child: Container(
+                          width: 230,
+                          decoration: BoxDecoration(
+                              color: Colors.orange,
+                              border: Border(
+                                top: BorderSide(color: Colors.white, width: 24),
+                                right:
+                                    BorderSide(color: Colors.white, width: 24),
+                                bottom:
+                                    BorderSide(color: Colors.white, width: 24),
+                              )),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
@@ -71,31 +137,3 @@ class _MainPageState extends State<MainPage> with SingleTickerProviderStateMixin
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
