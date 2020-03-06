@@ -157,21 +157,17 @@ class _MainPageState extends State<MainPage>
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                  top: 24,
-                                  left: 16,
-                                  right: 16,
-                                  bottom: 8
-                                ),
+                                    top: 24, left: 16, right: 16, bottom: 8),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
                                       "Height",
                                       style: TextStyle(
-                                        color: Color(0xff643635),
-                                        fontSize: 18
-                                      ),
+                                          color: Color(0xff643635),
+                                          fontSize: 18),
                                     ),
                                     Container(
                                       height: 1,
@@ -181,30 +177,25 @@ class _MainPageState extends State<MainPage>
                                     Text(
                                       "176 cm",
                                       style: TextStyle(
-                                        color: Color(0xff643635),
-                                          fontSize: 18
-                                      ),
+                                          color: Color(0xff643635),
+                                          fontSize: 18),
                                     ),
                                   ],
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                    top: 24,
-                                    left: 16,
-                                    right: 16,
-                                    bottom: 8
-                                ),
+                                    top: 24, left: 16, right: 16, bottom: 8),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
                                       "Hips",
                                       style: TextStyle(
                                           color: Color(0xff643635),
-                                          fontSize: 18
-                                      ),
+                                          fontSize: 18),
                                     ),
                                     Container(
                                       height: 1,
@@ -216,29 +207,24 @@ class _MainPageState extends State<MainPage>
                                       style: TextStyle(
                                           color: Color(0xff643635),
                                           fontSize: 18,
-                                        fontWeight: FontWeight.bold
-                                      ),
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                    top: 24,
-                                    left: 16,
-                                    right: 16,
-                                    bottom: 8
-                                ),
+                                    top: 24, left: 16, right: 16, bottom: 8),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: <Widget>[
                                     Text(
                                       "Shoe",
                                       style: TextStyle(
                                           color: Color(0xff643635),
-                                          fontSize: 18
-                                      ),
+                                          fontSize: 18),
                                     ),
                                     Container(
                                       height: 1,
@@ -250,8 +236,7 @@ class _MainPageState extends State<MainPage>
                                       style: TextStyle(
                                           color: Color(0xff643635),
                                           fontSize: 18,
-                                          fontWeight: FontWeight.bold
-                                      ),
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
