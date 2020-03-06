@@ -78,12 +78,13 @@ class _MainPageState extends State<MainPage>
                 children: <Widget>[
                   Stack(
                     children: <Widget>[
+                      Po
                       Positioned(
-                        right: 24,
-                        left:24,
+                        right: 48,
+                        left:48,
                         top: 32,
                         child: Container(
-                          height: 280,
+                          height: 320,
                           decoration: BoxDecoration(
                             color: Colors.white
                           ),
@@ -98,11 +99,11 @@ class _MainPageState extends State<MainPage>
                           decoration: BoxDecoration(
                               color: Colors.orange,
                               border: Border(
-                                top: BorderSide(color: Colors.white, width: 24),
+                                top: BorderSide(color: Colors.white, width: 20),
                                 left:
-                                    BorderSide(color: Colors.white, width: 24),
+                                    BorderSide(color: Colors.white, width: 20),
                                 bottom:
-                                    BorderSide(color: Colors.white, width: 24),
+                                    BorderSide(color: Colors.white, width: 20),
                               ),
                               image: DecorationImage(
                                   image: NetworkImage(
@@ -141,11 +142,11 @@ class _MainPageState extends State<MainPage>
                           decoration: BoxDecoration(
                               color: Colors.orange,
                               border: Border(
-                                top: BorderSide(color: Colors.white, width: 24),
+                                top: BorderSide(color: Colors.white, width: 16),
                                 right:
-                                    BorderSide(color: Colors.white, width: 24),
+                                    BorderSide(color: Colors.white, width: 16),
                                 bottom:
-                                    BorderSide(color: Colors.white, width: 24),
+                                    BorderSide(color: Colors.white, width: 16),
                               ),
                           image: DecorationImage(
                             image: NetworkImage(
