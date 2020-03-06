@@ -136,8 +136,23 @@ class _MainPageState extends State<MainPage>
                         child: Container(
                           height: 250,
                           width: MediaQuery.of(context).size.width - 160,
-                          decoration: BoxDecoration(
-                            color: Colors.grey
+
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text("AGENCY",style: GoogleFonts.notoSans(
+                                fontSize: 20,
+                                letterSpacing: 4
+                              ),),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 28),
+                                child: Text("Image Board", style: GoogleFonts.shadowsIntoLight(
+                                  fontSize: 30,
+                                  letterSpacing: 5,
+                                  color: Color(0xff643635),
+                                ),),
+                              )
+                            ],
                           ),
                         ),
                       )
