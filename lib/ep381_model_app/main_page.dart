@@ -79,31 +79,31 @@ class _MainPageState extends State<MainPage>
                 children: <Widget>[
                   Stack(
                     children: <Widget>[
-
                       Positioned(
                         right: 48,
-                        left:48,
+                        left: 48,
                         top: 32,
                         child: Container(
                           height: 320,
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            image: DecorationImage(
-                              image: NetworkImage("https://cdn.pixabay.com/photo/2014/01/03/01/13/girl-237871_960_720.jpg"),
-                              fit: BoxFit.cover
-                            )
-                          ),
+                              color: Colors.white,
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2014/01/03/01/13/girl-237871_960_720.jpg"),
+                                  fit: BoxFit.cover)),
                         ),
                       ),
                       Positioned(
                         top: 0,
                         left: 32,
-                        child: Text("LAYLA ONE", style: GoogleFonts.notoSans(
-                            fontSize: 42,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff643635),
-                          letterSpacing: 5
-                        ),),
+                        child: Text(
+                          "LAYLA ONE",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 42,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff643635),
+                              letterSpacing: 5),
+                        ),
                       ),
                       Positioned(
                         right: 0,
@@ -124,46 +124,144 @@ class _MainPageState extends State<MainPage>
                                   image: NetworkImage(
                                     "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg",
                                   ),
-                                  fit: BoxFit.none
-                              )
-                          ),
+                                  fit: BoxFit.none)),
                         ),
                       ),
-
                       Positioned(
                         left: 16,
                         bottom: 16,
                         child: Container(
                           height: 250,
                           width: MediaQuery.of(context).size.width - 160,
-
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text("AGENCY",style: GoogleFonts.notoSans(
-                                fontSize: 20,
-                                letterSpacing: 4
-                              ),),
+                              Text(
+                                "AGENCY",
+                                style: GoogleFonts.notoSans(
+                                  fontSize: 20,
+                                  letterSpacing: 4,
+                                  color: Color(0xff643635),
+                                ),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 28),
-                                child: Text("Image Board", style: GoogleFonts.shadowsIntoLight(
-                                  fontSize: 30,
-                                  letterSpacing: 5,
-                                  color: Color(0xff643635),
-                                ),),
+                                child: Text(
+                                  "Image Board",
+                                  style: GoogleFonts.shadowsIntoLight(
+                                      fontSize: 30,
+                                      letterSpacing: 5,
+                                      color: Color(0xff643635),
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 24,
+                                  left: 16,
+                                  right: 16,
+                                  bottom: 8
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Text(
+                                      "Height",
+                                      style: TextStyle(
+                                        color: Color(0xff643635),
+                                        fontSize: 18
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 1,
+                                      width: 42,
+                                      color: Color(0xff643635),
+                                    ),
+                                    Text(
+                                      "176 cm",
+                                      style: TextStyle(
+                                        color: Color(0xff643635),
+                                          fontSize: 18
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 24,
+                                    left: 16,
+                                    right: 16,
+                                    bottom: 8
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Text(
+                                      "Hips",
+                                      style: TextStyle(
+                                          color: Color(0xff643635),
+                                          fontSize: 18
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 1,
+                                      width: 42,
+                                      color: Color(0xff643635),
+                                    ),
+                                    Text(
+                                      "85 cm",
+                                      style: TextStyle(
+                                          color: Color(0xff643635),
+                                          fontSize: 18,
+                                        fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 24,
+                                    left: 16,
+                                    right: 16,
+                                    bottom: 8
+                                ),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Text(
+                                      "Shoe",
+                                      style: TextStyle(
+                                          color: Color(0xff643635),
+                                          fontSize: 18
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 1,
+                                      width: 42,
+                                      color: Color(0xff643635),
+                                    ),
+                                    Text(
+                                      "38 eu",
+                                      style: TextStyle(
+                                          color: Color(0xff643635),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               )
                             ],
                           ),
                         ),
                       )
-
-
                     ],
                   ),
-
-
-
-
                   Stack(
                     children: <Widget>[
                       Positioned(
@@ -173,12 +271,11 @@ class _MainPageState extends State<MainPage>
                         child: Container(
                           width: MediaQuery.of(context).size.width / 2 + 32,
                           decoration: BoxDecoration(
-                            color: Colors.blue,
-                            image: DecorationImage(
-                              image: NetworkImage("https://cdn.pixabay.com/photo/2015/05/03/14/40/woman-751236_960_720.jpg"),
-                              fit: BoxFit.cover
-                            )
-                          ),
+                              color: Colors.blue,
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                      "https://cdn.pixabay.com/photo/2015/05/03/14/40/woman-751236_960_720.jpg"),
+                                  fit: BoxFit.cover)),
                         ),
                       ),
                       Positioned(
@@ -196,13 +293,11 @@ class _MainPageState extends State<MainPage>
                                 bottom:
                                     BorderSide(color: Colors.white, width: 16),
                               ),
-                          image: DecorationImage(
-                            image: NetworkImage(
-                              "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg",
-                            ),
-                            fit: BoxFit.cover
-                          )
-                          ),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg",
+                                  ),
+                                  fit: BoxFit.cover)),
                         ),
                       ),
                       Positioned(
@@ -212,11 +307,13 @@ class _MainPageState extends State<MainPage>
                             height: 120,
                             width: 120,
                             child: Center(
-                              child: Text("17",style: TextStyle(
-                                fontSize: 38,
-                                color: Color(0xff643635),
-                                fontWeight: FontWeight.bold
-                              ),),
+                              child: Text(
+                                "17",
+                                style: TextStyle(
+                                    fontSize: 38,
+                                    color: Color(0xff643635),
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           )),
                       Positioned(
