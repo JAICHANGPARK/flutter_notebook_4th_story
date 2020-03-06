@@ -178,7 +178,8 @@ class _MainPageState extends State<MainPage>
                                       "176 cm",
                                       style: TextStyle(
                                           color: Color(0xff643635),
-                                          fontSize: 18),
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
