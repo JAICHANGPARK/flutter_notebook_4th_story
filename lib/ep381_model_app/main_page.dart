@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_circular_text/circular_text.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ModelApp extends StatelessWidget {
   @override
@@ -78,7 +79,7 @@ class _MainPageState extends State<MainPage>
                 children: <Widget>[
                   Stack(
                     children: <Widget>[
-                      Po
+
                       Positioned(
                         right: 48,
                         left:48,
@@ -89,6 +90,14 @@ class _MainPageState extends State<MainPage>
                             color: Colors.white
                           ),
                         ),
+                      ),
+                      Positioned(
+                        top: 16,
+                        left: 32,
+                        child: Text("LAYLA ONE", style: GoogleFonts.montserrat(
+                            fontSize: 42,
+                          fontWeight: FontWeight.bold
+                        ),),
                       ),
                       Positioned(
                         right: 0,
