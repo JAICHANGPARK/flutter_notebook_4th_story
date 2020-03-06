@@ -79,6 +79,17 @@ class _MainPageState extends State<MainPage>
                   Stack(
                     children: <Widget>[
                       Positioned(
+                        right: 24,
+                        left:24,
+                        top: 32,
+                        child: Container(
+                          height: 280,
+                          decoration: BoxDecoration(
+                            color: Colors.white
+                          ),
+                        ),
+                      ),
+                      Positioned(
                         right: 0,
                         top: 100,
                         bottom: 100,
@@ -92,7 +103,14 @@ class _MainPageState extends State<MainPage>
                                     BorderSide(color: Colors.white, width: 24),
                                 bottom:
                                     BorderSide(color: Colors.white, width: 24),
-                              )),
+                              ),
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg",
+                                  ),
+                                  fit: BoxFit.none
+                              )
+                          ),
                         ),
                       )
                     ],
@@ -107,19 +125,10 @@ class _MainPageState extends State<MainPage>
                           width: MediaQuery.of(context).size.width / 2 + 32,
                           decoration: BoxDecoration(
                             color: Colors.blue,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 16,
-                        top: 24,
-                        child: Container(
-                          height: 100,
-                          width: 100,
-                          child: CircularText(children: <TextItem>[
-                            TextItem(text: Text("TOP MODEL")),
-                            TextItem(text: Text("TOP MODEL")),
-                          ],
+                            image: DecorationImage(
+                              image: NetworkImage("https://cdn.pixabay.com/photo/2015/05/03/14/40/woman-751236_960_720.jpg"),
+                              fit: BoxFit.cover
+                            )
                           ),
                         ),
                       ),
@@ -137,7 +146,105 @@ class _MainPageState extends State<MainPage>
                                     BorderSide(color: Colors.white, width: 24),
                                 bottom:
                                     BorderSide(color: Colors.white, width: 24),
-                              )),
+                              ),
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_960_720.jpg",
+                            ),
+                            fit: BoxFit.cover
+                          )
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                          left: 16,
+                          top: 24,
+                          child: Container(
+                            height: 120,
+                            width: 120,
+                            child: Center(
+                              child: Text("17",style: TextStyle(
+                                fontSize: 38,
+                                color: Color(0xff643635),
+                                fontWeight: FontWeight.bold
+                              ),),
+                            ),
+                          )),
+                      Positioned(
+                        left: 16,
+                        top: 24,
+                        child: Container(
+                          height: 120,
+                          width: 120,
+                          child: CircularText(
+                            children: <TextItem>[
+                              TextItem(
+                                  text: Text(
+                                    "TOP MODEL",
+                                    style: TextStyle(
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xff643635),
+                                    ),
+                                  ),
+                                  startAngle: 120),
+                              TextItem(
+                                text: Text(
+                                  "TOP MODEL",
+                                  style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff643635),
+                                  ),
+                                ),
+                                startAngle: -120,
+                              ),
+                              TextItem(
+                                text: Text(
+                                  "+".toUpperCase(),
+                                  style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff643635),
+                                  ),
+                                ),
+                                startAngle: -20,
+                              ),
+                              TextItem(
+                                text: Text(
+                                  "+".toUpperCase(),
+                                  style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff643635),
+                                  ),
+                                ),
+                                startAngle: 100,
+                              ),
+                              TextItem(
+                                text: Text(
+                                  "TOP MODEL",
+                                  style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff643635),
+                                  ),
+                                ),
+                                startAngle: 0,
+                              ),
+                              TextItem(
+                                text: Text(
+                                  "+".toUpperCase(),
+                                  style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff643635),
+                                  ),
+                                ),
+                                startAngle: 220,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
