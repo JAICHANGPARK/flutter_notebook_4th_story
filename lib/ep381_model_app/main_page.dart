@@ -87,16 +87,22 @@ class _MainPageState extends State<MainPage>
                         child: Container(
                           height: 320,
                           decoration: BoxDecoration(
-                            color: Colors.white
+                            color: Colors.white,
+                            image: DecorationImage(
+                              image: NetworkImage("https://cdn.pixabay.com/photo/2014/01/03/01/13/girl-237871_960_720.jpg"),
+                              fit: BoxFit.cover
+                            )
                           ),
                         ),
                       ),
                       Positioned(
-                        top: 16,
+                        top: 0,
                         left: 32,
-                        child: Text("LAYLA ONE", style: GoogleFonts.montserrat(
+                        child: Text("LAYLA ONE", style: GoogleFonts.notoSans(
                             fontSize: 42,
-                          fontWeight: FontWeight.bold
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff643635),
+                          letterSpacing: 5
                         ),),
                       ),
                       Positioned(
@@ -122,9 +128,27 @@ class _MainPageState extends State<MainPage>
                               )
                           ),
                         ),
+                      ),
+
+                      Positioned(
+                        left: 16,
+                        bottom: 16,
+                        child: Container(
+                          height: 250,
+                          width: MediaQuery.of(context).size.width - 160,
+                          decoration: BoxDecoration(
+                            color: Colors.grey
+                          ),
+                        ),
                       )
+
+
                     ],
                   ),
+
+
+
+
                   Stack(
                     children: <Widget>[
                       Positioned(
