@@ -383,13 +383,14 @@ class _MainPageState extends State<MainPage>
                         left: 16,
                         bottom: 12,
                         right: 0,
-                        child: Text("Layla Ong, contestant in Asia's Next\nTop Model Season 5, standing at",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w300,
-                          wordSpacing: 1,
-                          letterSpacing: 3
-                        ),),
+                        child: Text(
+                          "Layla Ong, contestant in Asia's Next\nTop Model Season 5, standing at",
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w300,
+                              wordSpacing: 1,
+                              letterSpacing: 3),
+                        ),
                       )
                     ],
                   )
