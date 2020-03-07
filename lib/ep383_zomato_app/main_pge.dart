@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-
 class ZomatoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         "/": (BuildContext context) => ZomatoMainPage(),
@@ -12,6 +12,7 @@ class ZomatoApp extends StatelessWidget {
     );
   }
 }
+
 class ZomatoMainPage extends StatefulWidget {
   @override
   _ZomatoMainPageState createState() => _ZomatoMainPageState();
@@ -20,6 +21,16 @@ class ZomatoMainPage extends StatefulWidget {
 class _ZomatoMainPageState extends State<ZomatoMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.card_giftcard),
+          title: Text("Order")),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.directions_run),title: Text("Go Out")
+          )
+        ],
+      ),
+    );
   }
 }
