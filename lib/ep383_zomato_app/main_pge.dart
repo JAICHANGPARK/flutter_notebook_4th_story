@@ -23,8 +23,53 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 4, horizontal: 8
+                ),
+                child: Container(
+                  height: screenHeight / 20,
+                  decoration: BoxDecoration(
+                    color: Colors.grey
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 4, horizontal: 8
+                ),
+                child: Container(
+                  height: screenHeight / 15,
+                  decoration: BoxDecoration(
+                      color: Colors.red
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 4, horizontal: 8
+                ),
+                child: Container(
+                  height: screenHeight / 15,
+                  decoration: BoxDecoration(
+                      color: Colors.blue
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.red,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
         elevation: 8,
         currentIndex: pageIdx,
         onTap: (index) {
