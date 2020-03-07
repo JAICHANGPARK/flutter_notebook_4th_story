@@ -28,9 +28,32 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
           title: Text("Order")),
           BottomNavigationBarItem(
             icon: Icon(Icons.directions_run),title: Text("Go Out")
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.ac_unit),title: Text("Gold")
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_to_queue),title: Text("Go Out")
           )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
