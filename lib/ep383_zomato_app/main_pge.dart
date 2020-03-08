@@ -29,124 +29,145 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
-          child: IndexedStack(
-            index: pageIdx,
-            children:<Widget>[
-              Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 4, horizontal: 8
-                    ),
-                    child: Container(
-                      height: screenHeight / 20,
-
-                      child: Row(
-                        children: <Widget>[
-                          Icon(Icons.add_location, color: Colors.red,),
-                          Text("657-Mars, Milkyway",style: GoogleFonts.montserrat(
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16
-                          ),),
-                          Spacer(),
-                          CircleAvatar(
-                            radius: 12,
-                          )
-                        ],
-                      ),
+          child: IndexedStack(index: pageIdx, children: <Widget>[
+            Column(
+              children: <Widget>[
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  child: Container(
+                    height: screenHeight / 20,
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.add_location,
+                          color: Colors.red,
+                        ),
+                        Text(
+                          "657-Mars, Milkyway",
+                          style: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w700, fontSize: 16),
+                        ),
+                        Spacer(),
+                        CircleAvatar(
+                          radius: 12,
+                        )
+                      ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 4, horizontal: 8
-                    ),
-                    child: Container(
-                      height: screenHeight / 15,
-                      decoration: BoxDecoration(
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  child: Container(
+                    height: screenHeight / 20,
+                    decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(8),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.2),
-                            spreadRadius: 2,
-                            blurRadius: 3
-                          )
-                        ]
-                      ),
-
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 2,
+                              blurRadius: 3)
+                        ]),
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          icon: Icon(Icons.search),
+                          hintText: "Search for restaurants, cuisines...",
+                          border: InputBorder.none,
+                          hintStyle: GoogleFonts.montserrat(
+                            fontSize: 14
+                          )),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 4, horizontal: 8
-                    ),
-                    child: Container(
-                      height: screenHeight / 15,
-                      decoration: BoxDecoration(
-                          color: Colors.blue
-                      ),
-                    ),
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
-                    child: Container(
-                      height: screenHeight / 4,
-                      decoration: BoxDecoration(
-                          color: Colors.blue
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 4, horizontal: 8
-                    ),
-                    child: Container(
-                      height: screenHeight / 8,
-                      decoration: BoxDecoration(
-                          color: Colors.blue
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
-                    child: Container(
-                      height: screenHeight / 15,
-                      decoration: BoxDecoration(
-                          color: Colors.blue
-                      ),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  child: Container(
+                    height: screenHeight / 20,
+                    decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(4)
+                            ),
+                            child: Center(
+                              child: Text('Delivery',style: GoogleFonts.montserrat(),),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Center(
+                            child: Text("Self Pickup",style: GoogleFonts.montserrat(),),
+                          ),
+                        )
+                      ],
                     ),
                   ),
-
-                  Padding(
-                    padding: const EdgeInsets.all(8),
-                    child: Container(
-                      height: screenHeight / 3,
-                      decoration: BoxDecoration(
-                          color: Colors.blue
-                      ),
-                    ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
+                  child: Container(
+                    height: screenHeight / 4,
+                    decoration: BoxDecoration(color: Colors.blue),
                   ),
-                ],
-              ),
-              Column(
-                children: <Widget>[Center(
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  child: Container(
+                    height: screenHeight / 8,
+                    decoration: BoxDecoration(color: Colors.blue),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
+                  child: Container(
+                    height: screenHeight / 15,
+                    decoration: BoxDecoration(color: Colors.blue),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Container(
+                    height: screenHeight / 3,
+                    decoration: BoxDecoration(color: Colors.blue),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Center(
                   child: Text("Page 2"),
-                )],
-              ),
-              Column(
-                children: <Widget>[Center(
+                )
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Center(
                   child: Text("Page 3"),
-                )],
-              ),
-              Column(
-                children: <Widget>[Center(
+                )
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Center(
                   child: Text("Page 4"),
-                )],
-              ),
-            ]
-
-          ),
+                )
+              ],
+            ),
+          ]),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
