@@ -120,6 +120,17 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                   child: Container(
                     height: screenHeight / 4,
                     decoration: BoxDecoration(color: Colors.blue),
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index){
+                      return Container(
+                        margin: EdgeInsets.only(right: 8),
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        decoration: BoxDecoration(
+                          color: Colors.red,
+                        ),
+                      );
+                    }),
                   ),
                 ),
                 Padding(
