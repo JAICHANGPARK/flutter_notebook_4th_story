@@ -63,8 +63,17 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                     child: Container(
                       height: screenHeight / 15,
                       decoration: BoxDecoration(
-                          color: Colors.red
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 3
+                          )
+                        ]
                       ),
+
                     ),
                   ),
                   Padding(
