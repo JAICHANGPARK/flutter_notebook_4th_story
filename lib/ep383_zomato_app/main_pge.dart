@@ -187,7 +187,7 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                                 ),
                                 SizedBox(height: 8,),
                                 Expanded(
-                                  child: Text("Express\nDelivery",style: GoogleFonts.montserrat(
+                                  child: Text("Safety\nSealed",style: GoogleFonts.montserrat(
                                       fontSize: 11,
                                       fontWeight: FontWeight.w300
                                   ),),
@@ -201,27 +201,81 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                           flex: 1,
                           child: Container(
                             margin: EdgeInsets.symmetric(horizontal: 4),
+                            padding:  EdgeInsets.symmetric(vertical: 4),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
                                 border: Border.all(color: Colors.grey[300])),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Expanded(
+                                  child: CircleAvatar(),
+                                ),
+                                SizedBox(height: 8,),
+                                Expanded(
+                                  child: Text("Great\nOffers",style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w300
+                                  ),),
+                                )
+
+                              ],
+                            ),
                           ),
                         ),
                         Expanded(
                           flex: 1,
                           child: Container(
                             margin: EdgeInsets.symmetric(horizontal: 4),
+                            padding:  EdgeInsets.symmetric(vertical: 4),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
                                 border: Border.all(color: Colors.grey[300])),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Expanded(
+                                  child: CircleAvatar(),
+                                ),
+                                SizedBox(height: 8,),
+                                Expanded(
+                                  child: Text("New\nArrivals",style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w300
+                                  ),),
+                                )
+
+                              ],
+                            ),
                           ),
                         ),
                         Expanded(
                           flex: 1,
                           child: Container(
                             margin: EdgeInsets.symmetric(horizontal: 4),
+                            padding:  EdgeInsets.symmetric(vertical: 4),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(4),
                                 border: Border.all(color: Colors.grey[300])),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Expanded(
+                                  child: CircleAvatar(),
+                                ),
+                                SizedBox(height: 8,),
+                                Expanded(
+                                  child: Text("Trending\nPlaces",style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w300
+                                  ),),
+                                )
+
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -231,8 +285,24 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                 Padding(
                   padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
                   child: Container(
-                    height: screenHeight / 15,
-                    decoration: BoxDecoration(color: Colors.blue),
+                    height: screenHeight / 19,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index){
+                        return Container(
+                          margin: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                          height: double.infinity,
+                          width: 64,
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4)
+                          ),
+                        );
+                      },
+
+                    ),
                   ),
                 ),
                 Padding(
