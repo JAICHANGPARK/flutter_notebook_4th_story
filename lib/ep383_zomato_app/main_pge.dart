@@ -76,9 +76,7 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                           icon: Icon(Icons.search),
                           hintText: "Search for restaurants, cuisines...",
                           border: InputBorder.none,
-                          hintStyle: GoogleFonts.montserrat(
-                            fontSize: 14
-                          )),
+                          hintStyle: GoogleFonts.montserrat(fontSize: 14)),
                     ),
                   ),
                 ),
@@ -97,18 +95,23 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                           child: Container(
                             margin: EdgeInsets.all(4),
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(4)
-                            ),
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(4)),
                             child: Center(
-                              child: Text('Delivery',style: GoogleFonts.montserrat(),),
+                              child: Text(
+                                'Delivery',
+                                style: GoogleFonts.montserrat(),
+                              ),
                             ),
                           ),
                         ),
                         Expanded(
                           flex: 1,
                           child: Center(
-                            child: Text("Self Pickup",style: GoogleFonts.montserrat(),),
+                            child: Text(
+                              "Self Pickup",
+                              style: GoogleFonts.montserrat(),
+                            ),
                           ),
                         )
                       ],
@@ -119,18 +122,18 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                   padding: const EdgeInsets.only(left: 8, top: 8, bottom: 8),
                   child: Container(
                     height: screenHeight / 4,
-                    decoration: BoxDecoration(color: Colors.blue),
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index){
-                      return Container(
-                        margin: EdgeInsets.only(right: 8),
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                        ),
-                      );
-                    }),
+                        itemBuilder: (context, index) {
+                          return Container(
+                            margin: EdgeInsets.only(right: 8),
+                            width: MediaQuery.of(context).size.width / 1.5,
+                            decoration: BoxDecoration(
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          );
+                        }),
                   ),
                 ),
                 Padding(
@@ -138,7 +141,91 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                       const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                   child: Container(
                     height: screenHeight / 8,
-                    decoration: BoxDecoration(color: Colors.blue),
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 4),
+                            padding:  EdgeInsets.symmetric(vertical: 4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                border: Border.all(color: Colors.grey[300])),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Expanded(
+                                  child: CircleAvatar(),
+                                ),
+                                SizedBox(height: 8,),
+                                Expanded(
+                                  child: Text("Express\nDelivery",style: GoogleFonts.montserrat(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w300
+                                  ),),
+                                )
+
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 4),
+                            padding:  EdgeInsets.symmetric(vertical: 4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                border: Border.all(color: Colors.grey[300])),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Expanded(
+                                  child: CircleAvatar(),
+                                ),
+                                SizedBox(height: 8,),
+                                Expanded(
+                                  child: Text("Express\nDelivery",style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w300
+                                  ),),
+                                )
+
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                border: Border.all(color: Colors.grey[300])),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                border: Border.all(color: Colors.grey[300])),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                border: Border.all(color: Colors.grey[300])),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
