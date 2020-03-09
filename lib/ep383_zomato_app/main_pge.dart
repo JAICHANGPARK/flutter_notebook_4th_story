@@ -51,7 +51,8 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                         Spacer(),
                         CircleAvatar(
                           radius: 12,
-                          backgroundImage: NetworkImage("https://avatars2.githubusercontent.com/u/19484515?s=460&v=4"),
+                          backgroundImage: NetworkImage(
+                              "https://avatars2.githubusercontent.com/u/19484515?s=460&v=4"),
                         )
                       ],
                     ),
