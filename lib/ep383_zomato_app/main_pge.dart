@@ -389,7 +389,9 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                   child: Container(
                     height: screenHeight / 3,
                     decoration: BoxDecoration(color: Colors.blue),
-                    child: ListView.builder(itemBuilder: (context, index) {
+                    child: ListView.builder(
+
+                        itemBuilder: (context, index) {
                       return Container(
                         height: screenHeight / 7,
                         decoration: BoxDecoration(color: Colors.red),
