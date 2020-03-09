@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep383_zomato_app/restaurant.dart';
 import 'package:flutter_notebook_4th/ep383_zomato_app/top_banner.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -388,14 +389,49 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                   padding: const EdgeInsets.all(8),
                   child: Container(
                     height: screenHeight / 3,
-                    decoration: BoxDecoration(color: Colors.blue),
                     child: ListView.builder(
-
+                            itemCount: restaurantItems.length,
                         itemBuilder: (context, index) {
                       return Container(
-                        height: screenHeight / 7,
-                        decoration: BoxDecoration(color: Colors.red),
+                        height: screenHeight / 7.5,
                         margin: EdgeInsets.only(bottom: 8),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Expanded(
+                              flex: 3,
+                              child: Container(margin: EdgeInsets.all(4),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  image: DecorationImage(
+                                    image: NetworkImage(restaurantItems[index].img),
+                                    fit: BoxFit.cover,
+                                  )
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 8,
+                              child: Placeholder(),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                height: 28,
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(4)
+                                ),
+                                child: Center(
+                                  child: Text(restaurantItems[index].rate, style: TextStyle(
+                                    color: Colors.white,
+
+                                  ),),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       );
                     }),
                   ),
