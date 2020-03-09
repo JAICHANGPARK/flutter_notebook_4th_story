@@ -412,7 +412,31 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                             ),
                             Expanded(
                               flex: 8,
-                              child: Placeholder(),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(restaurantItems[index].title, style: TextStyle(
+
+                                        fontSize: 14,
+                                      fontWeight: FontWeight.bold
+                                    ),),
+                                    Text(restaurantItems[index].subtitle, style: TextStyle(
+                                        color: Colors.grey,
+                                      fontSize: 12
+                                    ),),
+                                    Text(restaurantItems[index].about, style: TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12
+                                    ),),
+                                    Text(restaurantItems[index].sale, style: TextStyle(
+                                      color: Colors.red
+                                    ),),
+                                  ],
+                                ),
+                              ),
                             ),
                             Expanded(
                               flex: 1,
