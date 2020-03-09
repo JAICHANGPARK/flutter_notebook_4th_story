@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep383_zomato_app/top_banner.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ZomatoApp extends StatelessWidget {
@@ -126,13 +127,75 @@ class _ZomatoMainPageState extends State<ZomatoMainPage> {
                     height: screenHeight / 4,
                     child: ListView.builder(
                         scrollDirection: Axis.horizontal,
+                        itemCount: bannerItems.length,
                         itemBuilder: (context, index) {
                           return Container(
                             margin: EdgeInsets.only(right: 8),
                             width: MediaQuery.of(context).size.width / 1.5,
                             decoration: BoxDecoration(
-                              color: Colors.red,
+                              color: bannerItems[index].bgColor,
+                              image: bannerItems[index].img != "" ? DecorationImage(
+                                  image: NetworkImage(bannerItems[index].img),
+                                  colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.3),
+                                  BlendMode.darken),
+                                  fit: BoxFit.cover):null,
                               borderRadius: BorderRadius.circular(8),
+
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 24),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.all(3),
+                                    child: Text(
+                                      bannerItems[index].tag,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                    decoration: BoxDecoration(
+                                        color: bannerItems[index].tagColor,
+                                        borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(4),
+                                          bottomRight: Radius.circular(4),
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 16),
+                                    child: Text(
+                                      bannerItems[index].title,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 42,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 16),
+                                    child: Text(
+                                      bannerItems[index].code,
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 16),
+                                    child: Text(
+                                      bannerItems[index].subtitle,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           );
                         }),
