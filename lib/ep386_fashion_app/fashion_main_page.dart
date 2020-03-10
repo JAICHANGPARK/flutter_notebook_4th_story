@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FashionApp extends StatelessWidget {
@@ -54,11 +55,43 @@ class _FashionMainPageState extends State<FashionMainPage> {
           Expanded(
             flex: 12,
             child: Container(
+              width: double.infinity,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
                           "https://cdn.pixabay.com/photo/2016/10/16/04/05/girl-1744349_960_720.jpg"),
                       fit: BoxFit.cover)),
+              child: Column(
+                children: <Widget>[
+                  Spacer(),
+                  Text("Play less for the\n brands you love", style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24
+                  ),),
+                  Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: MaterialButton(
+                      minWidth: 190,
+                      child: Text("Start Shopping", style: TextStyle(
+                        color: Colors.white,
+                      ),),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)
+                      ),
+                      color: Colors.green,
+                      padding: EdgeInsets.all(18),
+                      onPressed: (){},
+                    ),
+                  ),
+                  Spacer(),
+                  Row(
+                    children: <Widget>[
+                      Icon()
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -110,7 +143,7 @@ class _FashionMainPageState extends State<FashionMainPage> {
                           child: VerticalDivider(),
                         ),
                         Expanded(
-                          child: Placeholder(),
+                          child: Image.network("https://i.pinimg.com/originals/39/be/27/39be279f8290ec3d1e2072dc1d2df99a.jpg"),
                         ),
                       ],
                     ),
