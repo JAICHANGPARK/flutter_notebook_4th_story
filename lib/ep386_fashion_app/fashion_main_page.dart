@@ -22,20 +22,46 @@ class _FashionMainPageState extends State<FashionMainPage> {
         children: <Widget>[
           Expanded(
             flex: 2,
-            child: Placeholder(),
+            child: SafeArea(
+              child: Container(
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(Icons.menu),
+                      SizedBox(width: 8,),
+                      Icon(Icons.person_outline),
+                      Spacer(),
+                      Text("LoveTheSales",style: TextStyle(
+                        fontWeight: FontWeight.bold
+                      ),),
+                      Spacer(),
+                      Icon(Icons.favorite_border),
+                      SizedBox(width: 8,),
+                      Icon(Icons.search)
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ),
           Expanded(
-            flex: 2,
-            child: Placeholder(),
+            flex: 12,
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage("https://cdn.pixabay.com/photo/2016/11/16/10/28/two-girls-1828539_960_720.jpg"),
+                  fit: BoxFit.cover
+                )
+              ),
+            ),
           ),
           Expanded(
-            flex: 2,
+            flex: 5,
             child: Placeholder(),
           ),
-          Expanded(
-            flex: 2,
-            child: Placeholder(),
-          ),
+
         ],
       ),
     );
