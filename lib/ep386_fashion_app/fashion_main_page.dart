@@ -63,56 +63,60 @@ class _FashionMainPageState extends State<FashionMainPage> {
           ),
           Expanded(
             flex: 5,
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Placeholder(),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: VerticalDivider(),
-                      ),
-                      Expanded(
-                        child: Placeholder(),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: VerticalDivider(),
-                      ),
-                      Expanded(
-                        child: Placeholder(),
-                      ),
-                    ],
+            child: Container(
+              color: Colors.white,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Image.network(
+                              "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSyPAfmD5t7zLSewzTPq30d9w8njciGmOHBP13bqsaCfJCQIluo"),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: VerticalDivider(),
+                        ),
+                        Expanded(
+                            child: Image.network(
+                                "https://dg4teqrgjt4wz.cloudfront.net/app/uploads/2019/05/02133741/Hugo-Boss-Logo.jpg")),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: VerticalDivider(),
+                        ),
+                        Expanded(
+                          child: Image.network("https://www.turkibazaar.com/storage/media/9puobYEdk7AQMNtc15OOfTorf407ATHFdUGbPHKg.jpeg"),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Divider(),
-                Expanded(
-                  child: Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Placeholder(),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: VerticalDivider(),
-                      ),
-                      Expanded(
-                        child: Placeholder(),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8),
-                        child: VerticalDivider(),
-                      ),
-                      Expanded(
-                        child: Placeholder(),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                  Divider(),
+                  Expanded(
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Image.network("https://m.media-amazon.com/images/S/aplus-media/vc/149b001d-17eb-49c8-ad6b-9aa0fffb5d42.__CR1,0,2928,1200_PT0_SX1464_V1___.jpg"),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: VerticalDivider(),
+                        ),
+                        Expanded(
+                          child: Image.network("https://seoul-p-studio.bunjang.net/product/83400833_12_1561745670_w640.jpg"),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          child: VerticalDivider(),
+                        ),
+                        Expanded(
+                          child: Placeholder(),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],
@@ -120,3 +124,11 @@ class _FashionMainPageState extends State<FashionMainPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
