@@ -24,6 +24,46 @@ class PBAMainPage extends StatefulWidget {
 class _PBAMainPageState extends State<PBAMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+
+          ],
+        ),
+
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: ,
+      ),
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
