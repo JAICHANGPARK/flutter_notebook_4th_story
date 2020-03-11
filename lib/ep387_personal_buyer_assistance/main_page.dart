@@ -24,18 +24,32 @@ class _PBAMainPageState extends State<PBAMainPage> {
 
   @override
   Widget build(BuildContext context) {
+    final deviceHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[],
+          children: <Widget>[
+            Container(
+              height: deviceHeight / 4,
+              color: Colors.red,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16),
+              child: Container(
+                height: deviceHeight / 4,
+                color: Colors.red,
+              ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: _buildBottomAppBar(),
     );
   }
 
-  Widget _buildBottomAppBar(){
-    return  BottomAppBar(
+  Widget _buildBottomAppBar() {
+    return BottomAppBar(
       elevation: 5,
       child: Container(
         height: 64,
@@ -93,18 +107,3 @@ class _PBAMainPageState extends State<PBAMainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
