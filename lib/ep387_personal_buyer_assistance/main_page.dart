@@ -1,5 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 class PersonalBuyerAssistance extends StatelessWidget {
   @override
@@ -7,11 +7,8 @@ class PersonalBuyerAssistance extends StatelessWidget {
     return MaterialApp(
       initialRoute: "/",
       routes: {
-
-        '/' : (context)=>PBAMainPage(),
-
+        '/': (context) => PBAMainPage(),
       },
-
     );
   }
 }
@@ -22,23 +19,68 @@ class PBAMainPage extends StatefulWidget {
 }
 
 class _PBAMainPageState extends State<PBAMainPage> {
+  int pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: <Widget>[
-
-          ],
+          children: <Widget>[],
         ),
-
       ),
       bottomNavigationBar: BottomAppBar(
+        elevation: 5,
         child: Container(
-          height: 80,
+          height: 64,
+          padding: EdgeInsets.symmetric(horizontal: 16),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-
+              IconButton(
+                icon: Icon(
+                  Icons.home,
+                  color: pageIndex == 0 ? Colors.teal : Colors.grey,
+                ),
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 0;
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.refresh,
+                  color: pageIndex == 1 ? Colors.teal : Colors.grey,
+                ),
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 1;
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.chat_bubble_outline,
+                  color: pageIndex == 2 ? Colors.teal : Colors.grey,
+                ),
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 2;
+                  });
+                },
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.person_outline,
+                  color: pageIndex == 3 ? Colors.teal : Colors.grey,
+                ),
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 3;
+                  });
+                },
+              )
             ],
           ),
         ),
@@ -46,31 +88,3 @@ class _PBAMainPageState extends State<PBAMainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
