@@ -34,7 +34,14 @@ class _PBAMainPageState extends State<PBAMainPage> {
 
       ),
       bottomNavigationBar: BottomAppBar(
-        child: ,
+        child: Container(
+          height: 80,
+          child: Row(
+            children: <Widget>[
+
+            ],
+          ),
+        ),
       ),
     );
   }
