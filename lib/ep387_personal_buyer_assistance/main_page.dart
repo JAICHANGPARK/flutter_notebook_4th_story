@@ -27,21 +27,75 @@ class _PBAMainPageState extends State<PBAMainPage> {
     final deviceHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              height: deviceHeight / 4,
-              color: Colors.red,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: Container(
-                height: deviceHeight / 4,
-                color: Colors.red,
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(
+                  top: 16,right: 16, left: 16, bottom: 16
+                ),
+                height: deviceHeight / 4.5,
+                child: Column(
+                  children: <Widget>[
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text("Good day, Dreamwalker!",style: Theme.of(context).textTheme.bodyText1,),
+                              SizedBox(height: 5,),
+                              Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(16)
+                                ),
+                                child: Center(
+                                  child: Text("458 pts", style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
+                              ),
+                            ],
+                          ),
+                          CircleAvatar(),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: EdgeInsets.only(top: 8, bottom: 8),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Container(
+                  height: deviceHeight / 3.5,
+                  color: Colors.red,
+
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Container(
+                  height: deviceHeight / 2,
+                  color: Colors.red,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: _buildBottomAppBar(),
