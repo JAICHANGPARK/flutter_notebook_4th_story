@@ -158,7 +158,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
                 padding: const EdgeInsets.only(top: 16),
                 child: Container(
                   height: deviceHeight / 2,
-                  color: Colors.red,
+                  
                   child: Column(
                     children: <Widget>[
                       Expanded(
@@ -192,7 +192,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 16, bottom: 16),
+                                  padding: const EdgeInsets.only(top: 16, bottom: 16,left: 16),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,15 +203,21 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                     ],
                                   ),
                                 ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Icon(
-                                      Icons.bookmark,
-                                      color: Colors.grey,
-                                    ),
-                                    Text("36 requests"),
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 16),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Icon(
+                                        Icons.bookmark,
+                                        color: Colors.grey,
+                                        size: 14,
+                                      ),
+
+                                      Text("36 requests"),
+                                    ],
+                                  ),
                                 )
                               ],
                             ),
