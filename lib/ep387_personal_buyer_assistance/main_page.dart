@@ -121,36 +121,26 @@ class _PBAMainPageState extends State<PBAMainPage> {
                               return Container(
                                 width: 130,
                                 margin: EdgeInsets.only(right: 16),
-                                decoration: BoxDecoration(
-                                  color: Colors.blue
-                                ),
+                                decoration: BoxDecoration(color: Colors.blue),
                                 child: Column(
                                   children: <Widget>[
                                     Expanded(
-                                      flex:6,
+                                      flex: 6,
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.green,
-                                          image: DecorationImage(
-                                            image: NetworkImage("")
-                                          )
-                                        ),
+                                            color: Colors.green, image: DecorationImage(image: NetworkImage(""))),
                                       ),
                                     ),
                                     Expanded(
-                                      flex:2,
+                                      flex: 2,
                                       child: Container(
-                                        decoration: BoxDecoration(
-                                            color: Colors.red
-                                        ),
+                                        decoration: BoxDecoration(color: Colors.red),
                                       ),
                                     ),
                                     Expanded(
-                                      flex:2,
+                                      flex: 2,
                                       child: Container(
-                                        decoration: BoxDecoration(
-                                            color: Colors.green
-                                        ),
+                                        decoration: BoxDecoration(color: Colors.green),
                                       ),
                                     )
                                   ],
@@ -173,12 +163,59 @@ class _PBAMainPageState extends State<PBAMainPage> {
                     children: <Widget>[
                       Expanded(
                         flex: 2,
-                        child: Placeholder(),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text("Lates"),
+                              Text("View All"),
+                            ],
+                          ),
+                        ),
                       ),
                       Expanded(
                         flex: 10,
-                        child: ListView.builder(itemBuilder: (context, index){
-                          return Container();
+                        child: ListView.builder(itemBuilder: (context, index) {
+                          return Container(
+                            height: 100,
+                            color: Colors.white,
+                            padding: EdgeInsets.only(left: 16, right: 16),
+                            margin: EdgeInsets.only(bottom: 16),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 72,
+                                  width: 72,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 16, bottom: 16),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("Greem Saled Agliato Varbinaara"),
+                                      Text("\$240- \$320"),
+                                      Text("Iceland")
+                                    ],
+                                  ),
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.bookmark,
+                                      color: Colors.grey,
+                                    ),
+                                    Text("36 requests"),
+                                  ],
+                                )
+                              ],
+                            ),
+                          );
                         }),
                       )
                     ],
