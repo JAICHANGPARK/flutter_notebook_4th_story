@@ -71,8 +71,18 @@ class _PBAMainPageState extends State<PBAMainPage> {
                       child: Container(
                         margin: EdgeInsets.only(top: 8, bottom: 8),
                         decoration: BoxDecoration(
-                          color: Colors.grey[300],
+                          color: Colors.grey[100],
                           borderRadius: BorderRadius.circular(6),
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Search item",
+                            hintStyle: TextStyle(
+                              color: Colors.grey[400]
+                            )
+                          ),
                         ),
                       ),
                     )
@@ -80,11 +90,35 @@ class _PBAMainPageState extends State<PBAMainPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 8),
                 child: Container(
+
                   height: deviceHeight / 3.5,
                   color: Colors.red,
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text("Popular"),
+                            Text("View All", style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.greenAccent
+                            ),)
+                          ],
+                        ),
+                      ),
+                      ListView.builder(itemBuilder: (BuildContext context, int index) {
+                        return Container(
+                        );
+                      },
 
+
+                      )
+                    ],
+                  ),
                 ),
               ),
               Padding(
