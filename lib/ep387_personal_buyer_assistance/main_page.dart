@@ -33,9 +33,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(
-                  top: 16,right: 16, left: 16, bottom: 16
-                ),
+                padding: EdgeInsets.only(top: 16, right: 16, left: 16, bottom: 16),
                 height: deviceHeight / 4.5,
                 child: Column(
                   children: <Widget>[
@@ -47,18 +45,23 @@ class _PBAMainPageState extends State<PBAMainPage> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text("Good day, Dreamwalker!",style: Theme.of(context).textTheme.bodyText1,),
-                              SizedBox(height: 5,),
+                              Text(
+                                "Good day, Dreamwalker!",
+                                style: Theme.of(context).textTheme.bodyText1,
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
                               Container(
                                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                                decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.circular(16)
-                                ),
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(16)),
                                 child: Center(
-                                  child: Text("458 pts", style: TextStyle(
-                                    color: Colors.white,
-                                  ),),
+                                  child: Text(
+                                    "458 pts",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
@@ -77,12 +80,9 @@ class _PBAMainPageState extends State<PBAMainPage> {
                         padding: EdgeInsets.symmetric(horizontal: 16),
                         child: TextField(
                           decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Search item",
-                            hintStyle: TextStyle(
-                              color: Colors.grey[400]
-                            )
-                          ),
+                              border: InputBorder.none,
+                              hintText: "Search item",
+                              hintStyle: TextStyle(color: Colors.grey[400])),
                         ),
                       ),
                     )
@@ -92,30 +92,40 @@ class _PBAMainPageState extends State<PBAMainPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: Container(
-
                   height: deviceHeight / 3.5,
                   color: Colors.red,
                   child: Column(
                     children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text("Popular"),
-                            Text("View All", style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.greenAccent
-                            ),)
-                          ],
+                      Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text("Popular"),
+                              Text(
+                                "View All",
+                                style: TextStyle(fontSize: 13, color: Colors.greenAccent),
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                      ListView.builder(itemBuilder: (BuildContext context, int index) {
-                        return Container(
-                        );
-                      },
-
-
+                      Expanded(
+                        flex: 8,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              width: 160,
+                              margin: EdgeInsets.only(right: 16),
+                              decoration: BoxDecoration(
+                                color: Colors.blue
+                              ),
+                            );
+                          },
+                        ),
                       )
                     ],
                   ),
