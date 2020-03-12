@@ -33,7 +33,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
           child: Column(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(top: 16, right: 16, left: 16, bottom: 16),
+                padding: EdgeInsets.only(top: 16, right: 16, left: 16),
                 height: deviceHeight / 4.5,
                 child: Column(
                   children: <Widget>[
@@ -90,16 +90,15 @@ class _PBAMainPageState extends State<PBAMainPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 8),
+                padding: const EdgeInsets.only(top: 0),
                 child: Container(
-                  height: deviceHeight / 3.5,
-                  color: Colors.red,
+                  height: deviceHeight / 3.3,
                   child: Column(
                     children: <Widget>[
                       Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.only(left: 16, right: 16),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
@@ -114,17 +113,51 @@ class _PBAMainPageState extends State<PBAMainPage> {
                       ),
                       Expanded(
                         flex: 8,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              width: 160,
-                              margin: EdgeInsets.only(right: 16),
-                              decoration: BoxDecoration(
-                                color: Colors.blue
-                              ),
-                            );
-                          },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 16),
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                                width: 130,
+                                margin: EdgeInsets.only(right: 16),
+                                decoration: BoxDecoration(
+                                  color: Colors.blue
+                                ),
+                                child: Column(
+                                  children: <Widget>[
+                                    Expanded(
+                                      flex:6,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.green,
+                                          image: DecorationImage(
+                                            image: NetworkImage("")
+                                          )
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex:2,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.red
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex:2,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.green
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       )
                     ],
@@ -136,6 +169,20 @@ class _PBAMainPageState extends State<PBAMainPage> {
                 child: Container(
                   height: deviceHeight / 2,
                   color: Colors.red,
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 2,
+                        child: Placeholder(),
+                      ),
+                      Expanded(
+                        flex: 10,
+                        child: ListView.builder(itemBuilder: (context, index){
+                          return Container();
+                        }),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
