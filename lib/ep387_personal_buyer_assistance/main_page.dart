@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notebook_4th/ep387_personal_buyer_assistance/data_model.dart';
 
 class PersonalBuyerAssistance extends StatelessWidget {
   @override
@@ -92,7 +93,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 0),
                 child: Container(
-                  height: deviceHeight / 3.3,
+                  height: deviceHeight / 3,
                   child: Column(
                     children: <Widget>[
                       Expanded(
@@ -112,35 +113,46 @@ class _PBAMainPageState extends State<PBAMainPage> {
                         ),
                       ),
                       Expanded(
-                        flex: 8,
+                        flex: 10,
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16),
                           child: ListView.builder(
+                            itemCount: popularItems.length,
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (BuildContext context, int index) {
                               return Container(
                                 width: 130,
                                 margin: EdgeInsets.only(right: 16),
-                                decoration: BoxDecoration(color: Colors.blue),
+                              
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Expanded(
                                       flex: 6,
                                       child: Container(
+                                        margin: EdgeInsets.all(3),
                                         decoration: BoxDecoration(
-                                            color: Colors.green, image: DecorationImage(image: NetworkImage(""))),
+                                            borderRadius: BorderRadius.circular(12),
+                                            color: Colors.green,
+                                            image: DecorationImage(
+                                                image: NetworkImage(
+                                                  popularItems[index].img,
+                                                ),
+                                                fit: BoxFit.cover)),
                                       ),
                                     ),
                                     Expanded(
                                       flex: 2,
                                       child: Container(
-                                        decoration: BoxDecoration(color: Colors.red),
+
+                                        child: Text(popularItems[index].title),
                                       ),
                                     ),
                                     Expanded(
                                       flex: 2,
                                       child: Container(
-                                        decoration: BoxDecoration(color: Colors.green),
+
+                                        child: Text("${popularItems[index].lowPrice} - ${popularItems[index].highPrice}"),
                                       ),
                                     )
                                   ],
