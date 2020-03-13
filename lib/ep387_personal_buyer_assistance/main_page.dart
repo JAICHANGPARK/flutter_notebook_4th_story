@@ -209,6 +209,10 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                   width: 72,
                                   decoration: BoxDecoration(
                                     color: Colors.blue,
+                                    image: DecorationImage(
+                                      image: NetworkImage(lateItems[index].img),
+                                      fit: BoxFit.cover
+                                    )
                                   ),
                                 ),
                                 Padding(
@@ -217,12 +221,13 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      Text("Greem Saled Agliato Varbinaara"),
-                                      Text("\$240- \$320"),
-                                      Text("Iceland")
+                                      Text(lateItems[index].title),
+                                      Text("${lateItems[index].lowPrice}-${lateItems[index].highPrice}"),
+                                      Text(lateItems[index].from),
                                     ],
                                   ),
                                 ),
+                                Spacer(),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 16),
                                   child: Column(
@@ -231,10 +236,10 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                     children: <Widget>[
                                       Icon(
                                         Icons.bookmark,
-                                        color: Colors.grey,
+                                        color: lateItems[index].isSaved ? Colors.red :Colors.grey,
                                         size: 14,
                                       ),
-                                      Text("36 requests"),
+                                      Text("${lateItems[index].request} requests"),
                                     ],
                                   ),
                                 )
