@@ -97,7 +97,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
                   child: Column(
                     children: <Widget>[
                       Expanded(
-                        flex: 3,
+                        flex: 2,
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16, right: 16),
                           child: Row(
@@ -113,7 +113,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
                         ),
                       ),
                       Expanded(
-                        flex: 10,
+                        flex: 12,
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16),
                           child: ListView.builder(
@@ -123,16 +123,15 @@ class _PBAMainPageState extends State<PBAMainPage> {
                               return Container(
                                 width: 130,
                                 margin: EdgeInsets.only(right: 16),
-                              
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Expanded(
-                                      flex: 6,
+                                      flex: 9,
                                       child: Container(
                                         margin: EdgeInsets.all(3),
                                         decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(12),
+                                            borderRadius: BorderRadius.circular(8),
                                             color: Colors.green,
                                             image: DecorationImage(
                                                 image: NetworkImage(
@@ -142,17 +141,27 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                       ),
                                     ),
                                     Expanded(
-                                      flex: 2,
+                                      flex: 3,
                                       child: Container(
-
-                                        child: Text(popularItems[index].title),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(popularItems[index].title,style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                          ),),
+                                        ),
                                       ),
                                     ),
                                     Expanded(
                                       flex: 2,
                                       child: Container(
-
-                                        child: Text("${popularItems[index].lowPrice} - ${popularItems[index].highPrice}"),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text("${popularItems[index].lowPrice} - ${popularItems[index].highPrice}",
+                                          style: TextStyle(
+                                            fontSize: 12
+                                          ),),
+                                        ),
                                       ),
                                     )
                                   ],
