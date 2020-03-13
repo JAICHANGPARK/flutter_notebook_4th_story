@@ -35,7 +35,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.only(top: 16, right: 16, left: 16),
-                height: deviceHeight / 4.5,
+                height: deviceHeight / 5,
                 child: Column(
                   children: <Widget>[
                     Expanded(
@@ -196,7 +196,9 @@ class _PBAMainPageState extends State<PBAMainPage> {
                       ),
                       Expanded(
                         flex: 10,
-                        child: ListView.builder(itemBuilder: (context, index) {
+                        child: ListView.builder(
+                            itemCount: lateItems.length,
+                            itemBuilder: (context, index) {
                           return Container(
                             height: 100,
                             color: Colors.white,
@@ -209,6 +211,7 @@ class _PBAMainPageState extends State<PBAMainPage> {
                                   width: 72,
                                   decoration: BoxDecoration(
                                     color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(4),
                                     image: DecorationImage(
                                       image: NetworkImage(lateItems[index].img),
                                       fit: BoxFit.cover
