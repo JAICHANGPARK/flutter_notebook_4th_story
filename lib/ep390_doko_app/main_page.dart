@@ -91,27 +91,56 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        CircleAvatar(),
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "https://avatars0.githubusercontent.com/u/19484515?s=460&u=0ec7b31ff9129826cccc5cd971887a9dd0e0a538&v=4"),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[Text("Dreamwalker"), Text("Android/Flutter Developer")],
+                            children: <Widget>[
+                              Text(
+                                "Dreamwalker",
+                                style: TextStyle(
+                                  color: appAccentColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 4),
+                                child: Text(
+                                  "Android/Flutter Developer",
+                                  style: TextStyle(color: Colors.indigo[200], fontSize: 12),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                         Spacer(),
                         Chip(
-                          label: Text("Follow", style: TextStyle(
-                            color: Colors.white,
-                          ),),
+                          label: Text(
+                            "Follow",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
                           backgroundColor: appAccentColor,
                           elevation: 8,
                           padding: EdgeInsets.symmetric(horizontal: 12),
-                        )
+                        ),
                       ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: Text(
+                        "Tokyo Travel Guide",
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: appAccentColor,letterSpacing: 1.5),
+                      ),
                     )
                   ],
                 ),
