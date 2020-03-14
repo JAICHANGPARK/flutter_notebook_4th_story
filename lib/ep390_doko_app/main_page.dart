@@ -10,6 +10,7 @@ class DokoApp extends StatelessWidget {
     );
   }
 }
+
 class DokoDetailPage extends StatefulWidget {
   @override
   _DokoDetailPageState createState() => _DokoDetailPageState();
@@ -17,7 +18,8 @@ class DokoDetailPage extends StatefulWidget {
 
 class _DokoDetailPageState extends State<DokoDetailPage> {
   /// 8 23 90
-  Color appAccentColor = Color(0xff08175A );
+  Color appAccentColor = Color(0xff08175A);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,29 +42,15 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
             child: Card(
               margin: EdgeInsets.all(0),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(32),
-                )
-              ),
+                  borderRadius: BorderRadius.only(
+                topRight: Radius.circular(32),
+              )),
               elevation: 4,
               child: Column(),
             ),
           )
         ],
       ),
-
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
