@@ -186,7 +186,9 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                               style: TextStyle(color: appAccentColor),
                             ),
                           ),
-                          SizedBox(width: 16,),
+                          SizedBox(
+                            width: 16,
+                          ),
                           Icon(
                             Icons.attach_money,
                             size: 18,
@@ -194,29 +196,27 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                           ),
                           Text(
                             "1200\$ Per Person",
-                            style: TextStyle(color: appAccentColor,
-                            fontWeight: FontWeight.w600),
-
+                            style: TextStyle(color: appAccentColor, fontWeight: FontWeight.w600),
                           ),
                         ],
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 12),
-                      child: Text("Mount Fuji",style: TextStyle(
-                        color: appAccentColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18
-                      ),),
+                      child: Text(
+                        "Mount Fuji",
+                        style: TextStyle(color: appAccentColor, fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
                     ),
                     Text(
-                        "Mount Fuji (富士山, Fujisan), located on Honshū, is the highest volcano in Japan at 3,776.24 m (12,389 ft), \n\n"
-                            "2nd-highest volcano of an island in Asia (after Mount Kerinci in Sumatra), and 7th-highest peak of an island in the world.[1] It is an active stratovolcano that last erupted in 1707–1708.",
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w300,
-                      color: appAccentColor,
-                    ),),
+                      "Mount Fuji (富士山, Fujisan), located on Honshū, is the highest volcano in Japan at 3,776.24 m (12,389 ft), \n\n"
+                      "2nd-highest volcano of an island in Asia (after Mount Kerinci in Sumatra), and 7th-highest peak of an island in the world.[1] It is an active stratovolcano that last erupted in 1707–1708.",
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w300,
+                        color: appAccentColor,
+                      ),
+                    ),
                     Spacer(),
                     Row(
                       children: <Widget>[
@@ -280,9 +280,12 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                               child: Padding(
                                 padding: const EdgeInsets.all(16.0),
                                 child: Center(
-                                  child: Text("Mentioned",style: TextStyle(
-                                    color: Colors.white,
-                                  ),),
+                                  child: Text(
+                                    "Mentioned",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
