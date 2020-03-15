@@ -179,10 +179,14 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                             size: 18,
                             color: appAccentColor,
                           ),
-                          Text(
-                            "6 Days",
-                            style: TextStyle(color: appAccentColor),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8),
+                            child: Text(
+                              "6 Days",
+                              style: TextStyle(color: appAccentColor),
+                            ),
                           ),
+                          SizedBox(width: 16,),
                           Icon(
                             Icons.attach_money,
                             size: 18,
@@ -190,7 +194,9 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                           ),
                           Text(
                             "1200\$ Per Person",
-                            style: TextStyle(color: appAccentColor),
+                            style: TextStyle(color: appAccentColor,
+                            fontWeight: FontWeight.w600),
+
                           ),
                         ],
                       ),
