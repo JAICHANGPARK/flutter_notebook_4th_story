@@ -139,8 +139,144 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       child: Text(
                         "Tokyo Travel Guide",
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: appAccentColor,letterSpacing: 1.5),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20, color: appAccentColor, letterSpacing: 1.5),
                       ),
+                    ),
+                    Text("1.4 Reading"),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        Flexible(
+                          flex: 1,
+                          fit: FlexFit.loose,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(vertical: 8),
+                            color: Colors.indigo[200],
+                            height: 140,
+                            width: 3,
+                          ),
+                        ),
+                        Flexible(
+                            fit: FlexFit.loose,
+                            flex: 20,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 16),
+                              child: Text(
+                                "Mount Fuji (富士山, Fujisan), located on Honshū, is the highest volcano in Japan at 3,776.24 m (12,389 ft), 2nd-highest volcano of an island in Asia (after Mount Kerinci in Sumatra), and 7th-highest peak of an island in the world.[1] It is an active stratovolcano that last erupted in 1707–1708.[4][5] Mount Fuji lies about 100 kilometers (60 mi) south-west of Tokyo, and can be seen from there on a clear day. ",
+                                style: TextStyle(color: Colors.indigo[200], fontSize: 13),
+                              ),
+                            ))
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.calendar_today,
+                            size: 18,
+                            color: appAccentColor,
+                          ),
+                          Text(
+                            "6 Days",
+                            style: TextStyle(color: appAccentColor),
+                          ),
+                          Icon(
+                            Icons.attach_money,
+                            size: 18,
+                            color: appAccentColor,
+                          ),
+                          Text(
+                            "1200\$ Per Person",
+                            style: TextStyle(color: appAccentColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: Text("Mount Fuji",style: TextStyle(
+                        color: appAccentColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18
+                      ),),
+                    ),
+                    Text(
+                        "Mount Fuji (富士山, Fujisan), located on Honshū, is the highest volcano in Japan at 3,776.24 m (12,389 ft), \n\n"
+                            "2nd-highest volcano of an island in Asia (after Mount Kerinci in Sumatra), and 7th-highest peak of an island in the world.[1] It is an active stratovolcano that last erupted in 1707–1708.",
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w300,
+                      color: appAccentColor,
+                    ),),
+                    Spacer(),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 8,
+                          child: Card(
+                            elevation: 5,
+                            color: appAccentColor,
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Row(
+                                children: <Widget>[
+                                  Icon(
+                                    Icons.thumb_up,
+                                    color: Colors.white,
+                                    size: 20,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(),
+                                    child: Text(
+                                      "543",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Icon(
+                                    Icons.chat_bubble_outline,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    "220",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Spacer(),
+                                  Icon(
+                                    Icons.star_border,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    "377",
+                                    style: TextStyle(color: Colors.white),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 12),
+                            child: Card(
+                              elevation: 12,
+                              color: appAccentColor,
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Center(
+                                  child: Text("Mentioned",style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
