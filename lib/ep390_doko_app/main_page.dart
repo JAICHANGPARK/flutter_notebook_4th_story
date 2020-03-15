@@ -154,7 +154,7 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                           child: Container(
                             margin: EdgeInsets.symmetric(vertical: 8),
                             color: Colors.indigo[200],
-                            height: 140,
+                            height: 130,
                             width: 3,
                           ),
                         ),
@@ -229,7 +229,7 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                                     size: 20,
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(),
+                                    padding: const EdgeInsets.only(left: 4),
                                     child: Text(
                                       "543",
                                       style: TextStyle(color: Colors.white),
@@ -240,18 +240,24 @@ class _DokoDetailPageState extends State<DokoDetailPage> {
                                     Icons.chat_bubble_outline,
                                     color: Colors.white,
                                   ),
-                                  Text(
-                                    "220",
-                                    style: TextStyle(color: Colors.white),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 4),
+                                    child: Text(
+                                      "220",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                   ),
                                   Spacer(),
                                   Icon(
                                     Icons.star_border,
                                     color: Colors.white,
                                   ),
-                                  Text(
-                                    "377",
-                                    style: TextStyle(color: Colors.white),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 4),
+                                    child: Text(
+                                      "377",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                   )
                                 ],
                               ),
