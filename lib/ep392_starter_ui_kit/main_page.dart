@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class StarterUiKitApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,40 +36,17 @@ class _MainPageState extends State<MainPage> {
             top: 0,
             child: Container(
               height: MediaQuery.of(context).size.height / 1.9,
-              
               decoration: BoxDecoration(
                 color: Colors.green,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(16),
-                  bottomLeft: Radius.circular(16))
+                  bottomLeft: Radius.circular(16),
+                ),
               ),
-            )
+            ),
           ),
-
         ],
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
