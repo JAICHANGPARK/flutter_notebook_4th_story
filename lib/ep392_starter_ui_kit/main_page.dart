@@ -25,9 +25,50 @@ class _MainPageState extends State<MainPage> {
             left: 0,
             right: 0,
             bottom: 0,
-            top: 0,
+            top: MediaQuery.of(context).size.height/2,
             child: Container(
               color: Colors.black,
+              child: ListView(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.all(16),
+                    height: MediaQuery.of(context).size.height / 3.5,
+
+                    child: Column(
+                      
+                      children: <Widget>[
+                        Text("Rosalia's Top Songs", style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold
+                        ),),
+                        Row(
+                          children: <Widget>[
+                            Icon(Icons.arrow_drop_up, color: Colors.green,),
+                            Container(
+                              height: 38,
+                              width: 38,
+                              decoration: BoxDecoration(
+                                color: Colors.red,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Auto Cuture", style: TextStyle(
+                                color: Colors.white,
+                              ),),
+                            ),
+                            Spacer(),
+                            CircleAvatar(radius: 18,
+                            backgroundColor: Colors.grey[500],
+                            child: Icon(Icons.more_vert),),
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+
+                ],
+              ),
             ),
           ),
           Positioned(
