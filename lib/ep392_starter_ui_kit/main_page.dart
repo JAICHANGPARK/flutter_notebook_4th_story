@@ -268,6 +268,7 @@ class _MainPageState extends State<MainPage> {
             bottom: 16,
             child: Container(
               height: 52,
+              padding: EdgeInsets.symmetric(horizontal: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(32)
@@ -277,14 +278,35 @@ class _MainPageState extends State<MainPage> {
                   CircleAvatar(
 
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text("Playing Now"),
-                      Text("Pookie"),
-                    ],
-                  )
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("Playing Now",style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey,
+                        ),),
+                        Text("Pookie",style: TextStyle(
+                          color: Colors.grey
+                        ),),
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[300],
+                    child: Icon(Icons.pause, color: Colors.grey,),
+                  ),
+                  SizedBox(width: 8,),
+                  Container(height: 42,
+                  width: 42,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey, width: 2),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(Icons.skip_next, ),)
                 ],
               ),
             ),
