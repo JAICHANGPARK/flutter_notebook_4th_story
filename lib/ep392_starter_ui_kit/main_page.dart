@@ -34,42 +34,123 @@ class _MainPageState extends State<MainPage> {
                     margin: EdgeInsets.all(16),
                     height: MediaQuery.of(context).size.height / 3.5,
 
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("Rosalia's Top Songs", style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                          ),),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 12,),
-                          child: Row(
-                            children: <Widget>[
-                              Icon(Icons.arrow_drop_up, color: Colors.green,),
-                              Container(
-                                height: 38,
-                                width: 38,
-                                decoration: BoxDecoration(
-                                  color: Colors.red,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text("Auto Cuture", style: TextStyle(
-                                  color: Colors.white,
-                                ),),
-                              ),
-                              Spacer(),
-                              CircleAvatar(radius: 18,
-                              backgroundColor: Colors.grey[500],
-                              child: Icon(Icons.more_vert),),
-                            ],
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Rosalia's Top Songs", style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            ),),
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12,),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(Icons.arrow_drop_up, color: Colors.green,),
+                                Container(
+                                  height: 38,
+                                  width: 38,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Auto Cuture", style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
+                                Spacer(),
+                                CircleAvatar(radius: 18,
+                                backgroundColor: Colors.grey[500],
+                                child: Icon(Icons.more_vert, color: Colors.white,),),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12,),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(Icons.arrow_drop_down, color: Colors.pink,),
+                                Container(
+                                  height: 38,
+                                  width: 38,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Millionaria", style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
+                                Spacer(),
+                                CircleAvatar(radius: 18,
+                                  backgroundColor: Colors.grey[500],
+                                  child: Icon(Icons.more_vert, color: Colors.white,),),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12,),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(Icons.arrow_drop_up, color: Colors.green,),
+                                Container(
+                                  height: 38,
+                                  width: 38,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Can Altura", style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
+                                Spacer(),
+                                CircleAvatar(radius: 18,
+                                  backgroundColor: Colors.grey[500],
+                                  child: Icon(Icons.more_vert, color: Colors.white,),),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12,),
+                            child: Row(
+                              children: <Widget>[
+                                Icon(Icons.arrow_drop_up, color: Colors.green,),
+                                Container(
+                                  height: 38,
+                                  width: 38,
+                                  decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Auto Cuture", style: TextStyle(
+                                    color: Colors.white,
+                                  ),),
+                                ),
+                                Spacer(),
+                                CircleAvatar(radius: 18,
+                                  backgroundColor: Colors.grey[500],
+                                  child: Icon(Icons.more_vert, color: Colors.white,),),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
 
@@ -181,6 +262,33 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
           ),
+          Positioned(
+            left: 24,
+            right: 24,
+            bottom: 16,
+            child: Container(
+              height: 52,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(32)
+              ),
+              child: Row(
+                children: <Widget>[
+                  CircleAvatar(
+
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text("Playing Now"),
+                      Text("Pookie"),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
