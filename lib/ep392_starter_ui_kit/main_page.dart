@@ -152,6 +152,16 @@ class _MainPageState extends State<MainPage> {
                         ],
                       ),
                     ),
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height / 2,
+                    color: Colors.blue,
+
+                    child: Column(
+                      children: <Widget>[
+                        
+                      ],
+                    ),
                   )
 
                 ],
