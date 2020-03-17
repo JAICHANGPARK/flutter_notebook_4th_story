@@ -154,12 +154,44 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ),
                   Container(
-                    height: MediaQuery.of(context).size.height / 2,
+                    padding: EdgeInsets.all(16),
+                    height: MediaQuery.of(context).size.height / 3,
                     color: Colors.blue,
-
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        
+                        Expanded(
+                          child: Text("Latest Releases", style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                        ),
+                        Expanded(
+                          flex: 12,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 16),
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: <Widget>[
+                                Container(
+                                  width: 160,
+                                  color: Colors.pink,
+                                  margin: EdgeInsets.only(right: 16),
+                                ),
+                                Container(
+                                  width: 160,
+                                  color: Colors.pink,
+                                  margin: EdgeInsets.only(right: 16),
+                                ),
+                                Container(
+                                  width: 160,
+                                  color: Colors.pink,
+                                  margin: EdgeInsets.only(right: 16),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   )
