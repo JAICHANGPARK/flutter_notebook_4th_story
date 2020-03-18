@@ -27,7 +27,7 @@ class _BudgetPageState extends State<BudgetPage> {
               left: 0,
               right: 0,
               child: Container(
-                height: MediaQuery.of(context).size.height / 2.9,
+                height: MediaQuery.of(context).size.height / 2.3,
                 decoration: BoxDecoration(
                     color: Color(0xff453deb),
 
@@ -53,7 +53,7 @@ class _BudgetPageState extends State<BudgetPage> {
               left: 0,
               right: 0,
               child: Container(
-                height: MediaQuery.of(context).size.height / 4,
+                height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -61,7 +61,28 @@ class _BudgetPageState extends State<BudgetPage> {
                       topLeft: Radius.circular(48),
                     )),
                 child: Column(
-                  children: <Widget>[],
+                  children: <Widget>[
+                    Expanded(
+                        flex: 2,
+                        child: Center(
+                            child: Text(
+                          "Categories",
+                          style: Theme.of(context).textTheme.subtitle2.copyWith(fontWeight: FontWeight.bold),
+                        ))),
+                    Expanded(
+                      flex: 6,
+                      child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 10,
+                          itemBuilder: (context, index) {
+                            return Container(
+                              width: 160,
+                              margin: EdgeInsets.all(16),
+                              decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                            );
+                          }),
+                    )
+                  ],
                 ),
               ),
             )
