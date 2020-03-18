@@ -19,6 +19,7 @@ class _BudgetPageState extends State<BudgetPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[50],
       body: SafeArea(
         child: Stack(
           children: <Widget>[
@@ -67,7 +68,7 @@ class _BudgetPageState extends State<BudgetPage> {
                         child: Center(
                             child: Text(
                           "Categories",
-                          style: Theme.of(context).textTheme.subtitle2.copyWith(fontWeight: FontWeight.bold),
+                          style: Theme.of(context).textTheme.subtitle1.copyWith(fontWeight: FontWeight.bold),
                         ))),
                     Expanded(
                       flex: 6,
@@ -76,9 +77,36 @@ class _BudgetPageState extends State<BudgetPage> {
                           itemCount: 10,
                           itemBuilder: (context, index) {
                             return Container(
-                              width: 160,
+                              width: 140,
                               margin: EdgeInsets.all(16),
-                              decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+                              decoration: BoxDecoration(border: Border.all(color: Colors.grey[400]),
+                              borderRadius: BorderRadius.circular(24)),
+                              padding: EdgeInsets.all(18),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Container(height: 42,width: 42,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey[300],
+                                        borderRadius: BorderRadius.circular(8)
+                                      ),),
+                                      Padding(
+                                        padding: const EdgeInsets.all(16.0),
+                                        child: Text("72%", style: TextStyle(
+                                          color: Color(0xff453deb),
+                                          fontWeight: FontWeight.bold,
+
+                                        ),),
+                                      )
+                                    ],
+                                  ),
+                                  Text("Restaurant",style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),)
+                                ],
+                              ),
                             );
                           }),
                     )
