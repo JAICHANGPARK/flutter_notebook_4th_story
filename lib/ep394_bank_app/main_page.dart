@@ -151,7 +151,7 @@ class _BudgetPageState extends State<BudgetPage> {
 
                           series: [
                             BezierLine(
-                              label: "Budget",
+
                                 lineColor: Color(0xff453deb),
                                 dataPointStrokeColor: Color(0xff453deb),
                                 data: [
@@ -166,11 +166,27 @@ class _BudgetPageState extends State<BudgetPage> {
                           ],
                           config: BezierChartConfig(
                             xLinesColor: Color(0xff453deb),
-                            verticalIndicatorStrokeWidth: 3.0,
-                            verticalIndicatorColor: Colors.black,
+                            verticalIndicatorStrokeWidth: 2.0,
+                            verticalIndicatorColor: Colors.grey,
                             showVerticalIndicator: true,
                             bubbleIndicatorColor: Color(0xff453deb),
+                          
+                            footerHeight: 40,
+                            bubbleIndicatorValueStyle: TextStyle(
+                              fontSize: 48,
+                              color: Colors.white
+                            ),
+                            bubbleIndicatorLabelStyle: TextStyle(
+                                fontSize: 48,
+                                color: Colors.white
+                            ),
+                            bubbleIndicatorTitleStyle: TextStyle(
+                              fontSize: 48,
+                            ),
 
+                            xAxisTextStyle: TextStyle(
+                              color: Colors.black,
+                            )
                           ),
                         ))
                   ],
