@@ -31,7 +31,6 @@ class _BudgetPageState extends State<BudgetPage> {
                 height: MediaQuery.of(context).size.height / 2.3,
                 decoration: BoxDecoration(
                     color: Color(0xff453deb),
-
                     /// 69 61 235
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(48),
