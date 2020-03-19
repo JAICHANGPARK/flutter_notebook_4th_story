@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BankApp extends StatelessWidget {
   @override
@@ -122,11 +123,16 @@ class _BudgetPageState extends State<BudgetPage> {
                 child: Column(
                   children: <Widget>[
                     Spacer(),
-                    Text("\$600.00"),
-                    Text("March Expenses"),
+                    Text("\$600.00",style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.bold,
+                      fontSize:42
+                    ),),
+                    Text("March Expenses", style: GoogleFonts.montserrat(
+                      color: Colors.grey,
+                    ),),
                     Spacer(),
                     Container(
-                      height: MediaQuery.of(context).size.height / 4,
+                      height: MediaQuery.of(context).size.height / 3.8,
                       color: Colors.blue,
                     )
                   ],
