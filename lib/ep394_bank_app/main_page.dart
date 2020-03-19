@@ -146,8 +146,9 @@ class _BudgetPageState extends State<BudgetPage> {
                         height: MediaQuery.of(context).size.height / 3.8,
                         width: MediaQuery.of(context).size.width,
                         child: BezierChart(
+
                           bezierChartScale: BezierChartScale.CUSTOM,
-                          xAxisCustomValues: [0, 5, 10, 15, 20, 25, 30],
+                          xAxisCustomValues: [0, 5, 10, 15, 20, 25, 30, 35, 40],
 
                           series: [
                             BezierLine(
@@ -162,6 +163,8 @@ class _BudgetPageState extends State<BudgetPage> {
                               DataPoint<double>(value: 480.0, xAxis: 15),
                               DataPoint<double>(value: 520.0, xAxis: 16),
                               DataPoint<double>(value: 320.0, xAxis: 17),
+                                  DataPoint<double>(value: 420.0, xAxis: 17),
+                                  DataPoint<double>(value: 320.0, xAxis: 17),
                             ]),
                           ],
                           config: BezierChartConfig(
@@ -170,7 +173,7 @@ class _BudgetPageState extends State<BudgetPage> {
                             verticalIndicatorColor: Colors.grey,
                             showVerticalIndicator: true,
                             bubbleIndicatorColor: Color(0xff453deb),
-                          
+
                             footerHeight: 40,
                             bubbleIndicatorValueStyle: TextStyle(
                               fontSize: 48,
