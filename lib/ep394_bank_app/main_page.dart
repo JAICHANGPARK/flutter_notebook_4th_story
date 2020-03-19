@@ -112,6 +112,26 @@ class _BudgetPageState extends State<BudgetPage> {
                   ],
                 ),
               ),
+            ),
+            Positioned(
+              left: 0,
+              right: 0,
+              top: 0,
+              child: Container(
+                height: MediaQuery.of(context).size.height /2,
+                child: Column(
+                  children: <Widget>[
+                    Spacer(),
+                    Text("\$600.00"),
+                    Text("March Expenses"),
+                    Spacer(),
+                    Container(
+                      height: MediaQuery.of(context).size.height / 4,
+                      color: Colors.blue,
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),
@@ -119,3 +139,27 @@ class _BudgetPageState extends State<BudgetPage> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
