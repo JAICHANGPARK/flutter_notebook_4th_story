@@ -93,14 +93,22 @@ class _CalendarMainPageState extends State<CalendarMainPage> {
                   bottom: 0,
                   top: 0,
                   child: TimetableView(
+
                     laneEventsList: <LaneEvents>[
                       LaneEvents(
                         lane: Lane(name: "Meeting"),
                         events: <TableEvent>[
                           TableEvent(
-                            title: "Meeting",
-                            end: TableEventTime(hour: 11, minute: 20),
-                            start: TableEventTime(hour: 10, minute: 0),
+                            title: "Business lunch at McDonald's",
+                            backgroundColor: Colors.orangeAccent,
+                            end: TableEventTime(hour: 10, minute: 30),
+                            start: TableEventTime(hour: 9, minute: 30),
+                          ),
+                          TableEvent(
+                            title: "Skype call with incestors",
+                            backgroundColor: Colors.orangeAccent,
+                            end: TableEventTime(hour: 12, minute: 30),
+                            start: TableEventTime(hour: 11, minute: 30),
                           )
                         ],
                       )
