@@ -146,16 +146,10 @@ class _BudgetPageState extends State<BudgetPage> {
                         height: MediaQuery.of(context).size.height / 3.8,
                         width: MediaQuery.of(context).size.width,
                         child: BezierChart(
-
                           bezierChartScale: BezierChartScale.CUSTOM,
                           xAxisCustomValues: [0, 5, 10, 15, 20, 25, 30, 35, 40],
-
                           series: [
-                            BezierLine(
-
-                                lineColor: Color(0xff453deb),
-                                dataPointStrokeColor: Color(0xff453deb),
-                                data: [
+                            BezierLine(lineColor: Color(0xff453deb), dataPointStrokeColor: Color(0xff453deb), data: [
                               DataPoint<double>(value: 450.0, xAxis: 11),
                               DataPoint<double>(value: 600.0, xAxis: 12),
                               DataPoint<double>(value: 620.0, xAxis: 13),
@@ -163,34 +157,25 @@ class _BudgetPageState extends State<BudgetPage> {
                               DataPoint<double>(value: 480.0, xAxis: 15),
                               DataPoint<double>(value: 520.0, xAxis: 16),
                               DataPoint<double>(value: 320.0, xAxis: 17),
-                                  DataPoint<double>(value: 420.0, xAxis: 17),
-                                  DataPoint<double>(value: 320.0, xAxis: 17),
+                              DataPoint<double>(value: 420.0, xAxis: 17),
+                              DataPoint<double>(value: 320.0, xAxis: 17),
                             ]),
                           ],
                           config: BezierChartConfig(
-                            xLinesColor: Color(0xff453deb),
-                            verticalIndicatorStrokeWidth: 2.0,
-                            verticalIndicatorColor: Colors.grey,
-                            showVerticalIndicator: true,
-                            bubbleIndicatorColor: Color(0xff453deb),
-
-                            footerHeight: 40,
-                            bubbleIndicatorValueStyle: TextStyle(
-                              fontSize: 48,
-                              color: Colors.white
-                            ),
-                            bubbleIndicatorLabelStyle: TextStyle(
+                              xLinesColor: Color(0xff453deb),
+                              verticalIndicatorStrokeWidth: 2.0,
+                              verticalIndicatorColor: Colors.grey,
+                              showVerticalIndicator: true,
+                              bubbleIndicatorColor: Color(0xff453deb),
+                              footerHeight: 40,
+                              bubbleIndicatorValueStyle: TextStyle(fontSize: 48, color: Colors.white),
+                              bubbleIndicatorLabelStyle: TextStyle(fontSize: 48, color: Colors.white),
+                              bubbleIndicatorTitleStyle: TextStyle(
                                 fontSize: 48,
-                                color: Colors.white
-                            ),
-                            bubbleIndicatorTitleStyle: TextStyle(
-                              fontSize: 48,
-                            ),
-
-                            xAxisTextStyle: TextStyle(
-                              color: Colors.black,
-                            )
-                          ),
+                              ),
+                              xAxisTextStyle: TextStyle(
+                                color: Colors.black,
+                              )),
                         ))
                   ],
                 ),
