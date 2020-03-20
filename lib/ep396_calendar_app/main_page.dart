@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_timetable_view/flutter_timetable_view.dart';
 
 class CalendarApp extends StatelessWidget {
   @override
@@ -68,15 +69,20 @@ class _CalendarMainPageState extends State<CalendarMainPage> {
                 MaterialButton(
                   onPressed: () {},
                   color: Colors.orange,
-                  child: Text("Meeting", style: TextStyle(
-                    color: Colors.white,
-                  ),),
-
+                  child: Text(
+                    "Meeting",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 )
               ],
             ),
           ),
-          Divider(height: 0,color: Colors.grey,),
+          Divider(
+            height: 0,
+            color: Colors.grey,
+          ),
           Container(
             height: MediaQuery.of(context).size.height / 1.305,
             child: Stack(
@@ -86,7 +92,37 @@ class _CalendarMainPageState extends State<CalendarMainPage> {
                   right: 0,
                   bottom: 0,
                   top: 0,
-                  child: ,
+                  child: TimetableView(
+                    laneEventsList: <LaneEvents>[
+                      LaneEvents(
+                        lane: Lane(name: "Meeting"),
+                        events: <TableEvent>[
+                          TableEvent(
+                            title: "Meeting",
+                            end: TableEventTime(hour: 11, minute: 20),
+                            start: TableEventTime(hour: 10, minute: 0),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Container(
+                    height: 84,
+                    width: 84,
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(24)
+                      )
+                    ),
+                    child: Center(
+                      child: Icon(Icons.add, color: Colors.white,size: 48,),
+                    ),
+                  ),
                 )
               ],
             ),
@@ -96,14 +132,6 @@ class _CalendarMainPageState extends State<CalendarMainPage> {
     );
   }
 }
-
-
-
-
-
-
-
-
 
 
 
