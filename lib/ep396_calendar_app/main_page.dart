@@ -77,6 +77,20 @@ class _CalendarMainPageState extends State<CalendarMainPage> {
             ),
           ),
           Divider(height: 0,color: Colors.grey,),
+          Container(
+            height: MediaQuery.of(context).size.height / 1.305,
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  top: 0,
+                  child: ,
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
