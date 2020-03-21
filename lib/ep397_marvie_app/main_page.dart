@@ -46,7 +46,17 @@ class _MarvieHomeState extends State<MarvieHome> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  Text("Dreamwalker"),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 24),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.shop),
+                        Text("Shop")
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -56,3 +66,21 @@ class _MarvieHomeState extends State<MarvieHome> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
