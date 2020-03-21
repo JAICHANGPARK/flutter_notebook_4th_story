@@ -49,11 +49,56 @@ class _MarvieHomeState extends State<MarvieHome> {
                   ),
                   Text("Dreamwalker"),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 24),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     child: Row(
                       children: <Widget>[
                         Icon(Icons.shop),
                         Text("Shop")
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.shop),
+                        Text("Payment")
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.shop),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Chat"),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.shop),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Notifications"),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 24),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.settings),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("Settings"),
+                        )
                       ],
                     ),
                   ),
