@@ -29,6 +29,17 @@ class _MarvieHomeState extends State<MarvieHome> {
                   Container(
                     height: 84,
                     width: 84,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey
+                      ),
+                      child: Center(
+                        child: CircleAvatar(),
+                      ),
+                    ),
                   )
                 ],
               ),
