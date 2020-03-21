@@ -16,7 +16,53 @@ class MarvieHome extends StatefulWidget {
 class _MarvieHomeState extends State<MarvieHome> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Positioned(
+            left: 24,
+            top: 24,
+            bottom: 24,
+            child: SafeArea(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    height: 84,
+                    width: 84,
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
