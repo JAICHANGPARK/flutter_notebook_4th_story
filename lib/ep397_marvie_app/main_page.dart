@@ -205,12 +205,13 @@ class _MarvieHomeState extends State<MarvieHome> {
                           viewRight = -180;
                           viewTop = 120;
                           viewLeft = MediaQuery.of(context).size.width / 2;
-                          viewAngel = 0.2;
+                          viewAngel = -0.2;
 
                           view2Scale = 0.8;
                           view2Right = -160;
                           view2Top = 120;
                           view2Left = MediaQuery.of(context).size.width / 2;
+                          viewAngel = -0.4;
                         });
                       },
                       color: Colors.tealAccent,
