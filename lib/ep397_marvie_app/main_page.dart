@@ -258,7 +258,7 @@ class _MarvieHomeState extends State<MarvieHome> {
                 scale: view3Scale,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.tealAccent[400],
+                    color: Colors.grey[400],
                     borderRadius: BorderRadius.circular(48),
                   ),
                   child: Center(
