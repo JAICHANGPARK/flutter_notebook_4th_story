@@ -193,7 +193,7 @@ class _MarvieHomeState extends State<MarvieHome> {
               angle: viewAngel,
               child: Transform.scale(
                 scale: viewScale,
-                child: AnimatedContainer(
+                child: AnimatedContainer( duration: Duration(seconds: 1),
                   decoration: BoxDecoration(
                     color: Colors.red[400],
                     borderRadius: BorderRadius.circular(circles),
@@ -226,7 +226,7 @@ class _MarvieHomeState extends State<MarvieHome> {
               angle: view2Angel,
               child: Transform.scale(
                 scale: view2Scale,
-                child: AnimatedContainer(
+                child: AnimatedContainer( duration: Duration(seconds: 1),
                   decoration: BoxDecoration(
                     color: Colors.tealAccent[400],
                     borderRadius: BorderRadius.circular(circles),
