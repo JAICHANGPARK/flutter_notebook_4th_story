@@ -132,16 +132,34 @@ class _MarvieHomeState extends State<MarvieHome> {
                   SizedBox(
                     height: 34,
                   ),
-                  Container(
-                    width: 140,
-                    padding: EdgeInsets.all(16),
-                    decoration: BoxDecoration(color: Colors.greenAccent, borderRadius: BorderRadius.circular(12)),
-                    child: Center(
-                      child: Text(
-                        "Next",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                  GestureDetector(
+                    onTap: (){
+
+                      setState(() {
+                         viewScale = 1.0;
+                         viewLeft = 0.0;
+                         viewRight = 0.0;
+                         viewTop = 0.0;
+                         viewAngel = 0.0;
+
+                         view2Scale = 1.0;
+                         view2Left = 0.0;
+                         view2Right = 0.0;
+                         view2Top = 0.0;
+                         view2Angel = 0.0;
+                      });
+                    },
+                    child: Container(
+                      width: 140,
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(color: Colors.greenAccent, borderRadius: BorderRadius.circular(12)),
+                      child: Center(
+                        child: Text(
+                          "Next",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
