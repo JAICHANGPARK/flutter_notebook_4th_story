@@ -20,6 +20,13 @@ class _MarvieHomeState extends State<MarvieHome> {
   double viewLeft = 0.0;
   double viewRight = 0.0;
   double viewTop = 0.0;
+  double viewAngel = 0.0;
+
+  double view2Scale = 1.0;
+  double view2Left = 0.0;
+  double view2Right = 0.0;
+  double view2Top = 0.0;
+  double view2Angel = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -149,7 +156,7 @@ class _MarvieHomeState extends State<MarvieHome> {
             bottom: 0,
             right: viewRight,
             child: Transform.rotate(
-              angle: -0.2,
+              angle: viewAngel,
               child: Transform.scale(
                 scale: viewScale,
                 child: Container(
@@ -165,6 +172,45 @@ class _MarvieHomeState extends State<MarvieHome> {
                           viewRight = -160;
                           viewTop = 120;
                           viewLeft = MediaQuery.of(context).size.width / 2;
+                          viewAngel = 0.2;
+                        });
+                      },
+                      color: Colors.tealAccent,
+                      child: Text("Show Menu"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: view2Top,
+            left: view2Left,
+            bottom: 0,
+            right: view2Right,
+            child: Transform.rotate(
+              angle: view2Angel,
+              child: Transform.scale(
+                scale: view2Scale,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.green[400],
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: Center(
+                    child: MaterialButton(
+                      onPressed: () {
+                        setState(() {
+                          viewScale = 0.8;
+                          viewRight = -180;
+                          viewTop = 120;
+                          viewLeft = MediaQuery.of(context).size.width / 2;
+                          viewAngel = 0.2;
+
+                          view2Scale = 0.8;
+                          view2Right = -160;
+                          view2Top = 120;
+                          view2Left = MediaQuery.of(context).size.width / 2;
                         });
                       },
                       color: Colors.tealAccent,
@@ -175,8 +221,27 @@ class _MarvieHomeState extends State<MarvieHome> {
               ),
             ),
           )
+
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
