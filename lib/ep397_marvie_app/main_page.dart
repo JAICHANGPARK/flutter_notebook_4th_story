@@ -171,7 +171,7 @@ class _MarvieHomeState extends State<MarvieHome> {
           Positioned(
             top: viewTop,
             left: viewLeft,
-            bottom: 0,
+            bottom: -210,
             right: viewRight,
             child: Transform.rotate(
               angle: viewAngel,
@@ -204,7 +204,7 @@ class _MarvieHomeState extends State<MarvieHome> {
           Positioned(
             top: view2Top,
             left: view2Left,
-            bottom: 0,
+            bottom: -210,
             right: view2Right,
             child: Transform.rotate(
               angle: view2Angel,
@@ -212,7 +212,7 @@ class _MarvieHomeState extends State<MarvieHome> {
                 scale: view2Scale,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.green[400],
+                    color: Colors.tealAccent[400],
                     borderRadius: BorderRadius.circular(24),
                   ),
                   child: Center(
@@ -220,16 +220,16 @@ class _MarvieHomeState extends State<MarvieHome> {
                       onPressed: () {
                         setState(() {
                           viewScale = 0.8;
-                          viewRight = -180;
-                          viewTop = 120;
-                          viewLeft = MediaQuery.of(context).size.width / 2;
-                          viewAngel = -0.2;
+                          viewRight = -220;
+                          viewTop = 100;
+                          viewLeft = MediaQuery.of(context).size.width / 1.8;
+                          viewAngel = -0.3;
 
                           view2Scale = 0.8;
-                          view2Right = -160;
-                          view2Top = 120;
-                          view2Left = MediaQuery.of(context).size.width / 2;
-                          viewAngel = -0.4;
+                          view2Right = -210;
+                          view2Top = 64;
+                          view2Left = MediaQuery.of(context).size.width / 1.5;
+                          view2Angel = -0.15;
                         });
                       },
                       color: Colors.tealAccent,
