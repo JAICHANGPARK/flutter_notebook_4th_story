@@ -34,6 +34,8 @@ class _MarvieHomeState extends State<MarvieHome> {
   double view3Top = 0.0;
   double view3Angel = 0.0;
 
+  double circles = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,6 +161,8 @@ class _MarvieHomeState extends State<MarvieHome> {
                          view3Right = 0.0;
                          view3Top = 0.0;
                          view3Angel = 0.0;
+
+                         circles = 0.0;
                       });
                     },
                     child: Container(
@@ -189,10 +193,10 @@ class _MarvieHomeState extends State<MarvieHome> {
               angle: viewAngel,
               child: Transform.scale(
                 scale: viewScale,
-                child: Container(
+                child: AnimatedContainer(
                   decoration: BoxDecoration(
                     color: Colors.red[400],
-                    borderRadius: BorderRadius.circular(48),
+                    borderRadius: BorderRadius.circular(circles),
                   ),
                   child: Center(
                     child: MaterialButton(
@@ -222,10 +226,10 @@ class _MarvieHomeState extends State<MarvieHome> {
               angle: view2Angel,
               child: Transform.scale(
                 scale: view2Scale,
-                child: Container(
+                child: AnimatedContainer(
                   decoration: BoxDecoration(
                     color: Colors.tealAccent[400],
-                    borderRadius: BorderRadius.circular(48),
+                    borderRadius: BorderRadius.circular(circles),
                   ),
                   child: Center(
                     child: MaterialButton(
@@ -271,9 +275,9 @@ class _MarvieHomeState extends State<MarvieHome> {
                 child: AnimatedContainer(
                   decoration: BoxDecoration(
                     color: Colors.grey[400],
-                    borderRadius: BorderRadius.circular(48),
+                    borderRadius: BorderRadius.circular(circles),
                   ),
-                  duration: Duration(milliseconds: 400),
+                  duration: Duration(seconds: 1),
                   child: Center(
                     child: MaterialButton(
                       onPressed: () {
@@ -295,6 +299,7 @@ class _MarvieHomeState extends State<MarvieHome> {
                           view3Top = 0;
                           view3Left = MediaQuery.of(context).size.width / 1.2;
                           view3Angel = -0.1;
+                          circles = 48.0;
                         });
                       },
                       color: Colors.tealAccent,
