@@ -268,11 +268,12 @@ class _MarvieHomeState extends State<MarvieHome> {
               angle: view3Angel,
               child: Transform.scale(
                 scale: view3Scale,
-                child: Container(
+                child: AnimatedContainer(
                   decoration: BoxDecoration(
                     color: Colors.grey[400],
                     borderRadius: BorderRadius.circular(48),
                   ),
+                  duration: Duration(milliseconds: 400),
                   child: Center(
                     child: MaterialButton(
                       onPressed: () {
