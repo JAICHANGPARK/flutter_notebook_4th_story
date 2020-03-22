@@ -153,6 +153,12 @@ class _MarvieHomeState extends State<MarvieHome> {
                          view2Right = 0.0;
                          view2Top = 0.0;
                          view2Angel = 0.0;
+
+                         view3Scale = 1.0;
+                         view3Left = 0.0;
+                         view3Right = 0.0;
+                         view3Top = 0.0;
+                         view3Angel = 0.0;
                       });
                     },
                     child: Container(
@@ -236,6 +242,12 @@ class _MarvieHomeState extends State<MarvieHome> {
                           view2Top = 24;
                           view2Left = MediaQuery.of(context).size.width / 1.3;
                           view2Angel = -0.2;
+
+                          view3Scale = 0.8;
+                          view3Right = - MediaQuery.of(context).size.width /1.5;
+                          view3Top = 0;
+                          view3Left = MediaQuery.of(context).size.width / 1.2;
+                          view3Angel = -0.1;
                         });
                       },
                       color: Colors.tealAccent,
@@ -268,7 +280,7 @@ class _MarvieHomeState extends State<MarvieHome> {
                           viewScale = 0.8;
                           viewRight = - MediaQuery.of(context).size.width /1.8;
                           viewTop = 84;
-                          viewLeft = MediaQuery.of(context).size.width / 1.5;
+                          viewLeft = MediaQuery.of(context).size.width / 1.4;
                           viewAngel = -0.3;
 
                           view2Scale = 0.8;
@@ -276,6 +288,12 @@ class _MarvieHomeState extends State<MarvieHome> {
                           view2Top = 24;
                           view2Left = MediaQuery.of(context).size.width / 1.3;
                           view2Angel = -0.2;
+
+                          view3Scale = 0.8;
+                          view3Right = - MediaQuery.of(context).size.width /1.5;
+                          view3Top = 0;
+                          view3Left = MediaQuery.of(context).size.width / 1.2;
+                          view3Angel = -0.1;
                         });
                       },
                       color: Colors.tealAccent,
