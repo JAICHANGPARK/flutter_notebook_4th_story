@@ -35,7 +35,9 @@ class _MarvieHomeState extends State<MarvieHome> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: 34,),
+                  SizedBox(
+                    height: 34,
+                  ),
                   Container(
                     height: 84,
                     width: 84,
@@ -55,9 +57,10 @@ class _MarvieHomeState extends State<MarvieHome> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16),
-                    child: Text("Dreamwalker", style: TextStyle(
-                      fontWeight: FontWeight.bold,fontSize: 18
-                    ),),
+                    child: Text(
+                      "Dreamwalker",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16),
@@ -119,20 +122,21 @@ class _MarvieHomeState extends State<MarvieHome> {
                       ],
                     ),
                   ),
-
-                  SizedBox(height: 34,),
+                  SizedBox(
+                    height: 34,
+                  ),
                   Container(
                     width: 140,
                     padding: EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: Colors.greenAccent,
-                      borderRadius: BorderRadius.circular(12)
-                    ),
+                    decoration: BoxDecoration(color: Colors.greenAccent, borderRadius: BorderRadius.circular(12)),
                     child: Center(
-                      child: Text("Next",style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),),
+                      child: Text(
+                        "Next",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   )
                 ],
@@ -153,7 +157,6 @@ class _MarvieHomeState extends State<MarvieHome> {
                     color: Colors.red[400],
                     borderRadius: BorderRadius.circular(24),
                   ),
-
                   child: Center(
                     child: MaterialButton(
                       onPressed: () {
@@ -177,21 +180,3 @@ class _MarvieHomeState extends State<MarvieHome> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
