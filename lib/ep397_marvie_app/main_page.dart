@@ -28,6 +28,12 @@ class _MarvieHomeState extends State<MarvieHome> {
   double view2Top = 0.0;
   double view2Angel = 0.0;
 
+  double view3Scale = 1.0;
+  double view3Left = 0.0;
+  double view3Right = 0.0;
+  double view3Top = 0.0;
+  double view3Angel = 0.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -239,7 +245,48 @@ class _MarvieHomeState extends State<MarvieHome> {
                 ),
               ),
             ),
-          )
+          ),
+
+          Positioned(
+            top: view3Top,
+            left: view3Left,
+            bottom: -210,
+            right: view3Right,
+            child: Transform.rotate(
+              angle: view3Angel,
+              child: Transform.scale(
+                scale: view3Scale,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.tealAccent[400],
+                    borderRadius: BorderRadius.circular(48),
+                  ),
+                  child: Center(
+                    child: MaterialButton(
+                      onPressed: () {
+                        setState(() {
+                          viewScale = 0.8;
+                          viewRight = - MediaQuery.of(context).size.width /1.8;
+                          viewTop = 84;
+                          viewLeft = MediaQuery.of(context).size.width / 1.5;
+                          viewAngel = -0.3;
+
+                          view2Scale = 0.8;
+                          view2Right = - MediaQuery.of(context).size.width /1.4;
+                          view2Top = 24;
+                          view2Left = MediaQuery.of(context).size.width / 1.3;
+                          view2Angel = -0.2;
+                        });
+                      },
+                      color: Colors.tealAccent,
+                      child: Text("Show Menu"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
 
         ],
       ),
