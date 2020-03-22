@@ -180,7 +180,7 @@ class _MarvieHomeState extends State<MarvieHome> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.red[400],
-                    borderRadius: BorderRadius.circular(24),
+                    borderRadius: BorderRadius.circular(48),
                   ),
                   child: Center(
                     child: MaterialButton(
@@ -213,23 +213,23 @@ class _MarvieHomeState extends State<MarvieHome> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.tealAccent[400],
-                    borderRadius: BorderRadius.circular(24),
+                    borderRadius: BorderRadius.circular(48),
                   ),
                   child: Center(
                     child: MaterialButton(
                       onPressed: () {
                         setState(() {
                           viewScale = 0.8;
-                          viewRight = -220;
-                          viewTop = 100;
-                          viewLeft = MediaQuery.of(context).size.width / 1.8;
+                          viewRight = - MediaQuery.of(context).size.width /1.8;
+                          viewTop = 84;
+                          viewLeft = MediaQuery.of(context).size.width / 1.5;
                           viewAngel = -0.3;
 
                           view2Scale = 0.8;
-                          view2Right = -210;
-                          view2Top = 64;
-                          view2Left = MediaQuery.of(context).size.width / 1.5;
-                          view2Angel = -0.15;
+                          view2Right = - MediaQuery.of(context).size.width /1.4;
+                          view2Top = 24;
+                          view2Left = MediaQuery.of(context).size.width / 1.3;
+                          view2Angel = -0.2;
                         });
                       },
                       color: Colors.tealAccent,
