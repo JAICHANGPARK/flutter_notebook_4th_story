@@ -1,5 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class DigitalWalletApp extends StatelessWidget {
@@ -66,15 +68,41 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                           top: 0,
                           bottom: 0,
                           child: Container(
+                            padding: EdgeInsets.all(8),
                             width: MediaQuery.of(context).size.width / 2,
-                            decoration: BoxDecoration(
-                              color: Colors.red,
-                            ),
                             child: PieChart(
-                              
+                              PieChartData(
+                                borderData: FlBorderData(
+                                  show: false,
+                                ),
+                                sections: [
+                                  PieChartSectionData(value: 35, color: Colors.indigo,
+                                  title: "35%"),
+                                  PieChartSectionData(value: 15, color: Colors.blue,title: "15%"),
+                                  PieChartSectionData(value: 45, color: Colors.yellow,title: "45%"),
+                                ]
+                              ),
                             ),
                           ),
-                        )
+                        ),
+                      Positioned(
+                        top: 16,
+                        left: 16,
+                        child: Column(
+                          children: <Widget>[
+                            Text("\$498.57",style: GoogleFonts.montserrat(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.indigo
+                            ),),
+                            Text("Available Balance",style: TextStyle(
+                              fontSize: 12,
+                              color: Colors.grey
+                            ),),
+
+                          ],
+                        ),
+                      )
 
                     ],
                   ),
