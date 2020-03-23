@@ -72,9 +72,12 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                             width: MediaQuery.of(context).size.width / 2,
                             child: PieChart(
                               PieChartData(
+                                centerSpaceRadius: 40,
                                 borderData: FlBorderData(
                                   show: false,
                                 ),
+                                sectionsSpace: 0,
+                                startDegreeOffset: -120,
                                 sections: [
                                   PieChartSectionData(value: 35, color: Colors.indigo,
                                   title: "35%"),
@@ -89,6 +92,7 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                         top: 16,
                         left: 16,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text("\$498.57",style: GoogleFonts.montserrat(
                               fontSize: 28,
@@ -99,6 +103,60 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                               fontSize: 12,
                               color: Colors.grey
                             ),),
+                            SizedBox(height: 16,),
+                            Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 8,
+                                  width: 8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.indigo,
+                                    shape: BoxShape.circle
+                                  ),
+                                ),
+                                SizedBox(width: 4,),
+                                Text("Spent",style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey
+                                ),),
+
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                              child: Text("\$1.598",style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                                color: Colors.indigo
+                              ),),
+                            ),
+                            SizedBox(height: 16,),
+                            Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 8,
+                                  width: 8,
+                                  decoration: BoxDecoration(
+                                      color: Colors.yellow,
+                                      shape: BoxShape.circle
+                                  ),
+                                ),
+                                SizedBox(width: 4,),
+                                Text("Earned",style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.grey
+                                ),),
+
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                              child: Text("\$5.984",style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Colors.indigo
+                              ),),
+                            )
 
                           ],
                         ),
