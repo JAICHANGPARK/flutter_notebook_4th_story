@@ -246,6 +246,79 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                         )
                       ],
                     )),
+                Container(
+                    margin: EdgeInsets.only(bottom: 16),
+                    height: MediaQuery.of(context).size.height / 3.5,
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 2,
+                        spreadRadius: 2,
+                      )
+                    ]),
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text(
+                                "Services",
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.indigo,
+                                ),
+                              ),
+                              Text("View all",style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.indigoAccent
+                              ),)
+                            ],
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: ListView.builder(itemBuilder: (context, index){
+                            return Container(height: 42,
+                            margin: EdgeInsets.only(bottom: 9),
+                            child: Row(
+                              children: <Widget>[
+                                Container(
+                                  height: 42,
+                                  width: 42,
+                                  decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    borderRadius: BorderRadius.circular(8)
+                                  ),
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text("Dreamwalker"),
+                                    Text("20 March")
+                                  ],
+                                ),
+                                Spacer(),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text("-\$50.00"),
+                                    Text("-\$50.00"),
+                                  ],
+                                )
+                              ],
+                            ),
+                            color: Colors.yellow,);
+
+                          }),
+                        )
+                      ],
+                    )),
+
               ],
             ),
           )
