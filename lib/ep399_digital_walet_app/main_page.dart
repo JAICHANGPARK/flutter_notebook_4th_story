@@ -29,20 +29,49 @@ class _MyWalletHomeState extends State<MyWalletHome> {
             right: 0,
             child: SafeArea(
               child: Container(
-                height: MediaQuery.of(context).size.height / 3.5,
+                height: MediaQuery.of(context).size.height / 4,
                 decoration: BoxDecoration(
                     color: Colors.blueAccent,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(24),
                       bottomRight: Radius.circular(24),
                     )),
+                padding: EdgeInsets.only(left: 16, top: 39, right: 16, bottom: 100),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+
+                  children: <Widget>[
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("Hello!",style: GoogleFonts.montserrat(
+                          color: Colors.grey[100]
+                        ),),
+                        Text("Dreamwalker",style: GoogleFonts.montserrat(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 18
+                        ),)
+                      ],
+                    ),
+                    Spacer(),
+                    Container(
+                      height: 42,
+                      width: 42,
+                      decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
           Positioned(
             left: 16,
             right: 16,
-            top: MediaQuery.of(context).size.height / 4.7,
+            top: MediaQuery.of(context).size.height / 4.5,
             bottom: 0,
             child: ListView(
               children: <Widget>[
