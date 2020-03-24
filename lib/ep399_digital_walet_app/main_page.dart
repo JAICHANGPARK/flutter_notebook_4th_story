@@ -300,15 +300,29 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                                     padding: const EdgeInsets.only(left: 8),
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[Text("Dreamwalker"), Text("20 March")],
+                                      children: <Widget>[Text("Dreamwalker",
+                                      style: GoogleFonts.montserrat(
+                                        fontWeight: FontWeight.bold,
+                                          color: Colors.indigo
+                                      ),), Text("20 March",style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.grey
+                                      ),)],
                                     ),
                                   ),
                                   Spacer(),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      Text("-\$50.00"),
-                                      Text("-\$5479"),
+                                      Text("-\$50.00",style: GoogleFonts.montserrat(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.indigo
+                                      ),),
+                                      Text("-\$5479",style: GoogleFonts.montserrat(
+                                          fontSize: 10,
+                                        color: Colors.grey
+                                      ),),
                                     ],
                                   )
                                 ],
