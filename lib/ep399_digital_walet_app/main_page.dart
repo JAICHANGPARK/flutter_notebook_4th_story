@@ -273,57 +273,51 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                                   color: Colors.indigo,
                                 ),
                               ),
-                              Text("View all",style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.indigoAccent
-                              ),)
+                              Text(
+                                "View all",
+                                style: TextStyle(fontSize: 12, color: Colors.indigoAccent),
+                              )
                             ],
                           ),
                         ),
                         Expanded(
                           flex: 4,
-                          child: ListView.builder(itemBuilder: (context, index){
-                            return Container(height: 42,
-                            margin: EdgeInsets.only(bottom: 9),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Container(
-                                  height: 42,
-                                  width: 42,
-                                  decoration: BoxDecoration(
-                                    color: Colors.orange,
-                                    borderRadius: BorderRadius.circular(8)
+                          child: ListView.builder(itemBuilder: (context, index) {
+                            return Container(
+                              height: 42,
+                              margin: EdgeInsets.only(bottom: 9),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Container(
+                                    height: 42,
+                                    width: 42,
+                                    decoration:
+                                        BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.circular(8)),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 8),
-                                  child: Column(
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 8),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[Text("Dreamwalker"), Text("20 March")],
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      Text("Dreamwalker"),
-                                      Text("20 March")
+                                      Text("-\$50.00"),
+                                      Text("-\$5479"),
                                     ],
-                                  ),
-                                ),
-                                Spacer(),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text("-\$50.00"),
-                                    Text("-\$5479"),
-                                  ],
-                                )
-                              ],
-                            ),
-                            color: Colors.yellow,);
-
+                                  )
+                                ],
+                              ),
+                            );
                           }),
                         )
                       ],
                     )),
-
               ],
             ),
           )
