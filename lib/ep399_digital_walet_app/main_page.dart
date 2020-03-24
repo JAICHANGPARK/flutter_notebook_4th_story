@@ -71,7 +71,7 @@ class _MyWalletHomeState extends State<MyWalletHome> {
           Positioned(
             left: 16,
             right: 16,
-            top: MediaQuery.of(context).size.height / 4.5,
+            top: MediaQuery.of(context).size.height / 6,
             bottom: 0,
             child: ListView(
               children: <Widget>[
