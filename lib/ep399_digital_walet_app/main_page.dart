@@ -202,6 +202,8 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                         flex: 1,
                         child: Text("Services",style: GoogleFonts.montserrat(
                           fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.indigo,
                         ),),
                       ),
                       Expanded(
@@ -230,23 +232,37 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                             ),
                           ),
                           Container(
-                            color: Colors.blue,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
                           ),
                           Container(
-                            color: Colors.blue,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
                           ),
                           Container(
-                            color: Colors.blue,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
                           ),
                           Container(
-                            color: Colors.blue,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
                           ),
                           Container(
-                            color: Colors.blue,
-                          )
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
+                          ),
                         ],),
                       )
-                      
                     ],
                   )
                 ),
