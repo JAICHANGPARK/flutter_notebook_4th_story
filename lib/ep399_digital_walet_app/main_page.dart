@@ -286,6 +286,8 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                             return Container(height: 42,
                             margin: EdgeInsets.only(bottom: 9),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Container(
                                   height: 42,
@@ -295,19 +297,22 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                                     borderRadius: BorderRadius.circular(8)
                                   ),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text("Dreamwalker"),
-                                    Text("20 March")
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 8),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text("Dreamwalker"),
+                                      Text("20 March")
+                                    ],
+                                  ),
                                 ),
                                 Spacer(),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text("-\$50.00"),
-                                    Text("-\$50.00"),
+                                    Text("-\$5479"),
                                   ],
                                 )
                               ],
