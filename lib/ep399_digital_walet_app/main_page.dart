@@ -194,15 +194,58 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                       spreadRadius: 2,
                     )
                   ]),
-                  padding: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Expanded(
+                        flex: 1,
                         child: Text("Services",style: GoogleFonts.montserrat(
                           fontSize: 16,
                         ),),
                       ),
+                      Expanded(
+                        flex: 4,
+                        child: GridView.count(crossAxisCount: 4,
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                        childAspectRatio: 1.15,
+                        children: <Widget>[
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.circular(8)
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(8)
+                            ),
+                          ),
+                          Container(
+                            color: Colors.blue,
+                          ),
+                          Container(
+                            color: Colors.blue,
+                          ),
+                          Container(
+                            color: Colors.blue,
+                          ),
+                          Container(
+                            color: Colors.blue,
+                          ),
+                          Container(
+                            color: Colors.blue,
+                          )
+                        ],),
+                      )
                       
                     ],
                   )
