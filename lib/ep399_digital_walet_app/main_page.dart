@@ -39,19 +39,18 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                 padding: EdgeInsets.only(left: 16, top: 39, right: 16, bottom: 100),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
-
                   children: <Widget>[
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text("Hello!",style: GoogleFonts.montserrat(
-                          color: Colors.grey[100]
-                        ),),
-                        Text("Dreamwalker",style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 18
-                        ),)
+                        Text(
+                          "Hello!",
+                          style: GoogleFonts.montserrat(color: Colors.grey[100]),
+                        ),
+                        Text(
+                          "Dreamwalker",
+                          style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 18),
+                        )
                       ],
                     ),
                     Spacer(),
@@ -186,86 +185,67 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                   ),
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height / 3.5,
-                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 2,
-                      spreadRadius: 2,
-                    )
-                  ]),
-                  padding: EdgeInsets.all(20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Expanded(
-                        flex: 1,
-                        child: Text("Services",style: GoogleFonts.montserrat(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.indigo,
-                        ),),
-                      ),
-                      Expanded(
-                        flex: 4,
-                        child: GridView.count(crossAxisCount: 4,
-                        crossAxisSpacing: 12,
-                        mainAxisSpacing: 12,
-                        childAspectRatio: 1.15,
-                        children: <Widget>[
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.blue,
-                              borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(8)
-                            ),
-                          ),
-                        ],),
+                    margin: EdgeInsets.only(bottom: 16),
+                    height: MediaQuery.of(context).size.height / 3.5,
+                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 2,
+                        spreadRadius: 2,
                       )
-                    ],
-                  )
-                ),
+                    ]),
+                    padding: EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            "Services",
+                            style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.indigo,
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: GridView.count(
+                            crossAxisCount: 4,
+                            crossAxisSpacing: 12,
+                            mainAxisSpacing: 12,
+                            childAspectRatio: 1.15,
+                            children: <Widget>[
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(color: Colors.blue, borderRadius: BorderRadius.circular(8)),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
               ],
             ),
           )
