@@ -76,6 +76,7 @@ class _MyWalletHomeState extends State<MyWalletHome> {
             child: ListView(
               children: <Widget>[
                 Container(
+                  margin: EdgeInsets.only(bottom: 16),
                   height: MediaQuery.of(context).size.height / 3.5,
                   decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
                     BoxShadow(
@@ -183,7 +184,29 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                       )
                     ],
                   ),
-                )
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height / 3.5,
+                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16), boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 2,
+                      spreadRadius: 2,
+                    )
+                  ]),
+                  padding: EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Expanded(
+                        child: Text("Services",style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                        ),),
+                      ),
+                      
+                    ],
+                  )
+                ),
               ],
             ),
           )
