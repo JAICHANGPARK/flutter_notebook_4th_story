@@ -300,29 +300,32 @@ class _MyWalletHomeState extends State<MyWalletHome> {
                                     padding: const EdgeInsets.only(left: 8),
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: <Widget>[Text("Dreamwalker",
-                                      style: GoogleFonts.montserrat(
-                                        fontWeight: FontWeight.bold,
-                                          color: Colors.indigo
-                                      ),), Text("20 March",style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey
-                                      ),)],
+                                      children: <Widget>[
+                                        Text(
+                                          "Dreamwalker",
+                                          style:
+                                              GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: Colors.indigo),
+                                        ),
+                                        Text(
+                                          "20 March",
+                                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                                        )
+                                      ],
                                     ),
                                   ),
                                   Spacer(),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      Text("-\$50.00",style: GoogleFonts.montserrat(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.indigo
-                                      ),),
-                                      Text("-\$5479",style: GoogleFonts.montserrat(
-                                          fontSize: 10,
-                                        color: Colors.grey
-                                      ),),
+                                      Text(
+                                        "-\$50.00",
+                                        style: GoogleFonts.montserrat(
+                                            fontSize: 10, fontWeight: FontWeight.bold, color: Colors.indigo),
+                                      ),
+                                      Text(
+                                        "-\$5479",
+                                        style: GoogleFonts.montserrat(fontSize: 10, color: Colors.grey),
+                                      ),
                                     ],
                                   )
                                 ],
